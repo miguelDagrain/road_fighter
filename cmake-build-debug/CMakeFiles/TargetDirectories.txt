@@ -1,0 +1,3 @@
+/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles/road_fighter.dir
