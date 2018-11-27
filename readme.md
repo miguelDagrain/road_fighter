@@ -1,0 +1,1 @@
+https://travis-ci.com/miguelDagrain/road_fighter.svg?token=ZkDqysYpNptpb3cYE4vp&branch=master

@@ -90,6 +90,9 @@ road_fighter_EXTERNAL_OBJECTS =
 
 road_fighter: CMakeFiles/road_fighter.dir/main.cpp.o
 road_fighter: CMakeFiles/road_fighter.dir/build.make
+road_fighter: /usr/lib/x86_64-linux-gnu/libsfml-system-d.so
+road_fighter: /usr/lib/x86_64-linux-gnu/libsfml-window-d.so
+road_fighter: /usr/lib/x86_64-linux-gnu/libsfml-graphics-d.so
 road_fighter: CMakeFiles/road_fighter.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable road_fighter"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/road_fighter.dir/link.txt --verbose=$(VERBOSE)
