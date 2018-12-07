@@ -111,44 +111,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named road_fighter
+# Target rules for targets named roadfighter
 
 # Build rule for target.
-road_fighter: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 road_fighter
-.PHONY : road_fighter
+roadfighter: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roadfighter
+.PHONY : roadfighter
 
 # fast build rule for target.
-road_fighter/fast:
-	$(MAKE) -f CMakeFiles/road_fighter.dir/build.make CMakeFiles/road_fighter.dir/build
-.PHONY : road_fighter/fast
+roadfighter/fast:
+	$(MAKE) -f roadfighter/CMakeFiles/roadfighter.dir/build.make roadfighter/CMakeFiles/roadfighter.dir/build
+.PHONY : roadfighter/fast
 
-main.o: main.cpp.o
+#=============================================================================
+# Target rules for targets named game
 
-.PHONY : main.o
+# Build rule for target.
+game: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 game
+.PHONY : game
 
-# target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/road_fighter.dir/build.make CMakeFiles/road_fighter.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/road_fighter.dir/build.make CMakeFiles/road_fighter.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/road_fighter.dir/build.make CMakeFiles/road_fighter.dir/main.cpp.s
-.PHONY : main.cpp.s
+# fast build rule for target.
+game/fast:
+	$(MAKE) -f roadfighter_GUI/CMakeFiles/game.dir/build.make roadfighter_GUI/CMakeFiles/game.dir/build
+.PHONY : game/fast
 
 # Help Target
 help:
@@ -158,10 +144,8 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... road_fighter"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... roadfighter"
+	@echo "... game"
 .PHONY : help
 
 

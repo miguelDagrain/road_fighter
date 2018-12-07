@@ -12,6 +12,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.10.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.10.1/CMakeSystem.cmake"
   "../cmake/Modules/FindSFML.cmake"
+  "../roadfighter/CMakeLists.txt"
+  "../roadfighter_GUI/CMakeLists.txt"
   "/opt/clion-2017.2.3/bin/cmake/share/cmake-3.10/Modules/CMakeCInformation.cmake"
   "/opt/clion-2017.2.3/bin/cmake/share/cmake-3.10/Modules/CMakeCXXInformation.cmake"
   "/opt/clion-2017.2.3/bin/cmake/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake"
@@ -42,9 +44,12 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "roadfighter/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "roadfighter_GUI/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/road_fighter.dir/DependInfo.cmake"
+  "roadfighter/CMakeFiles/roadfighter.dir/DependInfo.cmake"
+  "roadfighter_GUI/CMakeFiles/game.dir/DependInfo.cmake"
   )

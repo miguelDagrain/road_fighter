@@ -1,3 +1,8 @@
 /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles/road_fighter.dir
+/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter/CMakeFiles/rebuild_cache.dir
+/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter/CMakeFiles/edit_cache.dir
+/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter/CMakeFiles/roadfighter.dir
+/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter_GUI/CMakeFiles/rebuild_cache.dir
+/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter_GUI/CMakeFiles/edit_cache.dir
+/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter_GUI/CMakeFiles/game.dir

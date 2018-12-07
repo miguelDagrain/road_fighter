@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/road_fighter.dir/main.cpp.o  -o road_fighter /usr/lib/x86_64-linux-gnu/libsfml-system-d.so /usr/lib/x86_64-linux-gnu/libsfml-window-d.so /usr/lib/x86_64-linux-gnu/libsfml-graphics-d.so 
