@@ -12,7 +12,7 @@ add_library(roadfighter
         Bullet.cpp
         Entity.cpp
         Fuelcar.cpp
-        PassingcarSFML.cpp
+        Passingcar.cpp
         Player.cpp
         Racer.cpp
         World.cpp
