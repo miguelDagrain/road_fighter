@@ -3,3 +3,7 @@
 //
 
 #include "Racer.h"
+
+RF::Racer::Racer(RF::location &entityLocation, RF::size &entitySize) : Entity(entityLocation, entitySize) {
+
+}

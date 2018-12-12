@@ -9,6 +9,11 @@ namespace RF {
 
     class Racer : public Entity {
 
+    public:
+        Racer() = default;
+
+        Racer(location& entityLocation, size& entitySize);
+
     };
 
 }

@@ -8,6 +8,7 @@
 #                        World.h World.cpp)
 
 add_library(roadfighter
+        PlaneLocation.cpp
         Bullet.cpp
         Entity.cpp
         Fuelcar.cpp
@@ -15,6 +16,7 @@ add_library(roadfighter
         Player.cpp
         Racer.cpp
         World.cpp
-        EntityFactory.cpp)
+        EntityFactory.cpp
+        RoadfighterError.cpp)
 
 target_include_directories(roadfighter PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

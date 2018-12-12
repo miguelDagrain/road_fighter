@@ -3,3 +3,7 @@
 //
 
 #include "Bullet.h"
+
+RF::Bullet::Bullet(RF::location &entityLocation, RF::size &entitySize) : Entity(entityLocation, entitySize) {
+
+}

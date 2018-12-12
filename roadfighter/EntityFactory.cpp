@@ -2,26 +2,33 @@
 #include "EntityFactory.h"
 
 
-RF::Bullet *RF::Factory::BulletFactory::createEntity() {
+std::shared_ptr<RF::Bullet > RF::Factory::BulletFactory::createEntity()
+{
     return nullptr;
 }
 
-RF::Fuelcar *RF::Factory::FuelcarFactory::createEntity() {
+std::shared_ptr<RF::Bullet > RF::Factory::BulletFactory::createEntity(RF::location &entityLocation)
+{
+    RF::size standard(0.1, 0.1);
+    return std::make_shared<Bullet >(Bullet(entityLocation, standard));
+}
+
+std::shared_ptr<RF::Fuelcar > RF::Factory::FuelcarFactory::createEntity() {
     return nullptr;
 }
 
-RF::Passingcar *RF::Factory::PassingcarFactory::createEntity() {
+std::shared_ptr<RF::Passingcar > RF::Factory::PassingcarFactory::createEntity() {
     return nullptr;
 }
 
-RF::Player *RF::Factory::PlayerFactory::createEntity() {
+std::shared_ptr<RF::Player > RF::Factory::PlayerFactory::createEntity() {
     return nullptr;
 }
 
-RF::Racer *RF::Factory::RacerFactory::createEntity() {
+std::shared_ptr<RF::Racer > RF::Factory::RacerFactory::createEntity() {
     return nullptr;
 }
 
-RF::World *RF::Factory::WorldFactory::createEntity() {
+std::shared_ptr<RF::World > RF::Factory::WorldFactory::createEntity() {
     return nullptr;
 }

@@ -9,6 +9,10 @@ namespace RF {
 
     class Bullet: public Entity {
 
+    public:
+        Bullet() = default;
+
+        Bullet(location& entityLocation, size& entitySize);
 
 
     };

@@ -1,4 +1,4 @@
-/opt/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter
+/opt/clion-2018.3.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter
 -- Found SFML 2.4.2 in /usr/local
 -- Configuring done
 -- Generating done

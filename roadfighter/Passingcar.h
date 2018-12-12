@@ -7,7 +7,12 @@
 
 namespace RF {
 
-    class Passingcar : public Entity {
+    class Passingcar : public Entity{
+
+    public:
+        Passingcar() = default;
+
+        Passingcar(location& entityLocation, size& entitySize);
 
     };
 

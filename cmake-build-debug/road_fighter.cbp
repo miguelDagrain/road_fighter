@@ -166,6 +166,12 @@
 		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/Passingcar.h">
 			<Option target="roadfighter"/>
 		</Unit>
+		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/PlaneLocation.cpp">
+			<Option target="roadfighter"/>
+		</Unit>
+		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/PlaneLocation.h">
+			<Option target="roadfighter"/>
+		</Unit>
 		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/Player.cpp">
 			<Option target="roadfighter"/>
 		</Unit>
@@ -176,6 +182,12 @@
 			<Option target="roadfighter"/>
 		</Unit>
 		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/Racer.h">
+			<Option target="roadfighter"/>
+		</Unit>
+		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/RoadfighterError.cpp">
+			<Option target="roadfighter"/>
+		</Unit>
+		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/RoadfighterError.h">
 			<Option target="roadfighter"/>
 		</Unit>
 		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/World.cpp">

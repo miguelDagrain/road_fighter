@@ -17,7 +17,7 @@ public:
     Transformation(Transformation const&) = delete;
     void operator=(Transformation const&) = delete;
 
-    exactLocation operator()(const location& loc, const int x, const int y);
+    exactLocation operator()(const RF::location& loc, const int x, const int y);
 
 private:
 

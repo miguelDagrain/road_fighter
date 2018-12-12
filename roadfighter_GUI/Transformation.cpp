@@ -3,7 +3,7 @@
 #include <stdexcept>
 #include "Transformation.h"
 
-exactLocation Transformation::operator()(const location &loc, const int x, const int y) {
+exactLocation Transformation::operator()(const RF::location &loc, const int x, const int y) {
     if(loc.first > 3 or loc.first < -3 or loc.second > 4 or loc.second < -4){
         throw std::runtime_error("the given coordinates aren't within the correct range [-4, 4]x[-3, 3]");
     }

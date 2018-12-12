@@ -1,29 +1,53 @@
 #ifndef ROAD_FIGHTER_ENTITY_H
 #define ROAD_FIGHTER_ENTITY_H
 
-#include <utility>
+#include <memory>
 
-
-using location = std::pair<double, double>;
-using size = location;
+#include <PlaneLocation.h>
+#include <RoadfighterError.h>
 
 namespace RF {
+
+    using location = PlaneLocation;
+    using size = PlaneLocation;
+    using movementVector = PlaneLocation;
 
     class Entity {
 
     public:
-        virtual Entity() = default;
 
-        Entity(location& loc, size& entitySize);
+        Entity() = default;
+
+        Entity(location& entityLocation, size& entitySize);
+
+        Entity(location& entityLocation, size& entitySize, movementVector& movement);
+
+        virtual void addObject(std::shared_ptr<Entity > newbornObject);
+
+        virtual void removeObject(std::shared_ptr<Entity > deadObject);
 
 
+        virtual const location &getLocation() const;
 
+        virtual const size &getSize() const;
+
+        virtual const movementVector &getMovement() const;
+
+        virtual void setMovement(movementVector &newVelocity);
+
+        virtual void attackAction(std::shared_ptr<Entity > world);
+
+
+        virtual void update();
+
+        //functie om de wereld rond het centrum te houden, de 'wereld' beweegt dus in de richting van de correctionVector.
+        virtual void correctPosition(PlaneLocation& correctionVector);
 
     private:
-        location location;
+        location entityLocation;
         size entitySize;
 
-        double speed;
+        movementVector movement;
 
     };
 

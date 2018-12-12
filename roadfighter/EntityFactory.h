@@ -4,6 +4,7 @@
 #define ROAD_FIGHTER_ENTITYFACTORY_H
 
 #include <World.h>
+#include <memory>
 
 namespace RF {
     namespace Factory {
@@ -11,6 +12,8 @@ namespace RF {
         template<typename Tresult, typename... Targs>
         class BaseFactory {
         public:
+            BaseFactory() = default;
+
             virtual ~BaseFactory() = default;
 
             virtual Tresult createEntity(Targs... args) = 0;
@@ -18,51 +21,52 @@ namespace RF {
         };
 
 
-        class BulletFactory : public BaseFactory<Bullet *> {
+        class BulletFactory : public BaseFactory<std::shared_ptr<Bullet > > {
         public:
             BulletFactory() = default;
 
-            Bullet *createEntity() final;
+            std::shared_ptr<Bullet > createEntity() final;
 
+            std::shared_ptr<Bullet > createEntity(location &entityLocation);
         };
 
 
-        class FuelcarFactory : public BaseFactory<Fuelcar *> {
+        class FuelcarFactory : public BaseFactory<std::shared_ptr<Fuelcar > > {
         public:
             FuelcarFactory() = default;
 
-            Fuelcar *createEntity() final;
+            std::shared_ptr<Fuelcar > createEntity() final;
         };
 
 
-        class PassingcarFactory : public BaseFactory<Passingcar *> {
+    class PassingcarFactory : public BaseFactory<std::shared_ptr<Passingcar > > {
         public:
             PassingcarFactory() = default;
 
-            Passingcar *createEntity() final;
+            std::shared_ptr<Passingcar > createEntity() final;
         };
 
-        class PlayerFactory : public BaseFactory<Player *> {
+    class PlayerFactory : public BaseFactory<std::shared_ptr<Player >> {
         public:
             PlayerFactory() = default;
 
-            Player *createEntity() final;
+            std::shared_ptr<Player > createEntity() final;
         };
 
-        class RacerFactory : public BaseFactory<Racer *>
+    class RacerFactory : public BaseFactory<std::shared_ptr<Racer > >
         {
         public:
             RacerFactory() = default;
 
-            Racer *createEntity() final;
+            std::shared_ptr<Racer > createEntity() final;
         };
 
-        class WorldFactory : public BaseFactory<World *>
+    class WorldFactory : public BaseFactory<std::shared_ptr<World > >
         {
         public:
             WorldFactory() = default;
 
-            World *createEntity() final;
+            std::shared_ptr<World > createEntity() final;
         };
 
     }
