@@ -39,12 +39,50 @@ const RF::movementVector &RF::Entity::getMovement() const
     return movement;
 }
 
+bool RF::Entity::hasCrashed() const
+{
+    return crashed;
+}
+
 void RF::Entity::setMovement(RF::movementVector &newVelocity)
 {
     movement = newVelocity;
 }
 
 void RF::Entity::attackAction(std::shared_ptr<Entity > world)
+{
+}
+
+void RF::Entity::checkIfOnRoad(const double& sideLine)
+{
+
+    if(entityLocation.first < -(sideLine) || entityLocation.first > (sideLine)){
+        crashed = true;
+    }
+}
+
+void RF::Entity::checkIfCollided(const std::shared_ptr<RF::Entity> other)
+{
+    //eerst controleren we of we ons niet rechts van de andere entiteit begeven, zoniet ga verder...
+    if(this->getLocation().first <= (other->getLocation().first+other->getSize().first))
+    {
+        //dan controleren we of we ons niet links van de andere entiteit begeven, zoniet ga verder...
+        if((this->getLocation().first+this->getSize().first) >= other->getLocation().first)
+        {
+            //vervolgens controleren we of we ons niet onder de andere entiteit begeven, zoniet ga verder...
+            if((this->getLocation().second <= (other->getLocation().second+other->getSize().second)))
+            {
+                //tot slot controleren we of we ons niet boven de andere entiteit begeven, zoniet dan heb je collision
+                if((this->getLocation().second+this->getSize().second) >= other->getLocation().second){
+                    crashed = true;
+                }
+            }
+
+        }
+    }
+}
+
+void RF::Entity::checkOnCollision()
 {
 }
 
@@ -56,4 +94,12 @@ void RF::Entity::update()
 void RF::Entity::correctPosition(RF::PlaneLocation &correctionVector)
 {
     entityLocation -= correctionVector;
+}
+
+std::vector<std::shared_ptr<RF::Entity>>::const_iterator RF::Entity::begin() const {
+    throw RoadfighterError("a leaf entity is not iterable.");
+}
+
+std::vector<std::shared_ptr<RF::Entity>>::const_iterator RF::Entity::end() const {
+    throw RoadfighterError("a leaf entity is not iterable");
 }

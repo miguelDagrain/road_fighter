@@ -16,6 +16,10 @@
 
 namespace RF {
 
+    //De lijn wordt ergens getrokken zodat het overeenkomt met de achtergrond. Deze verhoudingen zijn niet de grootte
+    //van het scherm maar van de gebruikte afbeelding.
+    double lineEndOfRoad = (156/294.0)*4;
+
     class World : public Entity{
 
     public:
@@ -25,9 +29,27 @@ namespace RF {
 
         void removeObject(std::shared_ptr<Entity > deadObject) final;
 
+
+
         void update() final;
 
+        void checkIfOnRoad(const double& sideline) final;
+
+        void checkIfCollided(std::shared_ptr<Entity > other) final;
+
+        void checkOnCollision() final;
+
         void correctPosition(PlaneLocation& correctionVector) final;
+
+
+        std::vector<std::shared_ptr<Entity > >::const_iterator begin() const final;
+
+        std::vector<std::shared_ptr<Entity > >::const_iterator end() const final;
+
+    private:
+
+        //deze member heeft geen zin voor de composite class
+        bool hasCrashed() const final;
 
         //deze member heeft geen zin voor de composite class
         const location &getLocation() const final;
@@ -40,7 +62,7 @@ namespace RF {
 
         //deze member heeft geen zin voor de composite class
         void setMovement(movementVector &newVelocity) final;
-    private:
+
         std::vector<std::shared_ptr<Entity > > livingObjects;
     };
 

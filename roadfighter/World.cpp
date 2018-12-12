@@ -17,21 +17,46 @@ void RF::World::removeObject(std::shared_ptr<RF::Entity> deadObject)
 
 void RF::World::update()
 {
-    for(auto& object:livingObjects)
+    for(auto &object:livingObjects)
     {
         object->update();
     }
 }
 
+void RF::World::checkIfOnRoad(const double &sideline)
+{
+    for(auto &object:livingObjects){
+        object->checkIfOnRoad(sideline);
+    }
+}
+
+void RF::World::checkIfCollided(std::shared_ptr<RF::Entity> other)
+{
+    for(auto &object:livingObjects){
+
+        object->checkIfCollided(other);
+
+    }
+}
+
+void RF::World::checkOnCollision()
+{
+    for(auto &object:livingObjects){
+        checkIfCollided(object);
+    }
+}
 
 void RF::World::correctPosition(RF::PlaneLocation &correctionVector)
 {
-    for(auto& object:livingObjects)
+    for(auto &object:livingObjects)
     {
         object->correctPosition(correctionVector);
     }
 }
 
+bool RF::World::hasCrashed() const {
+    throw RoadfighterError("The world can't crash.");
+}
 
 const RF::location &RF::World::getLocation() const
 {
@@ -51,4 +76,16 @@ const RF::movementVector &RF::World::getMovement() const
 void RF::World::setMovement(RF::movementVector &newVelocity)
 {
     throw RoadfighterError("You can't set the movement of the world, it has none.");
+}
+
+std::vector<std::shared_ptr<RF::Entity>, std::allocator<std::shared_ptr<RF::Entity>>>::const_iterator
+RF::World::begin() const
+{
+    return livingObjects.begin();
+}
+
+std::vector<std::shared_ptr<RF::Entity>, std::allocator<std::shared_ptr<RF::Entity>>>::const_iterator
+RF::World::end() const
+{
+    return livingObjects.end();
 }
