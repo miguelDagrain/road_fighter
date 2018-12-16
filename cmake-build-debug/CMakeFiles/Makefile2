@@ -65,15 +65,53 @@ CMAKE_SOURCE_DIR = /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/r
 CMAKE_BINARY_DIR = /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug
 
 #=============================================================================
+# Target rules for target CMakeFiles/game.dir
+
+# All Build rule for target.
+CMakeFiles/game.dir/all: roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/all
+CMakeFiles/game.dir/all: roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/all
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/depend
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles --progress-num=19,20 "Built target game"
+.PHONY : CMakeFiles/game.dir/all
+
+# Include target in all.
+all: CMakeFiles/game.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/game.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles 20
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/game.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/game.dir/rule
+
+# Convenience name for target.
+game: CMakeFiles/game.dir/rule
+
+.PHONY : game
+
+# clean rule for target.
+CMakeFiles/game.dir/clean:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/clean
+.PHONY : CMakeFiles/game.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/game.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Directory level rules for directory roadfighter
 
 # Convenience name for "all" pass in the directory.
-roadfighter/all: roadfighter/CMakeFiles/roadfighter.dir/all
+roadfighter/all: roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/all
 
 .PHONY : roadfighter/all
 
 # Convenience name for "clean" pass in the directory.
-roadfighter/clean: roadfighter/CMakeFiles/roadfighter.dir/clean
+roadfighter/clean: roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/clean
 
 .PHONY : roadfighter/clean
 
@@ -83,39 +121,39 @@ roadfighter/preinstall:
 .PHONY : roadfighter/preinstall
 
 #=============================================================================
-# Target rules for target roadfighter/CMakeFiles/roadfighter.dir
+# Target rules for target roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir
 
 # All Build rule for target.
-roadfighter/CMakeFiles/roadfighter.dir/all:
-	$(MAKE) -f roadfighter/CMakeFiles/roadfighter.dir/build.make roadfighter/CMakeFiles/roadfighter.dir/depend
-	$(MAKE) -f roadfighter/CMakeFiles/roadfighter.dir/build.make roadfighter/CMakeFiles/roadfighter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles --progress-num=4,5,6,7,8,9,10,11,12,13,14 "Built target roadfighter"
-.PHONY : roadfighter/CMakeFiles/roadfighter.dir/all
+roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/all:
+	$(MAKE) -f roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/build.make roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/depend
+	$(MAKE) -f roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/build.make roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles --progress-num=8,9,10,11,12,13,14,15,16,17,18 "Built target FILES_GAME_LOGIC"
+.PHONY : roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/all
 
 # Include target in all.
-all: roadfighter/CMakeFiles/roadfighter.dir/all
+all: roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-roadfighter/CMakeFiles/roadfighter.dir/rule: cmake_check_build_system
+roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles 11
-	$(MAKE) -f CMakeFiles/Makefile2 roadfighter/CMakeFiles/roadfighter.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles 0
-.PHONY : roadfighter/CMakeFiles/roadfighter.dir/rule
+.PHONY : roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/rule
 
 # Convenience name for target.
-roadfighter: roadfighter/CMakeFiles/roadfighter.dir/rule
+FILES_GAME_LOGIC: roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/rule
 
-.PHONY : roadfighter
-
-# clean rule for target.
-roadfighter/CMakeFiles/roadfighter.dir/clean:
-	$(MAKE) -f roadfighter/CMakeFiles/roadfighter.dir/build.make roadfighter/CMakeFiles/roadfighter.dir/clean
-.PHONY : roadfighter/CMakeFiles/roadfighter.dir/clean
+.PHONY : FILES_GAME_LOGIC
 
 # clean rule for target.
-clean: roadfighter/CMakeFiles/roadfighter.dir/clean
+roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/clean:
+	$(MAKE) -f roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/build.make roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/clean
+.PHONY : roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/clean
+
+# clean rule for target.
+clean: roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/clean
 
 .PHONY : clean
 
@@ -123,12 +161,12 @@ clean: roadfighter/CMakeFiles/roadfighter.dir/clean
 # Directory level rules for directory roadfighter_GUI
 
 # Convenience name for "all" pass in the directory.
-roadfighter_GUI/all: roadfighter_GUI/CMakeFiles/game.dir/all
+roadfighter_GUI/all: roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/all
 
 .PHONY : roadfighter_GUI/all
 
 # Convenience name for "clean" pass in the directory.
-roadfighter_GUI/clean: roadfighter_GUI/CMakeFiles/game.dir/clean
+roadfighter_GUI/clean: roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/clean
 
 .PHONY : roadfighter_GUI/clean
 
@@ -138,39 +176,39 @@ roadfighter_GUI/preinstall:
 .PHONY : roadfighter_GUI/preinstall
 
 #=============================================================================
-# Target rules for target roadfighter_GUI/CMakeFiles/game.dir
+# Target rules for target roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir
 
 # All Build rule for target.
-roadfighter_GUI/CMakeFiles/game.dir/all: roadfighter/CMakeFiles/roadfighter.dir/all
-	$(MAKE) -f roadfighter_GUI/CMakeFiles/game.dir/build.make roadfighter_GUI/CMakeFiles/game.dir/depend
-	$(MAKE) -f roadfighter_GUI/CMakeFiles/game.dir/build.make roadfighter_GUI/CMakeFiles/game.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target game"
-.PHONY : roadfighter_GUI/CMakeFiles/game.dir/all
+roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/all:
+	$(MAKE) -f roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/build.make roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/depend
+	$(MAKE) -f roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/build.make roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target FILES_GAME_GUI"
+.PHONY : roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/all
 
 # Include target in all.
-all: roadfighter_GUI/CMakeFiles/game.dir/all
+all: roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-roadfighter_GUI/CMakeFiles/game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles 14
-	$(MAKE) -f CMakeFiles/Makefile2 roadfighter_GUI/CMakeFiles/game.dir/all
+roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles 7
+	$(MAKE) -f CMakeFiles/Makefile2 roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles 0
-.PHONY : roadfighter_GUI/CMakeFiles/game.dir/rule
+.PHONY : roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/rule
 
 # Convenience name for target.
-game: roadfighter_GUI/CMakeFiles/game.dir/rule
+FILES_GAME_GUI: roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/rule
 
-.PHONY : game
-
-# clean rule for target.
-roadfighter_GUI/CMakeFiles/game.dir/clean:
-	$(MAKE) -f roadfighter_GUI/CMakeFiles/game.dir/build.make roadfighter_GUI/CMakeFiles/game.dir/clean
-.PHONY : roadfighter_GUI/CMakeFiles/game.dir/clean
+.PHONY : FILES_GAME_GUI
 
 # clean rule for target.
-clean: roadfighter_GUI/CMakeFiles/game.dir/clean
+roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/clean:
+	$(MAKE) -f roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/build.make roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/clean
+.PHONY : roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/clean
+
+# clean rule for target.
+clean: roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/clean
 
 .PHONY : clean
 

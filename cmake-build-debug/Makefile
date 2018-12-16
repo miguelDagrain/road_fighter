@@ -56,16 +56,17 @@ CMAKE_BINARY_DIR = /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/r
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/opt/clion-2018.3.1/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/opt/clion-2018.3.1/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/opt/clion-2018.3.1/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -77,6 +78,51 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/opt/clion-2018.3.1/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/opt/clion-2018.3.1/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/opt/clion-2018.3.1/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/opt/clion-2018.3.1/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/opt/clion-2018.3.1/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,19 +157,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named roadfighter
-
-# Build rule for target.
-roadfighter: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roadfighter
-.PHONY : roadfighter
-
-# fast build rule for target.
-roadfighter/fast:
-	$(MAKE) -f roadfighter/CMakeFiles/roadfighter.dir/build.make roadfighter/CMakeFiles/roadfighter.dir/build
-.PHONY : roadfighter/fast
-
-#=============================================================================
 # Target rules for targets named game
 
 # Build rule for target.
@@ -133,8 +166,61 @@ game: cmake_check_build_system
 
 # fast build rule for target.
 game/fast:
-	$(MAKE) -f roadfighter_GUI/CMakeFiles/game.dir/build.make roadfighter_GUI/CMakeFiles/game.dir/build
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
 .PHONY : game/fast
+
+#=============================================================================
+# Target rules for targets named FILES_GAME_LOGIC
+
+# Build rule for target.
+FILES_GAME_LOGIC: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 FILES_GAME_LOGIC
+.PHONY : FILES_GAME_LOGIC
+
+# fast build rule for target.
+FILES_GAME_LOGIC/fast:
+	$(MAKE) -f roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/build.make roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/build
+.PHONY : FILES_GAME_LOGIC/fast
+
+#=============================================================================
+# Target rules for targets named FILES_GAME_GUI
+
+# Build rule for target.
+FILES_GAME_GUI: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 FILES_GAME_GUI
+.PHONY : FILES_GAME_GUI
+
+# fast build rule for target.
+FILES_GAME_GUI/fast:
+	$(MAKE) -f roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/build.make roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/build
+.PHONY : FILES_GAME_GUI/fast
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -142,10 +228,18 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
+	@echo "... install/strip"
 	@echo "... edit_cache"
-	@echo "... roadfighter"
 	@echo "... game"
+	@echo "... rebuild_cache"
+	@echo "... list_install_components"
+	@echo "... install/local"
+	@echo "... install"
+	@echo "... FILES_GAME_LOGIC"
+	@echo "... FILES_GAME_GUI"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

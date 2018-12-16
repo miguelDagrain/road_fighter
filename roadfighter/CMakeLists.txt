@@ -1,22 +1,18 @@
-#add_library(Roadfighter_include
-#                        Bullet.h Bullet.cpp
-#                        Entity.h Entity.cpp
-#                        Fuelcar.h Fuelcar.cpp
-#                        Passingcar.h Passingcar.cpp
-#                        Player.h Player.cpp
-#                        Racer.h Racer.cpp
-#                        World.h World.cpp)
 
-add_library(roadfighter
-        PlaneLocation.cpp
-        Bullet.cpp
-        Entity.cpp
-        Fuelcar.cpp
-        Passingcar.cpp
-        Player.cpp
-        Racer.cpp
-        World.cpp
-        EntityFactory.cpp
-        RoadfighterError.cpp)
 
-target_include_directories(roadfighter PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+add_library(FILES_GAME_LOGIC STATIC
+        src/PlaneLocation.cpp
+        src/Bullet.cpp
+        src/Entity.cpp
+        src/Fuelcar.cpp
+        src/Passingcar.cpp
+        src/Player.cpp
+        src/Racer.cpp
+        src/World.cpp
+        src/EntityFactory.cpp
+        src/RoadfighterError.cpp)
+
+install(TARGETS FILES_GAME_LOGIC ARCHIVE DESTINATION build/lib/logic)
+
+
+target_include_directories(FILES_GAME_LOGIC PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

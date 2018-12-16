@@ -51,6 +51,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "roadfighter/CMakeFiles/roadfighter.dir/DependInfo.cmake"
-  "roadfighter_GUI/CMakeFiles/game.dir/DependInfo.cmake"
+  "CMakeFiles/game.dir/DependInfo.cmake"
+  "roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/DependInfo.cmake"
+  "roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/DependInfo.cmake"
   )

@@ -17,11 +17,11 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="rebuild_cache">
+			<Target title="install/strip">
 				<Option working_dir="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -37,173 +37,245 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="roadfighter">
-				<Option output="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter/libroadfighter.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter/Makefile&quot;  VERBOSE=1 roadfighter"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="roadfighter/fast">
-				<Option output="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter/libroadfighter.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter/Makefile&quot;  VERBOSE=1 roadfighter/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="game">
-				<Option output="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter_GUI/game" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter_GUI"/>
+				<Option output="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/game" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/local"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter_GUI"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter_GUI/Makefile&quot;  VERBOSE=1 game"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 game"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="game/fast">
+				<Option output="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/game" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter"/>
+					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter_GUI"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 game/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="FILES_GAME_LOGIC">
+				<Option output="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter/libFILES_GAME_LOGIC.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter/Makefile&quot;  VERBOSE=1 FILES_GAME_LOGIC"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="FILES_GAME_LOGIC/fast">
+				<Option output="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter/libFILES_GAME_LOGIC.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter/Makefile&quot;  VERBOSE=1 FILES_GAME_LOGIC/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="FILES_GAME_GUI">
+				<Option output="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter_GUI/libFILES_GAME_GUI.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter_GUI"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter"/>
+					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter_GUI"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter_GUI/Makefile&quot;  VERBOSE=1 FILES_GAME_GUI"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter_GUI/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter_GUI/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter_GUI/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="game/fast">
-				<Option output="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter_GUI/game" prefix_auto="0" extension_auto="0"/>
+			<Target title="FILES_GAME_GUI/fast">
+				<Option output="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter_GUI/libFILES_GAME_GUI.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter_GUI"/>
 				<Option object_output="./"/>
-				<Option type="1"/>
+				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/local"/>
-					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter"/>
+					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter_GUI"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter_GUI/Makefile&quot;  VERBOSE=1 game/fast"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter_GUI/Makefile&quot;  VERBOSE=1 FILES_GAME_GUI/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter_GUI/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter_GUI/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/roadfighter_GUI/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/Bullet.cpp">
-			<Option target="roadfighter"/>
-		</Unit>
-		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/Bullet.h">
-			<Option target="roadfighter"/>
-		</Unit>
-		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/Entity.cpp">
-			<Option target="roadfighter"/>
-		</Unit>
-		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/Entity.h">
-			<Option target="roadfighter"/>
-		</Unit>
-		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/EntityFactory.cpp">
-			<Option target="roadfighter"/>
-		</Unit>
-		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/EntityFactory.h">
-			<Option target="roadfighter"/>
-		</Unit>
-		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/Fuelcar.cpp">
-			<Option target="roadfighter"/>
-		</Unit>
-		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/Fuelcar.h">
-			<Option target="roadfighter"/>
-		</Unit>
-		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/Passingcar.cpp">
-			<Option target="roadfighter"/>
-		</Unit>
-		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/Passingcar.h">
-			<Option target="roadfighter"/>
-		</Unit>
-		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/PlaneLocation.cpp">
-			<Option target="roadfighter"/>
-		</Unit>
-		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/PlaneLocation.h">
-			<Option target="roadfighter"/>
-		</Unit>
-		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/Player.cpp">
-			<Option target="roadfighter"/>
-		</Unit>
-		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/Player.h">
-			<Option target="roadfighter"/>
-		</Unit>
-		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/Racer.cpp">
-			<Option target="roadfighter"/>
-		</Unit>
-		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/Racer.h">
-			<Option target="roadfighter"/>
-		</Unit>
-		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/RoadfighterError.cpp">
-			<Option target="roadfighter"/>
-		</Unit>
-		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/RoadfighterError.h">
-			<Option target="roadfighter"/>
-		</Unit>
-		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/World.cpp">
-			<Option target="roadfighter"/>
-		</Unit>
-		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/World.h">
-			<Option target="roadfighter"/>
-		</Unit>
-		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter_GUI/Transformation.cpp">
+		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/main.cpp">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter_GUI/Transformation.h">
-			<Option target="game"/>
+		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/src/Bullet.cpp">
+			<Option target="FILES_GAME_LOGIC"/>
 		</Unit>
-		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter_GUI/main.cpp">
-			<Option target="game"/>
+		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/src/Entity.cpp">
+			<Option target="FILES_GAME_LOGIC"/>
+		</Unit>
+		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/src/EntityFactory.cpp">
+			<Option target="FILES_GAME_LOGIC"/>
+		</Unit>
+		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/src/Fuelcar.cpp">
+			<Option target="FILES_GAME_LOGIC"/>
+		</Unit>
+		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/src/Passingcar.cpp">
+			<Option target="FILES_GAME_LOGIC"/>
+		</Unit>
+		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/src/PlaneLocation.cpp">
+			<Option target="FILES_GAME_LOGIC"/>
+		</Unit>
+		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/src/Player.cpp">
+			<Option target="FILES_GAME_LOGIC"/>
+		</Unit>
+		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/src/Racer.cpp">
+			<Option target="FILES_GAME_LOGIC"/>
+		</Unit>
+		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/src/RoadfighterError.cpp">
+			<Option target="FILES_GAME_LOGIC"/>
+		</Unit>
+		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/src/World.cpp">
+			<Option target="FILES_GAME_LOGIC"/>
+		</Unit>
+		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter_GUI/src/BulletSFML.cpp">
+			<Option target="FILES_GAME_GUI"/>
+		</Unit>
+		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter_GUI/src/FuelcarSFML.cpp">
+			<Option target="FILES_GAME_GUI"/>
+		</Unit>
+		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter_GUI/src/PassingcarSFML.cpp">
+			<Option target="FILES_GAME_GUI"/>
+		</Unit>
+		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter_GUI/src/PlayerSFML.cpp">
+			<Option target="FILES_GAME_GUI"/>
+		</Unit>
+		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter_GUI/src/RacerSFML.cpp">
+			<Option target="FILES_GAME_GUI"/>
+		</Unit>
+		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter_GUI/src/Transformation.cpp">
+			<Option target="FILES_GAME_GUI"/>
 		</Unit>
 		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
