@@ -12,6 +12,8 @@ namespace RF_GUI {
 
     class RacerSFML : public RF::Racer {
 
+        RacerSFML(std::shared_ptr<RF::Racer> basis);
+
         void draw() final;
 
     };

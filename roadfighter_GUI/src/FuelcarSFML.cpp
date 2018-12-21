@@ -1,7 +1,16 @@
 
+#include <include/FuelcarSFML.h>
+
 #include "roadfighter_GUI/include/FuelcarSFML.h"
 
-void RF_GUI::FuelcarSFML::draw() {
+RF_GUI::FuelcarSFML::FuelcarSFML(std::shared_ptr<RF::Fuelcar> basis):
+RF::Fuelcar(const_cast<RF::location&>(basis->getLocation()), const_cast<RF::size&>(basis->getSize()), const_cast<RF::movementVector&>(basis->getMovement()))
+{
+
+}
+
+void RF_GUI::FuelcarSFML::draw()
+{
     sf::Sprite sprite;
     sf::Texture texture;
 

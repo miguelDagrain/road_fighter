@@ -12,6 +12,8 @@ namespace RF_GUI {
 
     class FuelcarSFML : public RF::Fuelcar {
 
+        FuelcarSFML(std::shared_ptr<RF::Fuelcar > basis);
+
         void draw() final;
 
     };

@@ -13,6 +13,8 @@ namespace RF_GUI {
 
     class BulletSFML : public RF::Bullet{
 
+        BulletSFML(std::shared_ptr<RF::Bullet> basis);
+
         void draw() final;
     };
 

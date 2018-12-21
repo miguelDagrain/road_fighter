@@ -12,6 +12,8 @@ namespace RF_GUI {
 
     class PlayerSFML : public RF::Player {
 
+        PlayerSFML(std::shared_ptr<RF::Player > basis);
+
         void draw() final;
 
     };

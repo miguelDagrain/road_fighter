@@ -10,7 +10,9 @@
 
 namespace RF_GUI {
 
-    class Passingcar : public RF::Passingcar {
+    class PassingcarSFML : public RF::Passingcar {
+
+        PassingcarSFML(std::shared_ptr<RF::Passingcar > basis);
 
         void draw() final;
 
