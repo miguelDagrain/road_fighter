@@ -5,7 +5,7 @@
 #ifndef ROAD_FIGHTER_BULLETSFML_H
 #define ROAD_FIGHTER_BULLETSFML_H
 
-#include "Transformation.h"
+#include "roadfighter_GUI/include/Transformation.h"
 #include "roadfighter/include/Bullet.h"
 
 

@@ -4,6 +4,6 @@
 
 #include "roadfighter/include/Bullet.h"
 
-RF::Bullet::Bullet(RF::location &entityLocation, RF::size &entitySize) : Entity(entityLocation, entitySize) {
+RF::Bullet::Bullet(RF::location &entityLocation, RF::size &entitySize, RF::movementVector &movement) : Entity(entityLocation, entitySize, movement) {
 
 }

@@ -5,6 +5,7 @@
 #ifndef ROAD_FIGHTER_PASSINGCARSFML_H
 #define ROAD_FIGHTER_PASSINGCARSFML_H
 
+#include "roadfighter_GUI/include/Transformation.h"
 #include "roadfighter/include/Passingcar.h"
 
 namespace RF_GUI {

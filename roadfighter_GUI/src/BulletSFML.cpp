@@ -7,6 +7,9 @@ void RF_GUI::BulletSFML::draw() {
 
     texture.loadFromFile("../sprites/bullet.png");
 
-
     sprite.setTexture(texture);
+
+    sprite.setPosition(static_cast<float >(getLocation().first), static_cast<float >(getLocation().second));
+
+    window.draw(sprite);
 }

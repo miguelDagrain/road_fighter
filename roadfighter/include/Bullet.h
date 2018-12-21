@@ -12,8 +12,7 @@ namespace RF {
     public:
         Bullet() = default;
 
-        Bullet(location& entityLocation, size& entitySize);
-
+        Bullet(location &entityLocation, size &entitySize, movementVector &movement);
 
     };
 

@@ -12,7 +12,9 @@ namespace RF {
     public:
         Fuelcar() = default;
 
-        Fuelcar(location& entityLocation, size& entitySize);
+        Fuelcar(location &entityLocation, size &entitySize);
+
+        Fuelcar(location &entityLocation, size &entitySize, movementVector &movement);
     };
 
 }

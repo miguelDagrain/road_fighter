@@ -95,3 +95,7 @@ void RF::Entity::correctPosition(RF::PlaneLocation &correctionVector)
 {
     entityLocation -= correctionVector;
 }
+
+void RF::Entity::draw()
+{
+}

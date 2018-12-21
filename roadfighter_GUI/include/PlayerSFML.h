@@ -5,6 +5,7 @@
 #ifndef ROAD_FIGHTER_PLAYERSFML_H
 #define ROAD_FIGHTER_PLAYERSFML_H
 
+#include "roadfighter_GUI/include/Transformation.h"
 #include "roadfighter/include/Player.h"
 
 namespace RF_GUI {

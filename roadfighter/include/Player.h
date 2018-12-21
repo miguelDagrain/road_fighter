@@ -14,7 +14,9 @@ namespace RF {
     public:
         Player() = default;
 
-        Player(location& entityLocation, size& entitySize);
+        Player(location &entityLocation, size &entitySize);
+
+        Player(location &entityLocation, size &entitySize, movementVector &movement);
 
         void attackAction(std::shared_ptr<Entity > world) final;
     };

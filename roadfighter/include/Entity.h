@@ -50,10 +50,10 @@ namespace RF {
 
         virtual void update();
 
-        virtual void draw() = 0;
-
         //functie om de wereld rond het centrum te houden, de 'wereld' beweegt dus in de richting van de correctionVector.
         virtual void correctPosition(PlaneLocation& correctionVector);
+
+        virtual void draw();
 
     private:
         location entityLocation;

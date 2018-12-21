@@ -12,8 +12,9 @@ namespace RF {
     public:
         Passingcar() = default;
 
-        Passingcar(location& entityLocation, size& entitySize);
+        Passingcar(location &entityLocation, size &entitySize);
 
+        Passingcar(location &entityLocation, size &entitySize, movementVector &movement);
     };
 
 }

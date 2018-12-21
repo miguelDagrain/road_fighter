@@ -12,8 +12,9 @@ namespace RF {
     public:
         Racer() = default;
 
-        Racer(location& entityLocation, size& entitySize);
+        Racer(location &entityLocation, size &entitySize);
 
+        Racer(location &entityLocation, size &entitySize, movementVector &movement);
     };
 
 }
