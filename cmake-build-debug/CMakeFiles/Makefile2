@@ -65,44 +65,6 @@ CMAKE_SOURCE_DIR = /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/r
 CMAKE_BINARY_DIR = /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/game.dir
-
-# All Build rule for target.
-CMakeFiles/game.dir/all: roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/all
-CMakeFiles/game.dir/all: roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/all
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/depend
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles --progress-num=19,20 "Built target game"
-.PHONY : CMakeFiles/game.dir/all
-
-# Include target in all.
-all: CMakeFiles/game.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles 20
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/game.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/game.dir/rule
-
-# Convenience name for target.
-game: CMakeFiles/game.dir/rule
-
-.PHONY : game
-
-# clean rule for target.
-CMakeFiles/game.dir/clean:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/clean
-.PHONY : CMakeFiles/game.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/game.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Directory level rules for directory roadfighter
 
 # Convenience name for "all" pass in the directory.
@@ -209,6 +171,61 @@ roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/clean:
 
 # clean rule for target.
 clean: roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory app
+
+# Convenience name for "all" pass in the directory.
+app/all: app/CMakeFiles/game.dir/all
+
+.PHONY : app/all
+
+# Convenience name for "clean" pass in the directory.
+app/clean: app/CMakeFiles/game.dir/clean
+
+.PHONY : app/clean
+
+# Convenience name for "preinstall" pass in the directory.
+app/preinstall:
+
+.PHONY : app/preinstall
+
+#=============================================================================
+# Target rules for target app/CMakeFiles/game.dir
+
+# All Build rule for target.
+app/CMakeFiles/game.dir/all:
+	$(MAKE) -f app/CMakeFiles/game.dir/build.make app/CMakeFiles/game.dir/depend
+	$(MAKE) -f app/CMakeFiles/game.dir/build.make app/CMakeFiles/game.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles --progress-num=19,20 "Built target game"
+.PHONY : app/CMakeFiles/game.dir/all
+
+# Include target in all.
+all: app/CMakeFiles/game.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+app/CMakeFiles/game.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 app/CMakeFiles/game.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles 0
+.PHONY : app/CMakeFiles/game.dir/rule
+
+# Convenience name for target.
+game: app/CMakeFiles/game.dir/rule
+
+.PHONY : game
+
+# clean rule for target.
+app/CMakeFiles/game.dir/clean:
+	$(MAKE) -f app/CMakeFiles/game.dir/build.make app/CMakeFiles/game.dir/clean
+.PHONY : app/CMakeFiles/game.dir/clean
+
+# clean rule for target.
+clean: app/CMakeFiles/game.dir/clean
 
 .PHONY : clean
 

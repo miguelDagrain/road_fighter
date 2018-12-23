@@ -1,6 +1,8 @@
 
 
 #include <stdexcept>
+#include <include/Transformation.h>
+
 
 #include "roadfighter_GUI/include/Transformation.h"
 
@@ -20,4 +22,10 @@ exactLocation RF_GUI::Transformation::operator()(const RF::location &loc, const 
     transformed.second = (yValue/6.0)*y;
 
     return transformed;
+}
+
+std::unique_ptr<RF_GUI::Transformation> RF_GUI::Transformation::getInstance() {
+    Transformation* newTransform = new Transformation();
+
+    return std::make_unique<Transformation >(newTransform);
 }

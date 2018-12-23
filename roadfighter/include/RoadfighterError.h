@@ -16,6 +16,8 @@ namespace RF {
     public:
         explicit RoadfighterError(const char* error_msg);
 
+        ~RoadfighterError() override = default;
+
         const char* what() const noexcept final;
 
     private:

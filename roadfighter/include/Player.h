@@ -12,7 +12,9 @@ namespace RF {
     class Player: public Entity {
 
     public:
-        Player() = default;
+        Player();
+
+        ~Player() override;
 
         Player(location &entityLocation, size &entitySize);
 

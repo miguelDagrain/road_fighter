@@ -25,6 +25,8 @@ namespace RF {
         public:
             BulletFactory() = default;
 
+            ~BulletFactory() override = default;
+
             //ik weet dat dit niet de template createEntity van baseFactory niet overschrijft
             std::shared_ptr<Bullet > createEntity();
 
@@ -36,6 +38,8 @@ namespace RF {
         public:
             FuelcarFactory() = default;
 
+            ~FuelcarFactory() override = default;
+
             std::shared_ptr<Fuelcar > createEntity();
 
             std::shared_ptr<Fuelcar > createEntity(location &entityLocation, movementVector &movement);
@@ -46,6 +50,8 @@ namespace RF {
         public:
             PassingcarFactory() = default;
 
+            ~PassingcarFactory() override = default;
+
             std::shared_ptr<Passingcar > createEntity();
 
             std::shared_ptr<Passingcar > createEntity(location &entityLocation, movementVector &movement);
@@ -54,6 +60,8 @@ namespace RF {
         class PlayerFactory : public BaseFactory<Player> {
         public:
             PlayerFactory() = default;
+
+            ~PlayerFactory() override = default;
 
             std::shared_ptr<Player > createEntity();
 
@@ -64,6 +72,8 @@ namespace RF {
         {
         public:
             RacerFactory() = default;
+
+            ~RacerFactory() override = default;
 
             std::shared_ptr<Racer > createEntity();
 
@@ -76,6 +86,7 @@ namespace RF {
         public:
             WorldFactory() = default;
 
+            ~WorldFactory() override = default;
 
             std::shared_ptr<World > createEntity();
         };

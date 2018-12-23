@@ -24,7 +24,9 @@ namespace RF {
     class World : public Entity{
 
     public:
-        World() = default;
+        World();
+
+        ~World() override;
 
         void addObject(std::shared_ptr<Entity > newbornObject) final;
 
@@ -61,6 +63,8 @@ namespace RF {
 
         //deze member heeft geen zin voor de composite class
         void setMovement(movementVector &newVelocity) final;
+
+        void attackAction(std::shared_ptr<Entity > world) final;
 
         std::vector<std::shared_ptr<Entity > > livingObjects;
     };

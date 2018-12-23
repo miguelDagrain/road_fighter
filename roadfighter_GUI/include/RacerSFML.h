@@ -14,6 +14,8 @@ namespace RF_GUI {
 
         RacerSFML(std::shared_ptr<RF::Racer> basis);
 
+        ~RacerSFML() override = default;
+
         void draw() final;
 
     };

@@ -10,7 +10,9 @@ namespace RF {
     class Bullet: public Entity {
 
     public:
-        Bullet() = default;
+        Bullet();
+
+        ~Bullet() override;
 
         Bullet(location &entityLocation, size &entitySize, movementVector &movement);
 

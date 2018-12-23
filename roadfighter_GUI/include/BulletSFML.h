@@ -15,6 +15,8 @@ namespace RF_GUI {
 
         BulletSFML(std::shared_ptr<RF::Bullet> basis);
 
+        ~BulletSFML() override = default;
+
         void draw() final;
     };
 

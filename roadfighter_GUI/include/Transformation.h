@@ -3,6 +3,8 @@
 #ifndef ROAD_FIGHTER_TRANSFORMATION_H
 #define ROAD_FIGHTER_TRANSFORMATION_H
 
+#include <memory>
+
 #include <SFML/Graphics.hpp>
 
 #include "roadfighter/include/Entity.h"
@@ -18,9 +20,11 @@ namespace RF_GUI {
     class Transformation {
     public:
 
-        static Transformation &getInstance();
-
         Transformation(Transformation const &) = delete;
+
+        ~Transformation() = default;
+
+        static std::unique_ptr<Transformation > getInstance();
 
         void operator=(Transformation const &) = delete;
 

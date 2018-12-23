@@ -1,6 +1,9 @@
 
 #include "roadfighter/include/Entity.h"
 
+
+RF::Entity::Entity() = default;
+
 RF::Entity::Entity(location & entityLocation, size & entitySize) : entityLocation(entityLocation), entitySize(entitySize)
 {
     movementVector stationary(0, 0);
@@ -13,6 +16,8 @@ entitySize(entitySize),
 movement(movement)
 {
 }
+
+RF::Entity::~Entity() = default;
 
 void RF::Entity::addObject(std::shared_ptr<RF::Entity> newbornObject)
 {

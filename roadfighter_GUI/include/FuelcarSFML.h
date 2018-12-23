@@ -14,6 +14,8 @@ namespace RF_GUI {
 
         FuelcarSFML(std::shared_ptr<RF::Fuelcar > basis);
 
+        ~FuelcarSFML() override = default;
+
         void draw() final;
 
     };

@@ -1,8 +1,9 @@
-//
-// Created by miguel on 02.12.18.
-//
 
 #include "roadfighter/include/World.h"
+
+RF::World::World() = default;
+
+RF::World::~World() = default;
 
 void RF::World::addObject(std::shared_ptr<RF::Entity> newbornObject)
 {
@@ -84,4 +85,10 @@ void RF::World::setMovement(RF::movementVector &newVelocity)
 {
     throw RoadfighterError("You can't set the movement of the world, it has none.");
 }
+
+void RF::World::attackAction(std::shared_ptr<RF::Entity> world)
+{
+    throw RoadfighterError("You can't make the world attack, not all objects can attack.");
+}
+
 

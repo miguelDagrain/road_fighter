@@ -1,8 +1,10 @@
 
-
-#include <include/Fuelcar.h>
-
 #include "roadfighter/include/Fuelcar.h"
+
+
+RF::Fuelcar::Fuelcar() = default;
+
+RF::Fuelcar::~Fuelcar() = default;
 
 RF::Fuelcar::Fuelcar(RF::location &entityLocation, RF::size &entitySize) : Entity(entityLocation, entitySize)
 {
@@ -14,3 +16,4 @@ Entity(entityLocation, entitySize, movement)
 {
 
 }
+

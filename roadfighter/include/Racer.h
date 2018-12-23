@@ -10,7 +10,9 @@ namespace RF {
     class Racer : public Entity {
 
     public:
-        Racer() = default;
+        Racer();
+
+        ~Racer() override;
 
         Racer(location &entityLocation, size &entitySize);
 

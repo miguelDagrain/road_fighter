@@ -14,20 +14,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a6eb8fa-9912-480e-9da5-cd36d440e19d" name="Default" comment="constructor met parent klasses, nodig om gescheidenheid te bewaren.">
+      <change afterPath="$PROJECT_DIR$/app/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/road_fighter.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/road_fighter.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roadfighter/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roadfighter/include/Bullet.h" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/include/Bullet.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roadfighter/include/Entity.h" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/include/Entity.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roadfighter/include/EntityFactory.h" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/include/EntityFactory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roadfighter/include/Fuelcar.h" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/include/Fuelcar.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roadfighter/include/Passingcar.h" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/include/Passingcar.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roadfighter/include/PlaneLocation.h" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/include/PlaneLocation.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roadfighter/include/Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/include/Player.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roadfighter/include/Racer.h" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/include/Racer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roadfighter/include/RoadfighterError.h" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/include/RoadfighterError.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roadfighter/include/World.h" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/include/World.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roadfighter/src/Bullet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/src/Bullet.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roadfighter/src/Entity.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/src/Entity.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roadfighter/src/EntityFactory.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/src/EntityFactory.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roadfighter/src/Fuelcar.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/src/Fuelcar.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roadfighter/src/Passingcar.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/src/Passingcar.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roadfighter/src/PlaneLocation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/src/PlaneLocation.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roadfighter/src/Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/src/Player.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roadfighter/src/Racer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/src/Racer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roadfighter/src/World.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/src/World.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roadfighter_GUI/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter_GUI/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/roadfighter_GUI/include/BulletSFML.h" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter_GUI/include/BulletSFML.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/roadfighter_GUI/include/FuelcarSFML.h" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter_GUI/include/FuelcarSFML.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/roadfighter_GUI/include/PassingcarSFML.h" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter_GUI/include/PassingcarSFML.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/roadfighter_GUI/include/PlayerSFML.h" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter_GUI/include/PlayerSFML.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/roadfighter_GUI/include/RacerSFML.h" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter_GUI/include/RacerSFML.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roadfighter_GUI/include/Transformation.h" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter_GUI/include/Transformation.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/roadfighter_GUI/src/BulletSFML.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter_GUI/src/BulletSFML.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter_GUI/src/FuelcarSFML.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter_GUI/src/FuelcarSFML.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter_GUI/src/PassingcarSFML.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter_GUI/src/PassingcarSFML.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter_GUI/src/PlayerSFML.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter_GUI/src/PlayerSFML.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter_GUI/src/RacerSFML.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter_GUI/src/RacerSFML.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roadfighter_GUI/src/Transformation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter_GUI/src/Transformation.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/roadfighter_GUI/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/roadfighter/CMakeFiles/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,28 +72,84 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/roadfighter/include/Entity.h">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+            <state relative-caret-position="72">
+              <caret line="3" column="50" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
               <folding>
-                <element signature="e#61#78#0" expanded="true" />
+                <marker date="1545595446666" expanded="true" signature="396:426" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/roadfighter/src/Entity.cpp">
+        <entry file="file://$PROJECT_DIR$/app/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+            <state relative-caret-position="277">
+              <caret line="56" column="15" lean-forward="true" selection-start-line="56" selection-start-column="15" selection-end-line="56" selection-end-column="15" />
+              <folding>
+                <element signature="e#1#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/roadfighter/include/World.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="188">
+              <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+              <folding>
+                <element signature="e#61#81#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/roadfighter/src/World.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/roadfighter_GUI/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="277">
+              <caret line="17" column="20" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/roadfighter/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="744">
+              <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>=</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="MERGE" />
@@ -70,9 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/roadfighter/Entity.h" />
-        <option value="$PROJECT_DIR$/roadfighter/World.h" />
-        <option value="$PROJECT_DIR$/roadfighter/World.cpp" />
         <option value="$PROJECT_DIR$/roadfighter_GUI/FuelcarSFML.h" />
         <option value="$PROJECT_DIR$/roadfighter_GUI/PassingcarSFML.h" />
         <option value="$PROJECT_DIR$/roadfighter_GUI/PlayerSFML.h" />
@@ -86,48 +171,51 @@
         <option value="$PROJECT_DIR$/roadfighter_GUI/Transformation.h" />
         <option value="$PROJECT_DIR$/roadfighter/EntityFactory.cpp" />
         <option value="$PROJECT_DIR$/roadfighter_GUI/BulletSFML.cpp" />
-        <option value="$PROJECT_DIR$/roadfighter/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/roadfighter_GUI/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/roadfighter/src/PlaneLocation.cpp" />
         <option value="$PROJECT_DIR$/roadfighter/src/RoadfighterError.cpp" />
+        <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/roadfighter_GUI/src/PassingcarSFML.cpp" />
+        <option value="$PROJECT_DIR$/roadfighter_GUI/src/FuelcarSFML.cpp" />
+        <option value="$PROJECT_DIR$/roadfighter_GUI/src/PlayerSFML.cpp" />
+        <option value="$PROJECT_DIR$/roadfighter_GUI/src/RacerSFML.cpp" />
+        <option value="$PROJECT_DIR$/roadfighter_GUI/src/BulletSFML.cpp" />
+        <option value="$PROJECT_DIR$/roadfighter/include/EntityFactory.h" />
+        <option value="$PROJECT_DIR$/roadfighter/include/RoadfighterError.h" />
+        <option value="$PROJECT_DIR$/roadfighter_GUI/include/BulletSFML.h" />
+        <option value="$PROJECT_DIR$/roadfighter_GUI/include/FuelcarSFML.h" />
+        <option value="$PROJECT_DIR$/roadfighter_GUI/include/PassingcarSFML.h" />
+        <option value="$PROJECT_DIR$/roadfighter_GUI/include/PlayerSFML.h" />
+        <option value="$PROJECT_DIR$/roadfighter_GUI/include/RacerSFML.h" />
         <option value="$PROJECT_DIR$/roadfighter_GUI/include/Transformation.h" />
         <option value="$PROJECT_DIR$/roadfighter_GUI/src/Transformation.cpp" />
-        <option value="$PROJECT_DIR$/readme.md" />
-        <option value="$PROJECT_DIR$/roadfighter/src/World.cpp" />
+        <option value="$PROJECT_DIR$/roadfighter/src/EntityFactory.cpp" />
+        <option value="$PROJECT_DIR$/roadfighter/include/Entity.h" />
         <option value="$PROJECT_DIR$/roadfighter/include/World.h" />
+        <option value="$PROJECT_DIR$/roadfighter/include/Bullet.h" />
+        <option value="$PROJECT_DIR$/roadfighter/src/Bullet.cpp" />
+        <option value="$PROJECT_DIR$/roadfighter/src/Entity.cpp" />
         <option value="$PROJECT_DIR$/roadfighter/include/Fuelcar.h" />
         <option value="$PROJECT_DIR$/roadfighter/src/Fuelcar.cpp" />
         <option value="$PROJECT_DIR$/roadfighter/include/Passingcar.h" />
         <option value="$PROJECT_DIR$/roadfighter/src/Passingcar.cpp" />
+        <option value="$PROJECT_DIR$/roadfighter/include/PlaneLocation.h" />
+        <option value="$PROJECT_DIR$/roadfighter/src/PlaneLocation.cpp" />
         <option value="$PROJECT_DIR$/roadfighter/include/Player.h" />
         <option value="$PROJECT_DIR$/roadfighter/src/Player.cpp" />
         <option value="$PROJECT_DIR$/roadfighter/include/Racer.h" />
         <option value="$PROJECT_DIR$/roadfighter/src/Racer.cpp" />
-        <option value="$PROJECT_DIR$/roadfighter/include/Entity.h" />
-        <option value="$PROJECT_DIR$/roadfighter/src/Entity.cpp" />
-        <option value="$PROJECT_DIR$/roadfighter/include/EntityFactory.h" />
-        <option value="$PROJECT_DIR$/roadfighter/src/EntityFactory.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
-        <option value="$PROJECT_DIR$/roadfighter_GUI/include/BulletSFML.h" />
-        <option value="$PROJECT_DIR$/roadfighter/src/Bullet.cpp" />
-        <option value="$PROJECT_DIR$/roadfighter/include/Bullet.h" />
-        <option value="$PROJECT_DIR$/roadfighter_GUI/src/BulletSFML.cpp" />
-        <option value="$PROJECT_DIR$/roadfighter_GUI/include/PassingcarSFML.h" />
-        <option value="$PROJECT_DIR$/roadfighter_GUI/src/PassingcarSFML.cpp" />
-        <option value="$PROJECT_DIR$/roadfighter_GUI/include/FuelcarSFML.h" />
-        <option value="$PROJECT_DIR$/roadfighter_GUI/src/FuelcarSFML.cpp" />
-        <option value="$PROJECT_DIR$/roadfighter_GUI/include/PlayerSFML.h" />
-        <option value="$PROJECT_DIR$/roadfighter_GUI/src/PlayerSFML.cpp" />
-        <option value="$PROJECT_DIR$/roadfighter_GUI/include/RacerSFML.h" />
-        <option value="$PROJECT_DIR$/roadfighter_GUI/src/RacerSFML.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/roadfighter/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/app/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/roadfighter_GUI/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/roadfighter/src/World.cpp" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="30" />
-    <option name="width" value="1920" />
+    <option name="width" value="960" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -163,11 +251,28 @@
             <path>
               <item name="road_fighter" type="b2602c69:ProjectViewProjectNode" />
               <item name="road_fighter" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="road_fighter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="road_fighter" type="462c0819:PsiDirectoryNode" />
               <item name="build" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="road_fighter" type="b2602c69:ProjectViewProjectNode" />
               <item name="road_fighter" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="road_fighter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="road_fighter" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="road_fighter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="road_fighter" type="462c0819:PsiDirectoryNode" />
               <item name="roadfighter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -179,25 +284,7 @@
             <path>
               <item name="road_fighter" type="b2602c69:ProjectViewProjectNode" />
               <item name="road_fighter" type="462c0819:PsiDirectoryNode" />
-              <item name="roadfighter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="road_fighter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="road_fighter" type="462c0819:PsiDirectoryNode" />
               <item name="roadfighter_GUI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="road_fighter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="road_fighter" type="462c0819:PsiDirectoryNode" />
-              <item name="roadfighter_GUI" type="462c0819:PsiDirectoryNode" />
-              <item name="include" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="road_fighter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="road_fighter" type="462c0819:PsiDirectoryNode" />
-              <item name="roadfighter_GUI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -213,11 +300,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/roadfighter_GUI" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/build" />
       <recent name="$PROJECT_DIR$/build/lib" />
-      <recent name="$PROJECT_DIR$/roadfighter_GUI/src" />
-      <recent name="$PROJECT_DIR$/roadfighter_GUI/include" />
-      <recent name="$PROJECT_DIR$/roadfighter/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -233,7 +320,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Build All">
-    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="road_fighter" TARGET_NAME="game" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="road_fighter" RUN_TARGET_NAME="game">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="./sprites/background1.png" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="road_fighter" TARGET_NAME="game" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="road_fighter" RUN_TARGET_NAME="game">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -248,13 +335,7 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="game" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="road_fighter" TARGET_NAME="game" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="road_fighter" RUN_TARGET_NAME="game">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.game" />
       <item itemvalue="Application.FILES_GAME_LOGIC" />
       <item itemvalue="Application.FILES_GAME_GUI" />
       <item itemvalue="Application.Build All" />
@@ -301,7 +382,13 @@
       <workItem from="1545126347846" duration="598000" />
       <workItem from="1545141064882" duration="4549000" />
       <workItem from="1545317773581" duration="4251000" />
-      <workItem from="1545396066447" duration="12444000" />
+      <workItem from="1545396066447" duration="17405000" />
+      <workItem from="1545414633392" duration="342000" />
+      <workItem from="1545415854108" duration="1194000" />
+      <workItem from="1545487314484" duration="17103000" />
+      <workItem from="1545553785731" duration="1535000" />
+      <workItem from="1545555829099" duration="8710000" />
+      <workItem from="1545585314012" duration="8839000" />
     </task>
     <task id="LOCAL-00001" summary="basic structure continuation">
       <created>1544631418348</created>
@@ -345,31 +432,39 @@
       <option name="project" value="LOCAL" />
       <updated>1545406187923</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="constructor met parent klasses, nodig om gescheidenheid te bewaren.">
+      <created>1545408842837</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1545408842837</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106124000" />
+    <option name="totallyTimeSpent" value="148808000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1920" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4935065" visible="true" weight="0.1696905" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4935065" visible="true" weight="0.18089648" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5064935" side_tool="true" weight="0.12966916" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32899022" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3995657" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3297062" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32899022" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32790446" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="CMake" order="10" weight="0.32899022" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32899022" />
+      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.32899022" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -377,22 +472,22 @@
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4935065" visible="true" weight="0.16115262" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4935065" visible="true" weight="0.18089648" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5064935" side_tool="true" weight="0.12966916" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32899022" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3995657" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3297062" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32899022" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32790446" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="CMake" order="10" weight="0.32899022" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32899022" />
+      <window_info anchor="bottom" id="Messages" order="12" visible="true" weight="0.32899022" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -414,75 +509,8 @@
     <option name="LAST_COMMIT_MESSAGE" value="constructor met parent klasses, nodig om gescheidenheid te bewaren." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sprites/flag_cyanpng.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sprites/explosion3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/road_fighter.cbp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10201" />
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/include/SFML/Graphics/RenderWindow.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="820">
-          <caret line="101" column="18" selection-start-line="101" selection-start-column="18" selection-end-line="101" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/cmake_install.cmake" />
-    <entry file="file://$PROJECT_DIR$/roadfighter_GUI/cmake_install.cmake" />
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/roadfighter/cmake_install.cmake">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/roadfighter_GUI/cmake_install.cmake">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter_GUI/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="20" column="65" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter/src/PlaneLocation.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter/src/RoadfighterError.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter_GUI/include/Transformation.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sprites/fuel_car.png">
       <provider selected="true" editor-type-id="images" />
@@ -497,7 +525,6 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="72">
@@ -508,177 +535,7 @@
           </second_editor>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter/src/World.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="57" column="21" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter_GUI/src/Transformation.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-          <folding>
-            <element signature="e#2#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter/include/Player.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter/src/Player.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter/include/RoadfighterError.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#123#143#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter/include/Fuelcar.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter/src/Fuelcar.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="44" lean-forward="true" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
-          <folding>
-            <element signature="e#2#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter/include/PlaneLocation.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter/src/EntityFactory.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#1#35#0" expanded="true" />
-            <element signature="e#58#76#0" expanded="true" />
-            <element signature="e#125#144#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter/include/EntityFactory.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-380">
-          <caret line="38" column="38" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
-          <folding>
-            <element signature="e#76#93#0" expanded="true" />
-            <element signature="e#191#209#0" expanded="true" />
-            <element signature="e#360#379#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter/include/World.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
-          <folding>
-            <element signature="e#61#81#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter/include/Racer.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter/src/Racer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-          <folding>
-            <element signature="e#41#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter/src/Entity.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter/include/Bullet.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter/src/Bullet.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter_GUI/include/BulletSFML.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-          <folding>
-            <element signature="e#110#161#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter/src/Passingcar.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="e#2#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter/include/Passingcar.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/roadfighter_GUI/src/PassingcarSFML.cpp">
       <provider selected="true" editor-type-id="text-editor">
@@ -690,52 +547,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter_GUI/include/PassingcarSFML.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="61" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
-          <folding>
-            <element signature="e#118#169#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter_GUI/src/BulletSFML.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding>
-            <element signature="e#1#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/roadfighter_GUI/src/FuelcarSFML.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="5" column="68" lean-forward="true" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="68" />
           <folding>
             <element signature="e#1#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter_GUI/include/FuelcarSFML.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-          <folding>
-            <element signature="e#112#163#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter_GUI/include/PlayerSFML.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding>
-            <element signature="e#110#161#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -760,23 +577,313 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter_GUI/src/BulletSFML.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding>
+            <element signature="e#1#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/8/ext/new_allocator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="135" column="6" selection-start-line="135" selection-start-column="6" selection-end-line="135" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/SFML/Graphics/Sprite.hpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///usr/local/include/SFML/Graphics.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sprites/background1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile" />
+    <entry file="file://$PROJECT_DIR$/CMakeFiles/game.dir/build.make" />
+    <entry file="file:///usr/include/c++/8/bits/exception.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="63" column="13" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter_GUI/src/Transformation.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="29" column="57" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
+          <folding>
+            <element signature="e#2#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter_GUI/include/Transformation.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
+          <folding>
+            <element signature="e#79#96#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/roadfighter_GUI/include/RacerSFML.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+        <state relative-caret-position="384">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
           <folding>
             <element signature="e#108#159#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter_GUI/include/PlayerSFML.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+          <folding>
+            <element signature="e#110#161#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter_GUI/include/PassingcarSFML.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+          <folding>
+            <element signature="e#118#169#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter_GUI/include/FuelcarSFML.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+          <folding>
+            <element signature="e#112#163#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter_GUI/include/BulletSFML.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+          <folding>
+            <element signature="e#110#161#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter/src/RoadfighterError.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter/src/EntityFactory.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter/src/Bullet.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter/include/Bullet.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter/include/EntityFactory.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2112">
+          <caret line="88" column="22" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="22" />
+          <folding>
+            <element signature="e#76#93#0" expanded="true" />
+            <element signature="e#191#209#0" expanded="true" />
+            <element signature="e#360#379#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter/include/Fuelcar.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter/src/Fuelcar.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter/include/Passingcar.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="15" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter/src/Passingcar.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter/src/PlaneLocation.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter/include/Racer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter/src/Racer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter/src/Entity.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1683">
+          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/roadfighter/include/Entity.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+        <state relative-caret-position="480">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="e#61#78#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter/src/Player.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding>
+            <element signature="e#1#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter/include/Player.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter/include/PlaneLocation.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter/include/RoadfighterError.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#123#143#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/CMakeFiles/Makefile2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter_GUI/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="50" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+          <folding>
+            <marker date="1545595446666" expanded="true" signature="396:426" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="56" column="15" lean-forward="true" selection-start-line="56" selection-start-column="15" selection-end-line="56" selection-end-column="15" />
+          <folding>
+            <element signature="e#1#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter/include/World.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+          <folding>
+            <element signature="e#61#81#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter/src/World.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>

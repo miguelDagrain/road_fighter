@@ -11,13 +11,17 @@ namespace RF {
 
     struct PlaneLocation: public std::pair<double, double> {
 
-        PlaneLocation() = default;
+        PlaneLocation();
+
+        ~PlaneLocation();
 
         PlaneLocation(double one, double two);
 
         PlaneLocation &operator+=(const PlaneLocation& rhs);
 
         PlaneLocation &operator-=(const PlaneLocation& rhs);
+
+        PlaneLocation operator*(const double rhs) const;
     };
 
 }

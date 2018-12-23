@@ -7,7 +7,6 @@
 RF_GUI::BulletSFML::BulletSFML(std::shared_ptr<RF::Bullet> basis):
         Bullet(const_cast<RF::location&>(basis->getLocation()), const_cast<RF::size&>(basis->getSize()), const_cast<RF::movementVector&>(basis->getMovement()))
 {
-
 }
 
 void RF_GUI::BulletSFML::draw()

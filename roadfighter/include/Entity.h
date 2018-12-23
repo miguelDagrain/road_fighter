@@ -18,11 +18,13 @@ namespace RF {
 
     public:
 
-        Entity() = default;
+        Entity();
 
         Entity(location& entityLocation, size& entitySize);
 
         Entity(location& entityLocation, size& entitySize, movementVector& movement);
+
+        virtual ~Entity();
 
         virtual void addObject(std::shared_ptr<Entity > newbornObject);
 

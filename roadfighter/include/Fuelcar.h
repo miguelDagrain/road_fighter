@@ -10,7 +10,9 @@ namespace RF {
     class Fuelcar : public Entity {
 
     public:
-        Fuelcar() = default;
+        Fuelcar();
+
+        ~Fuelcar() override;
 
         Fuelcar(location &entityLocation, size &entitySize);
 

@@ -12,7 +12,21 @@ add_library(FILES_GAME_LOGIC STATIC
         src/EntityFactory.cpp
         src/RoadfighterError.cpp)
 
-install(TARGETS FILES_GAME_LOGIC ARCHIVE DESTINATION build/lib/logic)
+set(HEADER_FILES_GAME_LOGIC
+        include/PlaneLocation.h
+        include/Bullet.h
+        include/Entity.h
+        include/Fuelcar.h
+        include/Passingcar.h
+        include/Player.h
+        include/Racer.h
+        include/World.h
+        include/EntityFactory.h
+        include/RoadfighterError.h
+        PARENT_SCOPE)
 
 
-target_include_directories(FILES_GAME_LOGIC PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(FILES_GAME_LOGIC PUBLIC ${HEADER_FILES_GAME_LOGIC})
+
+install(TARGETS FILES_GAME_LOGIC DESTINATION /build/lib/logic)
+install(FILES HEADER_FILES_GAME_LOGIC DESTINATION /build/include/logic)

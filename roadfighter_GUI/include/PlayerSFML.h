@@ -14,6 +14,8 @@ namespace RF_GUI {
 
         PlayerSFML(std::shared_ptr<RF::Player > basis);
 
+        ~PlayerSFML() override = default;
+
         void draw() final;
 
     };

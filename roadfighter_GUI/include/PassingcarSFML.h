@@ -14,6 +14,8 @@ namespace RF_GUI {
 
         PassingcarSFML(std::shared_ptr<RF::Passingcar > basis);
 
+        ~PassingcarSFML() override = default;
+
         void draw() final;
 
     };
