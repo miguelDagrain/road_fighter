@@ -1,31 +1,56 @@
 
-
-#include <stdexcept>
 #include <include/Transformation.h>
-
 
 #include "roadfighter_GUI/include/Transformation.h"
 
-exactLocation RF_GUI::Transformation::operator()(const RF::location &loc, const int x, const int y) {
-    if(loc.first > 4 or loc.first < -4 or loc.second > 3 or loc.second < -3){
+namespace RF_GUI{
+    std::shared_ptr<RF_GUI::Transformation > Transformation::instance = nullptr;
+}
+
+
+RF_GUI::Transformation::Transformation(): window(std::make_shared<sf::RenderWindow>(sf::VideoMode(800, 600), "roadfighter"))
+{
+}
+
+
+void RF_GUI::Transformation::operator()(sf::Sprite entity) {
+    if(entity.getPosition().x > 4 or entity.getPosition().x < -4 or entity.getPosition().y > 3 or entity.getPosition().y < -3){
         throw std::runtime_error("the given coordinates aren't within the correct range [-4, 4]x[-3, 3]");
     }
 
-    //breng de coordinaten in het juiste kwadrant
-    double xValue = loc.first + 4;
-    double yValue = loc.second + 3;
+    //vergroot het object
+    double xScale = ((entity.getScale().x/8.0)*window->getSize().x);
+    double yScale = ((entity.getScale().y/6.0)*window->getSize().y);
 
-    exactLocation transformed;
+    //herschaal de grootte van het object
+    entity.setScale(static_cast<float >(xScale), static_cast<float >(yScale));
+
+    //breng de coordinaten in het juiste kwadrant
+    double xValue = entity.getPosition().x + 4;
+    double yValue = entity.getPosition().y + 3;
 
     //herschaal de locatie van de coordinaten
-    transformed.first =  (xValue/8.0)*x;
-    transformed.second = (yValue/6.0)*y;
+    entity.setPosition(static_cast<float >((xValue/8.0)*window->getSize().x),
+                       static_cast<float >((yValue/6.0)*window->getSize().y));
 
-    return transformed;
+
+
+    window->draw(entity);
 }
 
-std::unique_ptr<RF_GUI::Transformation> RF_GUI::Transformation::getInstance() {
-    Transformation* newTransform = new Transformation();
+std::shared_ptr<RF_GUI::Transformation> &RF_GUI::Transformation::getInstance() {
 
-    return std::make_unique<Transformation >(newTransform);
+    if(instance == nullptr) {
+
+        auto transformation = new Transformation();
+
+        instance = std::shared_ptr<RF_GUI::Transformation>(transformation);
+
+    }
+
+    return instance;
+}
+
+std::shared_ptr<sf::RenderWindow> RF_GUI::Transformation::getWindow() {
+    return window;
 }

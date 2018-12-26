@@ -21,5 +21,7 @@ set(HEADER_FILES_GAME_GUI
 
 target_include_directories(FILES_GAME_GUI PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
-install(TARGETS FILES_GAME_GUI DESTINATION /build/lib/gui)
-install(FILES HEADER_FILES_GAME_GUI DESTINATION /build/include/gui)
+#install(TARGETS FILES_GAME_GUI DESTINATION ${PROJECT_SOURCE_DIR}/build/lib/gui)
+#
+#install(FILES "${ITEM}" DESTINATION ${PROJECT_SOURCE_DIR}/build/include/gui)
+#

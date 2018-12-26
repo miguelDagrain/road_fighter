@@ -1,6 +1,4 @@
 
-#include <include/Passingcar.h>
-
 #include "roadfighter/include/Passingcar.h"
 
 RF::Passingcar::Passingcar() = default;

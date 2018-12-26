@@ -15,27 +15,29 @@ using exactLocation = std::pair<int, int>;
 
 namespace RF_GUI {
 
-    sf::RenderWindow window(sf::VideoMode(700, 700), "roadfighter");
-
     class Transformation {
-    public:
 
-        Transformation(Transformation const &) = delete;
+    public:
 
         ~Transformation() = default;
 
-        static std::unique_ptr<Transformation > getInstance();
+        static std::shared_ptr<Transformation > &getInstance();
 
-        void operator=(Transformation const &) = delete;
+        void operator()(sf::Sprite entity);
 
-        exactLocation operator()(const RF::location &loc, const int x, const int y);
+        std::shared_ptr< sf::RenderWindow > getWindow();
 
     private:
 
-        Transformation() = default;
+        static std::shared_ptr<RF_GUI::Transformation > instance;
+
+        std::shared_ptr< sf::RenderWindow> window;
+
+        Transformation();
     };
 
 }
+
 
 
 #endif //ROAD_FIGHTER_TRANSFORMATION_H

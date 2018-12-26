@@ -4,11 +4,40 @@
 #include <SFML/Graphics.hpp>
 
 #include "roadfighter/include/World.h"
+#include "roadfighter/include/EntityFactory.h"
+#include "roadfighter_GUI/include/Transformation.h"
+#include "roadfighter_GUI/include/PlayerSFML.h"
 
+int get_line_end_of_road(std::string inputFile){
+    int number = 0;
+
+    int iter = 1;
+    for(auto x:inputFile){
+
+        if(x < 58 && x > 47){
+            number *= iter;
+
+            x -= 47;
+
+            number += x;
+        }
+
+        iter *= 10;
+    }
+
+    return number;
+}
 
 
 void runGame(std::string inputFile)
 {
+    RF::World road;
+
+    auto transformationObject = RF_GUI::Transformation::getInstance();
+
+    //de naam van de inputfile moet aangeven waar de lijn eindigt
+    int end_line_of_road = get_line_end_of_road(inputFile);
+
     sf::Sprite background;
     sf::Texture backgroundTexture;
 
@@ -18,32 +47,43 @@ void runGame(std::string inputFile)
 
     background.setTexture(backgroundTexture);
 
-//    sf::RenderWindow window(sf::VideoMode(294, 164), "roadfighter");
+    sf::View view(sf::FloatRect(0.f, 0.f, 800.f, 600.f));
 
-    sf::RenderWindow window(sf::VideoMode(800, 600), "roadfighter");
+    background.scale(static_cast<float >(800.0/294), static_cast<float >(600.0/164));
 
-    sf::View view(sf::FloatRect(0.f, 0.f, 8000.f, 6000.f));
+    //create a player
+    RF::Factory fact;
 
-    background.scale(8000.0/294, 6000.0/164);
+    RF::location loc(0, 0);
+    RF::movementVector movement(0, 0);
 
-    while(window.isOpen()){
+    std::shared_ptr<RF::Player> player = fact.createPlayer(loc, movement);
+
+    RF_GUI::PlayerSFML playerSFML(player);
+
+    road.addObject(std::make_shared<RF_GUI::PlayerSFML>(playerSFML));
+
+    while(transformationObject->getWindow()->isOpen()){
 
         sf::Event event;
-        while(window.pollEvent(event))
+        while(transformationObject->getWindow()->pollEvent(event))
         {
             switch (event.type) {
                 case sf::Event::Closed :
-                    window.close();
+                    transformationObject->getWindow()->close();
                     break;
             }
         }
 
+        transformationObject->getWindow()->clear();
 
-        window.draw(background);
+        transformationObject->getWindow()->draw(background);
 
-        window.setView(view);
+        road.draw();
 
-        window.display();
+        transformationObject->getWindow()->setView(view);
+
+        transformationObject->getWindow()->display();
     }
 }
 
@@ -54,7 +94,6 @@ void runGame(std::string inputFile)
 
 int main(int argc, char* argv[]) {
 
-    RF::World road;
 
 
     runGame(argv[1]);

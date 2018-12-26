@@ -28,5 +28,8 @@ set(HEADER_FILES_GAME_LOGIC
 
 target_include_directories(FILES_GAME_LOGIC PUBLIC ${HEADER_FILES_GAME_LOGIC})
 
-install(TARGETS FILES_GAME_LOGIC DESTINATION /build/lib/logic)
-install(FILES HEADER_FILES_GAME_LOGIC DESTINATION /build/include/logic)
+#
+#install(TARGETS FILES_GAME_LOGIC DESTINATION ${PROJECT_SOURCE_DIR}/build/lib/logic)
+#
+#install(FILES include DESTINATION ${PROJECT_SOURCE_DIR}/build/include/logic)
+#

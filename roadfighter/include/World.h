@@ -17,9 +17,6 @@
 
 namespace RF {
 
-    //De lijn wordt ergens getrokken zodat het overeenkomt met de achtergrond. Deze verhoudingen zijn niet de grootte
-    //van het scherm maar van de gebruikte afbeelding.
-    double lineEndOfRoad = (156/294.0)*4;
 
     class World : public Entity{
 
