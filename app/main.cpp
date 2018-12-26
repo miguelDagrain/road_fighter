@@ -28,7 +28,6 @@ int get_line_end_of_road(std::string inputFile){
     return number;
 }
 
-
 void runGame(std::string inputFile)
 {
     RF::World road;
