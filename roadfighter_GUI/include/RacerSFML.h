@@ -12,7 +12,7 @@ namespace RF_GUI {
 
     class RacerSFML : public RF::Racer {
 
-        RacerSFML(std::shared_ptr<RF::Racer> basis);
+        explicit RacerSFML(std::shared_ptr<RF::Racer> basis);
 
         ~RacerSFML() override = default;
 

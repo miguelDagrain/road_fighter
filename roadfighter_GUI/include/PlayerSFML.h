@@ -13,7 +13,7 @@ namespace RF_GUI {
     class PlayerSFML : public RF::Player {
     public:
 
-        PlayerSFML(std::shared_ptr<RF::Player > basis);
+        explicit PlayerSFML(std::shared_ptr<RF::Player > basis);
 
         ~PlayerSFML() override = default;
 

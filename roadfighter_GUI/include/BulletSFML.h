@@ -10,7 +10,9 @@ namespace RF_GUI {
 
     class BulletSFML : public RF::Bullet{
 
-        BulletSFML(std::shared_ptr<RF::Bullet> basis);
+    public:
+
+        explicit BulletSFML(std::shared_ptr<RF::Bullet> basis);
 
         ~BulletSFML() override = default;
 

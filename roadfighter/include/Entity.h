@@ -39,21 +39,21 @@ namespace RF {
 
         virtual bool hasCrashed() const;
 
-        virtual void setMovement(movementVector &newVelocity);
+        virtual void setMovement(movementVector &addedVelocity);
 
 
         virtual void attackAction(std::shared_ptr<Entity > world);
 
         virtual void checkIfOnRoad(const double& sideLine);
 
-        virtual void checkIfCollided(const std::shared_ptr<Entity > other);
+        virtual void checkIfCollided(const std::shared_ptr<Entity > &other);
 
         virtual void checkOnCollision();
 
         virtual void update();
 
         //functie om de wereld rond het centrum te houden, de 'wereld' beweegt dus in de richting van de correctionVector.
-        virtual void correctPosition(PlaneLocation& correctionVector);
+        virtual void correctPosition(const PlaneLocation& correctionVector);
 
         virtual void draw();
 

@@ -7,6 +7,7 @@ add_library(FILES_GAME_GUI STATIC
         src/PassingcarSFML.cpp
         src/PlayerSFML.cpp
         src/RacerSFML.cpp
+        src/RoadSFML.cpp
         src/Interface.cpp)
 
 set(HEADER_FILES_GAME_GUI
@@ -16,6 +17,7 @@ set(HEADER_FILES_GAME_GUI
         include/PassingcarSFML.h
         include/PlayerSFML.h
         include/RacerSFML.h
+        include/RoadSFML.h
         include/Interface.h
         PARENT_SCOPE)
 

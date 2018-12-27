@@ -49,9 +49,9 @@ bool RF::Entity::hasCrashed() const
     return crashed;
 }
 
-void RF::Entity::setMovement(RF::movementVector &newVelocity)
+void RF::Entity::setMovement(RF::movementVector &addedVelocity)
 {
-    movement = newVelocity;
+    movement += addedVelocity;
 }
 
 void RF::Entity::attackAction(std::shared_ptr<Entity > world)
@@ -66,7 +66,7 @@ void RF::Entity::checkIfOnRoad(const double& sideLine)
     }
 }
 
-void RF::Entity::checkIfCollided(const std::shared_ptr<RF::Entity> other)
+void RF::Entity::checkIfCollided(const std::shared_ptr<RF::Entity> &other)
 {
     //eerst controleren we of we ons niet rechts van de andere entiteit begeven, zoniet ga verder...
     if(this->getLocation().first <= (other->getLocation().first+other->getSize().first))
@@ -94,9 +94,11 @@ void RF::Entity::checkOnCollision()
 void RF::Entity::update()
 {
     entityLocation += movement;
+
+    movement.first = 0;
 }
 
-void RF::Entity::correctPosition(RF::PlaneLocation &correctionVector)
+void RF::Entity::correctPosition(const RF::PlaneLocation &correctionVector)
 {
     entityLocation -= correctionVector;
 }

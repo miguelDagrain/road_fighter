@@ -5,12 +5,14 @@
 
 #include <SFML/Graphics.hpp>
 
+
 #include "roadfighter/include/World.h"
+#include "roadfighter_GUI/include/RoadSFML.h"
 #include "roadfighter_GUI/include/Transformation.h"
 
 namespace RF_GUI {
     namespace Interface {
-        void setupWorld(RF::World &world);
+        RF::World setupWorld(std::string inputFile);
 
         void handleEvents();
 

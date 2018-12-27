@@ -89,7 +89,7 @@ roadfighter/preinstall:
 roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/all:
 	$(MAKE) -f roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/build.make roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/depend
 	$(MAKE) -f roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/build.make roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles --progress-num=8,9,10,11,12,13,14,15,16,17,18,19,20 "Built target FILES_GAME_LOGIC"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles --progress-num=10,11,12,13,14,15,16,17,18,19,20,21,22 "Built target FILES_GAME_LOGIC"
 .PHONY : roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/all
 
 # Include target in all.
@@ -144,7 +144,7 @@ roadfighter_GUI/preinstall:
 roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/all:
 	$(MAKE) -f roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/build.make roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/depend
 	$(MAKE) -f roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/build.make roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target FILES_GAME_GUI"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target FILES_GAME_GUI"
 .PHONY : roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/all
 
 # Include target in all.
@@ -154,7 +154,7 @@ all: roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/all
 
 # Build rule for subdir invocation for target.
 roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles 0
 .PHONY : roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/rule
@@ -200,7 +200,7 @@ app/CMakeFiles/game.dir/all: roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/all
 app/CMakeFiles/game.dir/all: roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/all
 	$(MAKE) -f app/CMakeFiles/game.dir/build.make app/CMakeFiles/game.dir/depend
 	$(MAKE) -f app/CMakeFiles/game.dir/build.make app/CMakeFiles/game.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles --progress-num=21,22 "Built target game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles --progress-num=23,24 "Built target game"
 .PHONY : app/CMakeFiles/game.dir/all
 
 # Include target in all.
@@ -210,7 +210,7 @@ all: app/CMakeFiles/game.dir/all
 
 # Build rule for subdir invocation for target.
 app/CMakeFiles/game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles 24
 	$(MAKE) -f CMakeFiles/Makefile2 app/CMakeFiles/game.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles 0
 .PHONY : app/CMakeFiles/game.dir/rule

@@ -35,12 +35,14 @@ namespace RF {
 
         void checkIfOnRoad(const double& sideline) final;
 
-        void checkIfCollided(std::shared_ptr<Entity > other) final;
+        void checkIfCollided(const std::shared_ptr<Entity > &other) final;
 
         void checkOnCollision() final;
 
-        void correctPosition(PlaneLocation& correctionVector) final;
+        void correctPosition(const PlaneLocation& correctionVector) final;
 
+        //deze member zet enkel de movement voor de player
+        void setMovement(movementVector &addedVelocity) final;
 
         void draw() final;
 
@@ -57,9 +59,6 @@ namespace RF {
 
         //deze member heeft geen zin voor de composite class
         const movementVector  &getMovement() const final;
-
-        //deze member heeft geen zin voor de composite class
-        void setMovement(movementVector &newVelocity) final;
 
         void attackAction(std::shared_ptr<Entity > world) final;
 

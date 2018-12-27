@@ -18,10 +18,18 @@ void RF::World::removeObject(std::shared_ptr<RF::Entity> deadObject)
 
 void RF::World::update()
 {
+    std::shared_ptr<Player > player;
+
     for(auto &object:livingObjects)
     {
         object->update();
+        if(std::dynamic_pointer_cast<Player>(object)){
+            player = std::dynamic_pointer_cast<Player>(object);
+        }
     }
+
+    this->correctPosition(player->getMovement());
+
 }
 
 void RF::World::checkIfOnRoad(const double &sideline)
@@ -31,7 +39,7 @@ void RF::World::checkIfOnRoad(const double &sideline)
     }
 }
 
-void RF::World::checkIfCollided(std::shared_ptr<RF::Entity> other)
+void RF::World::checkIfCollided(const std::shared_ptr<RF::Entity> &other)
 {
     for(auto &object:livingObjects){
 
@@ -47,7 +55,7 @@ void RF::World::checkOnCollision()
     }
 }
 
-void RF::World::correctPosition(RF::PlaneLocation &correctionVector)
+void RF::World::correctPosition(const RF::PlaneLocation &correctionVector)
 {
     for(auto &object:livingObjects)
     {
@@ -55,6 +63,15 @@ void RF::World::correctPosition(RF::PlaneLocation &correctionVector)
     }
 }
 
+void RF::World::setMovement(RF::movementVector &addedVelocity)
+{
+    for(auto &object: livingObjects){
+        if(std::dynamic_pointer_cast<Player >(object)){
+            object->setMovement(addedVelocity);
+            break;
+        }
+    }
+}
 
 void RF::World::draw() {
     for(auto &object: livingObjects){
@@ -79,11 +96,6 @@ const RF::size &RF::World::getSize() const
 const RF::movementVector &RF::World::getMovement() const
 {
     throw RoadfighterError("You can't ask the movement of the world, it has none.");
-}
-
-void RF::World::setMovement(RF::movementVector &newVelocity)
-{
-    throw RoadfighterError("You can't set the movement of the world, it has none.");
 }
 
 void RF::World::attackAction(std::shared_ptr<RF::Entity> world)
