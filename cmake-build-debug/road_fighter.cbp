@@ -149,6 +149,7 @@
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/EntityFactory.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/RoadfighterError.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/Random.h"/>
+					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/Interface.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/Transformation.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/BulletSFML.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/FuelcarSFML.h"/>
@@ -190,6 +191,7 @@
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/EntityFactory.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/RoadfighterError.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/Random.h"/>
+					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/Interface.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/Transformation.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/BulletSFML.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/FuelcarSFML.h"/>
@@ -227,6 +229,9 @@
 			<Option target="FILES_GAME_LOGIC"/>
 		</Unit>
 		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/src/Fuelcar.cpp">
+			<Option target="FILES_GAME_LOGIC"/>
+		</Unit>
+		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/src/Interface.cpp">
 			<Option target="FILES_GAME_LOGIC"/>
 		</Unit>
 		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/src/Passingcar.cpp">

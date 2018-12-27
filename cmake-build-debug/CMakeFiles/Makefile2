@@ -89,7 +89,7 @@ roadfighter/preinstall:
 roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/all:
 	$(MAKE) -f roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/build.make roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/depend
 	$(MAKE) -f roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/build.make roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles --progress-num=8,9,10,11,12,13,14,15,16,17,18,19 "Built target FILES_GAME_LOGIC"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles --progress-num=8,9,10,11,12,13,14,15,16,17,18,19,20 "Built target FILES_GAME_LOGIC"
 .PHONY : roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/all
 
 # Include target in all.
@@ -99,7 +99,7 @@ all: roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/all
 
 # Build rule for subdir invocation for target.
 roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles 13
 	$(MAKE) -f CMakeFiles/Makefile2 roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles 0
 .PHONY : roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/rule
@@ -200,7 +200,7 @@ app/CMakeFiles/game.dir/all: roadfighter/CMakeFiles/FILES_GAME_LOGIC.dir/all
 app/CMakeFiles/game.dir/all: roadfighter_GUI/CMakeFiles/FILES_GAME_GUI.dir/all
 	$(MAKE) -f app/CMakeFiles/game.dir/build.make app/CMakeFiles/game.dir/depend
 	$(MAKE) -f app/CMakeFiles/game.dir/build.make app/CMakeFiles/game.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles --progress-num=20,21 "Built target game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles --progress-num=21,22 "Built target game"
 .PHONY : app/CMakeFiles/game.dir/all
 
 # Include target in all.
@@ -210,7 +210,7 @@ all: app/CMakeFiles/game.dir/all
 
 # Build rule for subdir invocation for target.
 app/CMakeFiles/game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 app/CMakeFiles/game.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/cmake-build-debug/CMakeFiles 0
 .PHONY : app/CMakeFiles/game.dir/rule

@@ -1,12 +1,9 @@
 
 #include <iostream>
 
-#include <SFML/Graphics.hpp>
-
-#include "roadfighter/include/World.h"
 #include "roadfighter/include/EntityFactory.h"
-#include "roadfighter_GUI/include/Transformation.h"
 #include "roadfighter_GUI/include/PlayerSFML.h"
+#include "roadfighter_GUI/include/Interface.h"
 
 int get_line_end_of_road(std::string inputFile){
     int number = 0;
@@ -27,6 +24,7 @@ int get_line_end_of_road(std::string inputFile){
 
     return number;
 }
+
 
 void runGame(std::string inputFile)
 {
@@ -64,15 +62,7 @@ void runGame(std::string inputFile)
 
     while(transformationObject->getWindow()->isOpen()){
 
-        sf::Event event;
-        while(transformationObject->getWindow()->pollEvent(event))
-        {
-            switch (event.type) {
-                case sf::Event::Closed :
-                    transformationObject->getWindow()->close();
-                    break;
-            }
-        }
+        RF_GUI::Interface::handleKeyboardInput(road);
 
         transformationObject->getWindow()->clear();
 
@@ -83,6 +73,9 @@ void runGame(std::string inputFile)
         transformationObject->getWindow()->setView(view);
 
         transformationObject->getWindow()->display();
+
+        RF_GUI::Interface::handleEvents();
+
     }
 }
 

@@ -20,7 +20,8 @@ std::shared_ptr<RF::Random > &RF::Random::getInstance()
 
 long RF::Random::getIntNumber() {
 
-    std::default_random_engine engine;
+    std::random_device randomizer;
+    std::default_random_engine engine(randomizer()); //otherwise default random engine genereert dezelfde output
     std::uniform_int_distribution<int > distribution(std::numeric_limits<int>::min(), std::numeric_limits<int>::max());
 
     return distribution(engine);
