@@ -10,9 +10,11 @@ namespace RF_GUI {
     class PassingcarSFML : public RF::Passingcar {
 
     public:
-        explicit PassingcarSFML(std::shared_ptr<RF::Passingcar > basis);
+        PassingcarSFML();
 
-        ~PassingcarSFML() override = default;
+        PassingcarSFML(RF::location &entityLocation, RF::size &entitySize, RF::movementVector &movement);
+
+        ~PassingcarSFML() override;
 
         void draw() final;
 

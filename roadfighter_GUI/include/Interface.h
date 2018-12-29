@@ -7,18 +7,23 @@
 
 
 #include "roadfighter/include/World.h"
-#include "roadfighter_GUI/include/RoadSFML.h"
-#include "roadfighter_GUI/include/Transformation.h"
+#include "roadfighter/include/Bullet.h"
+#include "SFMLFactory.h"
 
-namespace RF_GUI {
+#include "roadfighter_GUI/include/Transformation.h"
+#include "roadfighter_GUI/include/RoadSFML.h"
+
+
     namespace Interface {
-        RF::World setupWorld(std::string inputFile);
+        RF::World setupWorld(std::string &&inputFile);
+
+        void updateWorld(RF::World road,std::string &inputFile);
 
         void handleEvents();
 
         void handleKeyboardInput(RF::World &road);
     };
-}
+
 
 
 #endif //ROAD_FIGHTER_INTERFACE_H

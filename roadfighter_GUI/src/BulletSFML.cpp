@@ -1,11 +1,17 @@
 
+#include <include/BulletSFML.h>
+
 #include "roadfighter_GUI/include/BulletSFML.h"
 
 
-RF_GUI::BulletSFML::BulletSFML(std::shared_ptr<RF::Bullet> basis):
-        Bullet(const_cast<RF::location&>(basis->getLocation()), const_cast<RF::size&>(basis->getSize()), const_cast<RF::movementVector&>(basis->getMovement()))
+RF_GUI::BulletSFML::BulletSFML() = default;
+
+RF_GUI::BulletSFML::BulletSFML(RF::location &entityLocation, RF::size &entitySize, RF::movementVector &movement):
+        Bullet(entityLocation, entitySize, movement)
 {
 }
+
+RF_GUI::BulletSFML::~BulletSFML() = default;
 
 void RF_GUI::BulletSFML::draw()
 {

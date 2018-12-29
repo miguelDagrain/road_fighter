@@ -14,7 +14,8 @@ RF_GUI::Transformation::Transformation(): window(std::make_shared<sf::RenderWind
 
 
 void RF_GUI::Transformation::operator()(sf::Sprite entity) {
-    if(entity.getPosition().x > 4 or entity.getPosition().x < -4 or entity.getPosition().y > 3 or entity.getPosition().y < -3){
+    //de 9 is om de weg op tijd te kunnen tekenen
+    if(entity.getPosition().x > 4 || entity.getPosition().x < -4 || entity.getPosition().y > 3 || entity.getPosition().y < -9){
         throw std::runtime_error("the given coordinates aren't within the correct range [-4, 4]x[-3, 3]");
     }
 

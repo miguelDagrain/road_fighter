@@ -1,11 +1,14 @@
 
 #include "roadfighter_GUI/include/FuelcarSFML.h"
 
-RF_GUI::FuelcarSFML::FuelcarSFML(std::shared_ptr<RF::Fuelcar> basis):
-RF::Fuelcar(const_cast<RF::location&>(basis->getLocation()), const_cast<RF::size&>(basis->getSize()), const_cast<RF::movementVector&>(basis->getMovement()))
-{
+RF_GUI::FuelcarSFML::FuelcarSFML() = default;
 
+RF_GUI::FuelcarSFML::FuelcarSFML(RF::location &entityLocation, RF::size &entitySize, RF::movementVector &movement):
+RF::Fuelcar(entityLocation, entitySize, movement)
+{
 }
+
+RF_GUI::FuelcarSFML::~FuelcarSFML() = default;
 
 void RF_GUI::FuelcarSFML::draw()
 {

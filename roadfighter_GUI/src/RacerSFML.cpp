@@ -1,10 +1,14 @@
 
 #include "roadfighter_GUI/include/RacerSFML.h"
 
-RF_GUI::RacerSFML::RacerSFML(std::shared_ptr<RF::Racer> basis) :
-RF::Racer(const_cast<RF::location&>(basis->getLocation()), const_cast<RF::size&>(basis->getSize()), const_cast<RF::movementVector&>(basis->getMovement()))
+RF_GUI::RacerSFML::RacerSFML() = default;
+
+RF_GUI::RacerSFML::RacerSFML(RF::location &entityLocation, RF::size &entitySize, RF::movementVector &movement) :
+RF::Racer(entityLocation, entitySize, movement)
 {
 }
+
+RF_GUI::RacerSFML::~RacerSFML() = default;
 
 void RF_GUI::RacerSFML::draw() {
     sf::Sprite sprite;

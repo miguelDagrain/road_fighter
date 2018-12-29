@@ -6,17 +6,19 @@
 #include <algorithm>
 #include <vector>
 
-
-#include "roadfighter/include/Bullet.h"
-#include "roadfighter/include/Fuelcar.h"
-#include "roadfighter/include/Passingcar.h"
+#include "roadfighter/include/Entity.h"
+//#include "roadfighter/include/Bullet.h"
+//#include "roadfighter/include/Fuelcar.h"
+//#include "roadfighter/include/Passingcar.h"
 #include "roadfighter/include/Player.h"
-#include "roadfighter/include/Racer.h"
+//#include "roadfighter/include/Racer.h"
+#include "roadfighter/include/Road.h"
 #include "roadfighter/include/RoadfighterError.h"
 
 
 namespace RF {
 
+    extern double endOfRoad;
 
     class World : public Entity{
 
@@ -33,7 +35,7 @@ namespace RF {
 
         void update() final;
 
-        void checkIfOnRoad(const double& sideline) final;
+        void checkIfOnRoad() final;
 
         void checkIfCollided(const std::shared_ptr<Entity > &other) final;
 
@@ -42,11 +44,13 @@ namespace RF {
         void correctPosition(const PlaneLocation& correctionVector) final;
 
         //deze member zet enkel de movement voor de player
-        void setMovement(movementVector &addedVelocity) final;
+        void accelerate(movementVector &acceleration) final;
 
         void draw() final;
 
     private:
+        //deze member heeft geen zin voor de composite class
+        void checkIfInWorld() final;
 
         //deze member heeft geen zin voor de composite class
         bool hasCrashed() const final;

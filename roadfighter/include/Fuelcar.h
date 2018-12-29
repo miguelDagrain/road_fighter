@@ -14,8 +14,6 @@ namespace RF {
 
         ~Fuelcar() override;
 
-        Fuelcar(location &entityLocation, size &entitySize);
-
         Fuelcar(location &entityLocation, size &entitySize, movementVector &movement);
     };
 

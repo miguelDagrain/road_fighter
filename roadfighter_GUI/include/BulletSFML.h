@@ -12,9 +12,11 @@ namespace RF_GUI {
 
     public:
 
-        explicit BulletSFML(std::shared_ptr<RF::Bullet> basis);
+        BulletSFML();
 
-        ~BulletSFML() override = default;
+        BulletSFML(RF::location &entityLocation, RF::size &entitySize, RF::movementVector &movement);
+
+        ~BulletSFML() override;
 
         void draw() final;
     };

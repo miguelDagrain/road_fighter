@@ -1,10 +1,23 @@
 
+#include <roadfighter/include/Entity.h>
+
+#include "roadfighter/include/World.h"
 #include "roadfighter/include/Entity.h"
 
 
-RF::Entity::Entity() = default;
+RF::Entity::Entity(): crashed(false)
+{
+    RF::location loc(0, 0);
+    entityLocation = loc;
 
-RF::Entity::Entity(location & entityLocation, size & entitySize) : entityLocation(entityLocation), entitySize(entitySize)
+    RF::size size1(0, 0);
+    entitySize = size1;
+
+    movementVector stationary(0, 0);
+    movement = stationary;
+};
+
+RF::Entity::Entity(location & entityLocation, size & entitySize) : entityLocation(entityLocation), entitySize(entitySize), crashed(false)
 {
     movementVector stationary(0, 0);
     movement = stationary;
@@ -13,7 +26,8 @@ RF::Entity::Entity(location & entityLocation, size & entitySize) : entityLocatio
 RF::Entity::Entity(RF::location &entityLocation, RF::size &entitySize, RF::movementVector &movement) :
 entityLocation(entityLocation),
 entitySize(entitySize),
-movement(movement)
+movement(movement),
+crashed(false)
 {
 }
 
@@ -49,19 +63,26 @@ bool RF::Entity::hasCrashed() const
     return crashed;
 }
 
-void RF::Entity::setMovement(RF::movementVector &addedVelocity)
+void RF::Entity::accelerate(RF::movementVector &acceleration)
 {
-    movement += addedVelocity;
+    movement += acceleration;
 }
 
 void RF::Entity::attackAction(std::shared_ptr<Entity > world)
 {
 }
 
-void RF::Entity::checkIfOnRoad(const double& sideLine)
+void RF::Entity::checkIfInWorld()
+{
+    if(this->getLocation().first > 4 || this->getLocation().first < -4 || this->getLocation().second > 3 || this->getLocation().second < -3){
+        this->crashed = true;
+    }
+}
+
+void RF::Entity::checkIfOnRoad()
 {
 
-    if(entityLocation.first < -(sideLine) || entityLocation.first > (sideLine)){
+    if(entityLocation.first < -(RF::endOfRoad) || entityLocation.first > (RF::endOfRoad)){
         crashed = true;
     }
 }
@@ -96,6 +117,15 @@ void RF::Entity::update()
     entityLocation += movement;
 
     movement.first = 0;
+
+    if(movement.second < 0) {
+        movement.second += 0.001;
+    }else{
+        //we mogen niet achteruit bewegen
+        movement.second = 0;
+    }
+
+    this->hasCrashed();
 }
 
 void RF::Entity::correctPosition(const RF::PlaneLocation &correctionVector)
@@ -105,4 +135,8 @@ void RF::Entity::correctPosition(const RF::PlaneLocation &correctionVector)
 
 void RF::Entity::draw()
 {
+}
+
+void RF::Entity::setCrashed(bool value) {
+    crashed = value;
 }

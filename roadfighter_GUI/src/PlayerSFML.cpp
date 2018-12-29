@@ -1,10 +1,14 @@
 
 #include "roadfighter_GUI/include/PlayerSFML.h"
 
-RF_GUI::PlayerSFML::PlayerSFML(std::shared_ptr<RF::Player> basis):
-        RF::Player(const_cast<RF::location&>(basis->getLocation()), const_cast<RF::size&>(basis->getSize()), const_cast<RF::movementVector&>(basis->getMovement()))
+RF_GUI::PlayerSFML::PlayerSFML() = default;
+
+RF_GUI::PlayerSFML::PlayerSFML(RF::location &entityLocation, RF::size &entitySize, RF::movementVector &movement):
+        RF::Player(entityLocation, entitySize, movement)
 {
 }
+
+RF_GUI::PlayerSFML::~PlayerSFML() = default;
 
 void RF_GUI::PlayerSFML::draw() {
     sf::Sprite sprite;

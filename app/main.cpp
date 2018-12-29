@@ -1,7 +1,7 @@
 
 #include <iostream>
 
-#include "roadfighter/include/EntityFactory.h"
+#include "include/SFMLFactory.h"
 #include "roadfighter_GUI/include/PlayerSFML.h"
 #include "roadfighter_GUI/include/Interface.h"
 
@@ -12,17 +12,6 @@ void runGame(RF::World &road)
 
     sf::View view(sf::FloatRect(0.f, 0.f, 800.f, 600.f));
 
-    //create a player
-    RF::Factory fact;
-
-    RF::location loc(0, 0);
-    RF::movementVector movement(0, 0);
-
-    std::shared_ptr<RF::Player> player = fact.createPlayer(loc, movement);
-
-    RF_GUI::PlayerSFML playerSFML(player);
-
-    road.addObject(std::make_shared<RF_GUI::PlayerSFML>(playerSFML));
 
     while(transformationObject->getWindow()->isOpen()){
 

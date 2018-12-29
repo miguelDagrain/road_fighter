@@ -10,14 +10,17 @@ namespace RF_GUI {
     class FuelcarSFML : public RF::Fuelcar {
 
     public:
-        explicit FuelcarSFML(std::shared_ptr<RF::Fuelcar > basis);
+        FuelcarSFML();
 
-        ~FuelcarSFML() override = default;
+        FuelcarSFML(RF::location &entityLocation, RF::size &entitySize, RF::movementVector &movement);
+
+        ~FuelcarSFML() override;
 
         void draw() final;
 
     };
 
 }
+
 
 #endif //ROAD_FIGHTER_FUELCARSFML_H

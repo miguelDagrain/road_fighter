@@ -1,6 +1,10 @@
 
 #include "roadfighter/include/World.h"
 
+namespace RF {
+    double endOfRoad;
+}
+
 RF::World::World() = default;
 
 RF::World::~World() = default;
@@ -18,24 +22,50 @@ void RF::World::removeObject(std::shared_ptr<RF::Entity> deadObject)
 
 void RF::World::update()
 {
-    std::shared_ptr<Player > player;
+    std::shared_ptr<Player > player = nullptr;
 
-    for(auto &object:livingObjects)
+    std::vector<std::vector<std::shared_ptr<Entity > >::iterator > dyingObjects;
+
+    for(auto objectptr = livingObjects.begin(); objectptr != livingObjects.end(); objectptr++)
     {
-        object->update();
-        if(std::dynamic_pointer_cast<Player>(object)){
-            player = std::dynamic_pointer_cast<Player>(object);
+
+        //we controleren of het object is gecrasht
+        (*objectptr)->checkIfInWorld();
+        (*objectptr)->checkIfOnRoad();
+
+        for(auto &otherObject: livingObjects){
+            if((!std::dynamic_pointer_cast<RF::Road >(otherObject)) && (otherObject) != (*objectptr)) {
+                (*objectptr)->checkIfCollided(otherObject);
+            }
+        }
+
+        if((*objectptr)->hasCrashed()){
+            dyingObjects.emplace_back(objectptr);
+        }
+
+        //we updaten het object
+        (*objectptr)->update();
+
+        //we kijken of het object de speler is
+        if(std::dynamic_pointer_cast<Player>(*objectptr)){
+            player = std::dynamic_pointer_cast<Player>(*objectptr);
         }
     }
 
-    this->correctPosition(player->getMovement());
+    if(player) {
+        this->correctPosition(player->getMovement());
+    }
+
+    for(auto &object:dyingObjects){
+        livingObjects.erase(object);
+    }
 
 }
 
-void RF::World::checkIfOnRoad(const double &sideline)
+void RF::World::checkIfOnRoad()
 {
     for(auto &object:livingObjects){
-        object->checkIfOnRoad(sideline);
+        object->checkIfOnRoad();
     }
 }
 
@@ -63,11 +93,11 @@ void RF::World::correctPosition(const RF::PlaneLocation &correctionVector)
     }
 }
 
-void RF::World::setMovement(RF::movementVector &addedVelocity)
+void RF::World::accelerate(RF::movementVector &acceleration)
 {
     for(auto &object: livingObjects){
         if(std::dynamic_pointer_cast<Player >(object)){
-            object->setMovement(addedVelocity);
+            object->accelerate(acceleration);
             break;
         }
     }
@@ -77,6 +107,10 @@ void RF::World::draw() {
     for(auto &object: livingObjects){
         object->draw();
     }
+}
+
+void RF::World::checkIfInWorld() {
+    throw RoadfighterError("The world can't be outside the world.");
 }
 
 bool RF::World::hasCrashed() const {

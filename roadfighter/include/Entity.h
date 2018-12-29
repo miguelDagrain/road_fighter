@@ -39,12 +39,14 @@ namespace RF {
 
         virtual bool hasCrashed() const;
 
-        virtual void setMovement(movementVector &addedVelocity);
+        virtual void accelerate(movementVector &acceleration);
 
 
         virtual void attackAction(std::shared_ptr<Entity > world);
 
-        virtual void checkIfOnRoad(const double& sideLine);
+        virtual void checkIfInWorld();
+
+        virtual void checkIfOnRoad();
 
         virtual void checkIfCollided(const std::shared_ptr<Entity > &other);
 
@@ -56,6 +58,9 @@ namespace RF {
         virtual void correctPosition(const PlaneLocation& correctionVector);
 
         virtual void draw();
+
+    protected:
+        void setCrashed(bool value);
 
     private:
         location entityLocation;

@@ -14,6 +14,12 @@ namespace RF {
        ~Road() override;
 
        Road(location &entityLocation, size &entitySize, movementVector &movement);
+
+       void checkIfInWorld() override;
+
+       void checkIfOnRoad() override;
+
+       void checkIfCollided(const std::shared_ptr<Entity > &other) override;
    };
 }
 

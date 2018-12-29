@@ -1,13 +1,16 @@
 
+#include <include/PassingcarSFML.h>
+
 #include "roadfighter_GUI/include/PassingcarSFML.h"
 
+RF_GUI::PassingcarSFML::PassingcarSFML() = default;
 
-RF_GUI::PassingcarSFML::PassingcarSFML(std::shared_ptr<RF::Passingcar > basis):
-RF::Passingcar(const_cast<RF::location&>(basis->getLocation()), const_cast<RF::size&>(basis->getSize()), const_cast<RF::movementVector&>(basis->getMovement()))
+RF_GUI::PassingcarSFML::PassingcarSFML(RF::location &entityLocation, RF::size &entitySize, RF::movementVector &movement):
+RF::Passingcar(entityLocation, entitySize, movement)
 {
-
 }
 
+RF_GUI::PassingcarSFML::~PassingcarSFML() = default;
 
 void RF_GUI::PassingcarSFML::draw()
 {

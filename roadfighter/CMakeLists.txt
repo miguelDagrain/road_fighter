@@ -10,7 +10,6 @@ add_library(FILES_GAME_LOGIC STATIC
         src/Racer.cpp
         src/Road.cpp
         src/World.cpp
-        src/EntityFactory.cpp
         src/RoadfighterError.cpp
         src/Random.cpp)
 
@@ -24,7 +23,6 @@ set(HEADER_FILES_GAME_LOGIC
         include/Racer.h
         include/Road.h
         include/World.h
-        include/EntityFactory.h
         include/RoadfighterError.h
         include/Random.h
         PARENT_SCOPE)

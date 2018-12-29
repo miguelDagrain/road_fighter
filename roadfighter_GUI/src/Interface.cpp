@@ -2,52 +2,72 @@
 
 #include "roadfighter_GUI/include/Interface.h"
 
-int get_line_end_of_road(std::string inputFile){
-    int number = 0;
-
-    int iter = 1;
-    for(auto x:inputFile){
-
-        if(x < 58 && x > 47){
-            number *= iter;
-
-            x -= 47;
-
-            number += x;
-        }
-
-        iter *= 10;
-    }
-
-    return number;
-}
-
-RF::World RF_GUI::Interface::setupWorld(std::string inputFile)
-{
-    RF::World road;
-
-    //de naam van de inputfile moet aangeven waar de lijn eindigt
-    int end_line_of_road = get_line_end_of_road(inputFile);
-
+double get_line_end_of_road(std::string inputFile){
     sf::Texture backgroundTexture;
 
     backgroundTexture.loadFromFile(inputFile);
 
-    RF::location locationRoad(-4,-3);
-    RF::size sizeRoad(backgroundTexture.getSize().x, backgroundTexture.getSize().y);
-    RF::movementVector movementRoad(0, 0);
+    int number = 0;
 
-    RF_GUI::RoadSFML background(locationRoad, sizeRoad, movementRoad, inputFile);
+    int iter = 10;
+    for(auto x:inputFile){
 
-//    background.scale(static_cast<float >(800.0/294), static_cast<float >(600.0/164));
+        if(x < 58 && x > 47){
 
-    road.addObject(std::make_shared<RF_GUI::RoadSFML>(background));
+            x -= 48;
+
+            number += x;
+
+            number *= iter;
+        }
+
+    }
+
+    number /= 10;
+
+    double endLine = (static_cast<double>(number)/backgroundTexture.getSize().x)*4;
+
+
+    return endLine;
+}
+
+RF::World Interface::setupWorld(std::string &&inputFile)
+{
+    RF::World road;
+
+    double line = get_line_end_of_road(inputFile);
+
+    RF::endOfRoad = line;
+
+    Factory fact;
+
+    std::shared_ptr<RF_GUI::RoadSFML> background = fact.createRoad(inputFile, 1);
+
+    road.addObject(background);
+
+    std::shared_ptr<RF_GUI::RoadSFML> backgroundAbove = fact.createRoad(inputFile, 2);
+
+    road.addObject(backgroundAbove);
+
+    RF::location loc(0, 0);
+    RF::movementVector movement(0, 0);
+
+    std::shared_ptr<RF_GUI::PlayerSFML > playerSFML = fact.createPlayer(loc, movement);
+
+    road.addObject(playerSFML);
 
     return road;
 }
 
+void Interface::updateWorld(RF::World road, std::string &inputFile)
+{
+    if(){
 
-void RF_GUI::Interface::handleEvents()
+    }
+
+}
+
+void Interface::handleEvents()
 {
     auto transformationObject = RF_GUI::Transformation::getInstance();
 
@@ -66,26 +86,26 @@ void RF_GUI::Interface::handleEvents()
 
 }
 
-void RF_GUI::Interface::handleKeyboardInput(RF::World &road) {
+void Interface::handleKeyboardInput(RF::World &road) {
     auto transformationObject = RF_GUI::Transformation::getInstance();
 
     RF::movementVector acceleration{0, 0};
 
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
     {
-        acceleration.first -= 0.001;
+        acceleration.first -= 0.01;
     } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
     {
-        acceleration.first += 0.001;
+        acceleration.first += 0.01;
     } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
     {
-        acceleration.second -= 0.001;
+        acceleration.second -= 0.003;
     } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
     {
-        acceleration.second += 0.001;
+        acceleration.second += 0.003;
     } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
     {
     }
 
-    road.setMovement(acceleration);
+    road.accelerate(acceleration);
 }
