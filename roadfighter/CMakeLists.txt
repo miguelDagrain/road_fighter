@@ -11,7 +11,8 @@ add_library(FILES_GAME_LOGIC STATIC
         src/Road.cpp
         src/World.cpp
         src/RoadfighterError.cpp
-        src/Random.cpp)
+        src/Random.cpp
+        src/SemiObserverWorld.cpp)
 
 set(HEADER_FILES_GAME_LOGIC
         include/PlaneLocation.h
@@ -25,6 +26,7 @@ set(HEADER_FILES_GAME_LOGIC
         include/World.h
         include/RoadfighterError.h
         include/Random.h
+        include/SemiObserverWorld.h
         PARENT_SCOPE)
 
 

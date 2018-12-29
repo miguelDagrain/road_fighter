@@ -65,7 +65,11 @@ bool RF::Entity::hasCrashed() const
 
 void RF::Entity::accelerate(RF::movementVector &acceleration)
 {
-    movement += acceleration;
+    movement.first += acceleration.first;
+
+    if(movement.second > -0.08) {
+        movement.second += acceleration.second;
+    }
 }
 
 void RF::Entity::attackAction(std::shared_ptr<Entity > world)
@@ -114,29 +118,21 @@ void RF::Entity::checkOnCollision()
 
 void RF::Entity::update()
 {
+    if(movement.second > 0) {
+        movement.second = 0;
+    }
     entityLocation += movement;
 
     movement.first = 0;
 
-    if(movement.second < 0) {
-        movement.second += 0.001;
-    }else{
-        //we mogen niet achteruit bewegen
-        movement.second = 0;
-    }
-
-    this->hasCrashed();
 }
 
-void RF::Entity::correctPosition(const RF::PlaneLocation &correctionVector)
+void RF::Entity::correctPosition(RF::PlaneLocation correctionVector)
 {
-    entityLocation -= correctionVector;
+    entityLocation.second -= correctionVector.second;
 }
 
 void RF::Entity::draw()
 {
 }
 
-void RF::Entity::setCrashed(bool value) {
-    crashed = value;
-}

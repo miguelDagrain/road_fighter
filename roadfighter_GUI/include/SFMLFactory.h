@@ -42,6 +42,8 @@ public:
     std::shared_ptr<RF_GUI::RacerSFML > createRacer(RF::location &entityLocation, RF::movementVector &movement);
 
     std::shared_ptr<RF_GUI::RoadSFML > createRoad(std::string &inputFile, int pos);
+
+    std::shared_ptr<RF_GUI::RoadSFML > createRoad(std::string &inputFile, const RF::location &loc);
 };
 
 #endif //ROAD_FIGHTER_ENTITYFACTORY_H

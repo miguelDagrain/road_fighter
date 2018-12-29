@@ -1,4 +1,6 @@
 
+#include <include/SFMLFactory.h>
+
 #include "roadfighter_GUI/include/SFMLFactory.h"
 
 template<typename Tresult>
@@ -52,12 +54,23 @@ std::shared_ptr<RF_GUI::RoadSFML > Factory::createRoad(std::string &inputFile, i
         standardLocation.second = -3;
     }else if(pos == 2){
         standardLocation.first = -4;
-        standardLocation.second = -6;
+        standardLocation.second = -9;
     }else{
-        throw RF::RoadfighterError("road must be build on pos 1, 2.");
+        throw RF::RoadfighterError("road must be build on pos 1 or 2.");
     }
+
     RF::size standardSize(8, 6);
     RF::movementVector standardMovement(0, 0);
 
     return std::make_shared<RF_GUI::RoadSFML >(standardLocation, standardSize, standardMovement, inputFile);
+}
+
+std::shared_ptr<RF_GUI::RoadSFML> Factory::createRoad(std::string &inputFile, const RF::location &loc) {
+
+    RF::location newLoc(loc.first, loc.second - 12);
+    RF::size standardSize(8, 6);
+    RF::movementVector standardMovement(0, 0);
+
+    return std::make_shared<RF_GUI::RoadSFML >(newLoc, standardSize, standardMovement, inputFile);
+
 }

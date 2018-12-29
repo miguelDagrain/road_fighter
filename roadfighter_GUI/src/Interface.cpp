@@ -31,9 +31,16 @@ double get_line_end_of_road(std::string inputFile){
     return endLine;
 }
 
-RF::World Interface::setupWorld(std::string &&inputFile)
+namespace Interface {
+    bool lastMovement = false;
+}
+
+RF::World Interface::setupWorld(std::string &inputFile)
 {
     RF::World road;
+
+    std::shared_ptr<RF::SemiObserverWorld > observer = std::make_shared<RF::SemiObserverWorld>();
+    road.setObserver(std::move(observer));
 
     double line = get_line_end_of_road(inputFile);
 
@@ -42,14 +49,13 @@ RF::World Interface::setupWorld(std::string &&inputFile)
     Factory fact;
 
     std::shared_ptr<RF_GUI::RoadSFML> background = fact.createRoad(inputFile, 1);
-
     road.addObject(background);
 
-    std::shared_ptr<RF_GUI::RoadSFML> backgroundAbove = fact.createRoad(inputFile, 2);
+    std::shared_ptr<RF_GUI::RoadSFML> backgroundMiddle = fact.createRoad(inputFile, 2);
+    road.addObject(backgroundMiddle);
 
-    road.addObject(backgroundAbove);
 
-    RF::location loc(0, 0);
+    RF::location loc(0, 2);
     RF::movementVector movement(0, 0);
 
     std::shared_ptr<RF_GUI::PlayerSFML > playerSFML = fact.createPlayer(loc, movement);
@@ -59,10 +65,20 @@ RF::World Interface::setupWorld(std::string &&inputFile)
     return road;
 }
 
-void Interface::updateWorld(RF::World road, std::string &inputFile)
+void Interface::updateWorld(RF::World &road, std::string &inputFile)
 {
-    if(){
+    Interface::handleKeyboardInput(road);
 
+    Factory fact;
+
+    road.update();
+
+    RF::location loc(0, 0);
+    if(road.getObserver()->checkEndWorld() != loc){
+
+        std::shared_ptr<RF_GUI::RoadSFML> backgroundAbove = fact.createRoad(inputFile, road.getObserver()->checkEndWorld());
+        road.addObject(backgroundAbove);
+        road.getObserver()->resetEndWorld();
     }
 
 }
@@ -91,17 +107,21 @@ void Interface::handleKeyboardInput(RF::World &road) {
 
     RF::movementVector acceleration{0, 0};
 
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) && lastMovement)
     {
+        Interface::lastMovement = false;
         acceleration.first -= 0.01;
-    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) && lastMovement)
     {
+        Interface::lastMovement = false;
         acceleration.first += 0.01;
     } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
     {
+        lastMovement = true;
         acceleration.second -= 0.003;
     } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
     {
+        lastMovement = true;
         acceleration.second += 0.003;
     } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
     {

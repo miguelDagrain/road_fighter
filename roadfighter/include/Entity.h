@@ -55,14 +55,12 @@ namespace RF {
         virtual void update();
 
         //functie om de wereld rond het centrum te houden, de 'wereld' beweegt dus in de richting van de correctionVector.
-        virtual void correctPosition(const PlaneLocation& correctionVector);
+        virtual void correctPosition(PlaneLocation correctionVector);
 
         virtual void draw();
 
     protected:
-        void setCrashed(bool value);
 
-    private:
         location entityLocation;
         size entitySize;
 

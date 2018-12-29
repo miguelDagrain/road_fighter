@@ -5,8 +5,10 @@
 #include "roadfighter_GUI/include/PlayerSFML.h"
 #include "roadfighter_GUI/include/Interface.h"
 
-void runGame(RF::World &road)
+void runGame(std::string &&inputfile)
 {
+
+    RF::World road = Interface::setupWorld(inputfile);
 
     auto transformationObject = RF_GUI::Transformation::getInstance();
 
@@ -15,9 +17,7 @@ void runGame(RF::World &road)
 
     while(transformationObject->getWindow()->isOpen()){
 
-        RF_GUI::Interface::handleKeyboardInput(road);
-
-        road.update();
+        Interface::updateWorld(road, inputfile);
 
         transformationObject->getWindow()->clear();
 
@@ -27,7 +27,7 @@ void runGame(RF::World &road)
 
         transformationObject->getWindow()->display();
 
-        RF_GUI::Interface::handleEvents();
+        Interface::handleEvents();
 
     }
 }
@@ -39,9 +39,7 @@ void runGame(RF::World &road)
 
 int main(int argc, char* argv[]) {
 
-    RF::World road = RF_GUI::Interface::setupWorld(argv[1]);
-
-    runGame(road);
+    runGame(argv[1]);
 
     return 0;
 }

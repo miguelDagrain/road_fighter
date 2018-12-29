@@ -15,6 +15,8 @@
 #include "roadfighter/include/Road.h"
 #include "roadfighter/include/RoadfighterError.h"
 
+#include "roadfighter/include/SemiObserverWorld.h"
+
 
 namespace RF {
 
@@ -41,12 +43,16 @@ namespace RF {
 
         void checkOnCollision() final;
 
-        void correctPosition(const PlaneLocation& correctionVector) final;
+        void correctPosition(PlaneLocation correctionVector) final;
 
         //deze member zet enkel de movement voor de player
         void accelerate(movementVector &acceleration) final;
 
         void draw() final;
+
+        void setObserver(std::shared_ptr<RF::SemiObserverWorld > &&observerPtr);
+
+        const std::shared_ptr<RF::SemiObserverWorld > getObserver();
 
     private:
         //deze member heeft geen zin voor de composite class
@@ -67,6 +73,8 @@ namespace RF {
         void attackAction(std::shared_ptr<Entity > world) final;
 
         std::vector<std::shared_ptr<Entity > > livingObjects;
+
+        std::shared_ptr<RF::SemiObserverWorld > observer;
     };
 
 }

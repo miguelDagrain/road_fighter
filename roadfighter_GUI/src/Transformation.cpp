@@ -20,19 +20,18 @@ void RF_GUI::Transformation::operator()(sf::Sprite entity) {
     }
 
     //vergroot het object
-    double xScale = ((entity.getScale().x/8.0)*window->getSize().x);
-    double yScale = ((entity.getScale().y/6.0)*window->getSize().y);
+    float xScale = float((entity.getScale().x/8.0)*window->getSize().x);
+    float yScale = float((entity.getScale().y/6.0)*window->getSize().y);
 
     //herschaal de grootte van het object
-    entity.setScale(static_cast<float >(xScale), static_cast<float >(yScale));
+    entity.setScale(xScale, yScale);
 
     //breng de coordinaten in het juiste kwadrant
-    double xValue = entity.getPosition().x + 4;
-    double yValue = entity.getPosition().y + 3;
+    float xValue = entity.getPosition().x + 4;
+    float yValue = entity.getPosition().y + 3;
 
     //herschaal de locatie van de coordinaten
-    entity.setPosition(static_cast<float >((xValue/8.0)*window->getSize().x),
-                       static_cast<float >((yValue/6.0)*window->getSize().y));
+    entity.setPosition(float((xValue/8.0)*window->getSize().x), float((yValue/6.0)*window->getSize().y));
 
 
 

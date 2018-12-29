@@ -18,6 +18,8 @@ namespace RF {
 
         Player(location &entityLocation, size &entitySize, movementVector &movement);
 
+        void correctPosition(PlaneLocation correctionVector) override;
+
         void attackAction(std::shared_ptr<Entity > world) final;
     };
 

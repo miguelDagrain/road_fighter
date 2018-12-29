@@ -26,9 +26,24 @@ void RF::World::update()
 
     std::vector<std::vector<std::shared_ptr<Entity > >::iterator > dyingObjects;
 
+    //we updaten het object
+    for(auto &object: livingObjects){
+        object->update();
+
+        //we kijken of het object de speler is
+        if(std::dynamic_pointer_cast<Player>(object)){
+            player = std::dynamic_pointer_cast<Player>(object);
+        }
+    }
+
+    //corigeer het beeld
+    if(player) {
+        this->correctPosition(player->getMovement());
+    }
+
+    //verwijder onnodige objecten
     for(auto objectptr = livingObjects.begin(); objectptr != livingObjects.end(); objectptr++)
     {
-
         //we controleren of het object is gecrasht
         (*objectptr)->checkIfInWorld();
         (*objectptr)->checkIfOnRoad();
@@ -40,20 +55,13 @@ void RF::World::update()
         }
 
         if((*objectptr)->hasCrashed()){
+            if(std::dynamic_pointer_cast<RF::Road>(*objectptr)){
+                observer->notifyEndWorld((*objectptr)->getLocation());
+            }
+
             dyingObjects.emplace_back(objectptr);
         }
 
-        //we updaten het object
-        (*objectptr)->update();
-
-        //we kijken of het object de speler is
-        if(std::dynamic_pointer_cast<Player>(*objectptr)){
-            player = std::dynamic_pointer_cast<Player>(*objectptr);
-        }
-    }
-
-    if(player) {
-        this->correctPosition(player->getMovement());
     }
 
     for(auto &object:dyingObjects){
@@ -85,7 +93,7 @@ void RF::World::checkOnCollision()
     }
 }
 
-void RF::World::correctPosition(const RF::PlaneLocation &correctionVector)
+void RF::World::correctPosition(RF::PlaneLocation correctionVector)
 {
     for(auto &object:livingObjects)
     {
@@ -105,8 +113,25 @@ void RF::World::accelerate(RF::movementVector &acceleration)
 
 void RF::World::draw() {
     for(auto &object: livingObjects){
-        object->draw();
+        if(std::dynamic_pointer_cast<RF::Road>(object)){
+            object->draw();
+        }
     }
+    for(auto &object: livingObjects){
+        if(!std::dynamic_pointer_cast<RF::Road>(object)) {
+            object->draw();
+        }
+    }
+}
+
+void RF::World::setObserver(std::shared_ptr<RF::SemiObserverWorld> &&observerPtr)
+{
+    observer = observerPtr;
+}
+
+const std::shared_ptr<RF::SemiObserverWorld> RF::World::getObserver()
+{
+    return observer;
 }
 
 void RF::World::checkIfInWorld() {

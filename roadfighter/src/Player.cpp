@@ -11,6 +11,14 @@ Entity(entityLocation, entitySize, movement)
 
 }
 
+void RF::Player::correctPosition(RF::PlaneLocation correctionVector)
+{
+    entityLocation.second -= correctionVector.second;
+
+    if(movement.second < 0) {
+        movement.second += 0.001;
+    }
+}
 
 void RF::Player::attackAction(std::shared_ptr<Entity > world) {
 //    Factory factory;

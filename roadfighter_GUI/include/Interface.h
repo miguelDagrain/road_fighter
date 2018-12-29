@@ -8,6 +8,7 @@
 
 #include "roadfighter/include/World.h"
 #include "roadfighter/include/Bullet.h"
+#include "roadfighter/include/SemiObserverWorld.h"
 #include "SFMLFactory.h"
 
 #include "roadfighter_GUI/include/Transformation.h"
@@ -15,9 +16,11 @@
 
 
     namespace Interface {
-        RF::World setupWorld(std::string &&inputFile);
+        extern bool lastMovement;
 
-        void updateWorld(RF::World road,std::string &inputFile);
+        RF::World setupWorld(std::string &inputFile);
+
+        void updateWorld(RF::World &road,std::string &inputFile);
 
         void handleEvents();
 
