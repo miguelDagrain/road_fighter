@@ -22,9 +22,7 @@ void RF::Racer::update() {
 
     }else{
 
-        RF::movementVector doubleMovement(movement.first*2, movement.second*2);
-
-        entityLocation += doubleMovement;
+        entityLocation += movement*2;
 
         --specialActionDuration;
     }

@@ -24,9 +24,6 @@ namespace RF {
 
         void checkIfCollided(const std::shared_ptr<Entity > &other) final;
 
-        void attackAction(std::shared_ptr<Entity > world) final;
-
-
     };
 
 }

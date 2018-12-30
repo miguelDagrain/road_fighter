@@ -40,7 +40,7 @@ namespace RF {
         virtual void accelerate(movementVector &acceleration);
 
 
-        virtual void attackAction(std::shared_ptr<Entity > world);
+        virtual void attackAction(Entity &world);
 
         virtual void checkIfInWorld();
 

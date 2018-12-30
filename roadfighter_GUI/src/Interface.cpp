@@ -127,10 +127,11 @@ void Interface::handleKeyboardInput(RF::World &road) {
         acceleration.second += 0.002;
     }
 
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
-    }
-
     road.accelerate(acceleration);
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
+        road.attackAction(road);
+    }
 }
 
 

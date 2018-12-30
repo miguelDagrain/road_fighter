@@ -21,6 +21,7 @@ namespace RF_GUI {
 
         void draw() final;
 
+        void attackAction(RF::Entity &world) final;
     };
 
 }

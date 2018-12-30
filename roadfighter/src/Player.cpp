@@ -87,10 +87,4 @@ void RF::Player::checkIfCollided(const std::shared_ptr<RF::Entity> &other)
     }
 }
 
-void RF::Player::attackAction(std::shared_ptr<Entity > world) {
-//    Factory factory;
-//    location tempLoc = this->getLocation();
-//    movementVector tempMove =  (this->getMovement()*1.5);
-//    world->addObject(factory.createBullet(tempLoc, tempMove));
-}
 

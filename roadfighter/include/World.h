@@ -46,6 +46,8 @@ namespace RF {
         //deze member zet enkel de movement voor de player
         void accelerate(movementVector &acceleration) final;
 
+        void attackAction(RF::Entity &world) final;
+
         void draw() final;
 
         void setObserver(std::shared_ptr<RF::SemiObserverWorld > &&observerPtr);
@@ -67,8 +69,6 @@ namespace RF {
 
         //deze member heeft geen zin voor de composite class
         const movementVector  &getMovement() const final;
-
-        void attackAction(std::shared_ptr<Entity > world) final;
 
         std::vector<std::shared_ptr<Entity > > livingObjects;
 

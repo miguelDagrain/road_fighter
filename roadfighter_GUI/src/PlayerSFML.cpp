@@ -1,4 +1,6 @@
 
+#include "roadfighter_GUI/include/SFMLFactory.h"
+
 #include "roadfighter_GUI/include/PlayerSFML.h"
 
 RF_GUI::PlayerSFML::PlayerSFML() = default;
@@ -10,7 +12,8 @@ RF_GUI::PlayerSFML::PlayerSFML(RF::location &entityLocation, RF::size &entitySiz
 
 RF_GUI::PlayerSFML::~PlayerSFML() = default;
 
-void RF_GUI::PlayerSFML::draw() {
+void RF_GUI::PlayerSFML::draw()
+{
     sf::Sprite sprite;
     sf::Texture texture;
 
@@ -34,3 +37,11 @@ void RF_GUI::PlayerSFML::draw() {
     (*transform)(sprite);
 }
 
+
+void RF_GUI::PlayerSFML::attackAction(RF::Entity &world)
+{
+    Factory factory;
+    RF::location tempLoc = this->getLocation();
+    RF::movementVector tempMove =  (this->getMovement()*1.5);
+    world.addObject(factory.createBullet(tempLoc, tempMove));
+}

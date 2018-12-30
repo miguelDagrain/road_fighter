@@ -100,6 +100,16 @@ void RF::World::accelerate(RF::movementVector &acceleration)
     }
 }
 
+void RF::World::attackAction(RF::Entity &world)
+{
+    for(auto &object:livingObjects){
+        if(std::dynamic_pointer_cast<Player >(object)){
+            object->attackAction(world);
+            break;
+        }
+    }
+}
+
 void RF::World::draw() {
     for(auto &object: livingObjects){
         if(std::dynamic_pointer_cast<RF::Road>(object)){
@@ -116,6 +126,7 @@ void RF::World::draw() {
         }
     }
 }
+
 
 void RF::World::setObserver(std::shared_ptr<RF::SemiObserverWorld> &&observerPtr)
 {
@@ -150,9 +161,5 @@ const RF::movementVector &RF::World::getMovement() const
     throw RoadfighterError("You can't ask the movement of the world, it has none.");
 }
 
-void RF::World::attackAction(std::shared_ptr<RF::Entity> world)
-{
-    throw RoadfighterError("You can't make the world attack, not all objects can attack.");
-}
 
 

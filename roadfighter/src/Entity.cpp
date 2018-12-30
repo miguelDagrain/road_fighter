@@ -72,7 +72,7 @@ void RF::Entity::accelerate(RF::movementVector &acceleration)
     }
 }
 
-void RF::Entity::attackAction(std::shared_ptr<Entity > world)
+void RF::Entity::attackAction(Entity &world)
 {
 }
 

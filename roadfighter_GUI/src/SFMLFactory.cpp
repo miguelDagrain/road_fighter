@@ -13,7 +13,7 @@ std::shared_ptr<Tresult> Factory::createEntity()
 
 std::shared_ptr<RF_GUI::BulletSFML> Factory::createBullet(RF::location &entityLocation, RF::movementVector &movement)
 {
-    RF::size standard(0.1, 0.1);
+    RF::size standard(0.3, 0.3);
 
     return std::make_shared<RF_GUI::BulletSFML >(entityLocation, standard, movement);
 }

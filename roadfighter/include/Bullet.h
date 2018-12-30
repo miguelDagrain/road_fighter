@@ -16,6 +16,7 @@ namespace RF {
 
         Bullet(location &entityLocation, size &entitySize, movementVector &movement);
 
+        void checkIfCollided(const std::shared_ptr<Entity > &other) final;
     };
 
 }
