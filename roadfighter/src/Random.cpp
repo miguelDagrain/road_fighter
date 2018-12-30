@@ -29,7 +29,7 @@ int RF::Random::getIntCar()
 
 
 int RF::Random::getRandomInt() {
-    std::uniform_int_distribution<int > distribution(0, 5);
+    std::uniform_int_distribution<int > distribution(0, 10);
 
     return distribution(engine);
 };

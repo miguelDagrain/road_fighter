@@ -1,5 +1,7 @@
 
 #include <iostream>
+#include <chrono>
+#include <thread>
 
 #include "include/SFMLFactory.h"
 #include "roadfighter_GUI/include/PlayerSFML.h"
@@ -16,6 +18,8 @@ void runGame(std::string &&inputfile)
 
 
     while(transformationObject->getWindow()->isOpen()){
+        std::this_thread::sleep_for(std::chrono::microseconds(300));
+
 
         Interface::updateWorld(road, inputfile);
 

@@ -14,8 +14,6 @@ namespace RF {
 
         ~Passingcar() override;
 
-        Passingcar(location &entityLocation, size &entitySize);
-
         Passingcar(location &entityLocation, size &entitySize, movementVector &movement);
     };
 

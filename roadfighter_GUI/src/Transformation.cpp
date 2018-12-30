@@ -30,10 +30,11 @@ void RF_GUI::Transformation::operator()(sf::Sprite entity) {
     float xValue = entity.getPosition().x + 4;
     float yValue = entity.getPosition().y + 3;
 
+//    sf::FloatRect rect = entity.getGlobalBounds();
+//    entity.setOrigin(rect.width /2 , rect.height / 2);
+
     //herschaal de locatie van de coordinaten
     entity.setPosition(float((xValue/8.0)*window->getSize().x), float((yValue/6.0)*window->getSize().y));
-
-
 
     window->draw(entity);
 }

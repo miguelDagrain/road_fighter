@@ -1,5 +1,7 @@
 
 
+#include <include/Interface.h>
+
 #include "roadfighter_GUI/include/Interface.h"
 
 double get_line_end_of_road(std::string inputFile){
@@ -51,6 +53,9 @@ RF::World Interface::setupWorld(std::string &inputFile)
     road.addObject(backgroundMiddle);
 
 
+    createRacerCars(road);
+
+
     RF::location loc(0, 2);
     RF::movementVector movement(0, 0);
 
@@ -71,7 +76,7 @@ void Interface::updateWorld(RF::World &road, std::string &inputFile)
     RF::location loc(0, 0);
     if(road.getObserver()->checkEndWorld() != loc){
 
-        Interface::createEntities(road);
+        Interface::createFPCars(road);
 
 
         std::shared_ptr<RF_GUI::RoadSFML> backgroundAbove = fact.createRoad(inputFile, road.getObserver()->checkEndWorld());
@@ -129,7 +134,7 @@ void Interface::handleKeyboardInput(RF::World &road) {
 }
 
 
-void Interface::createEntities(RF::World &road)
+void Interface::createFPCars(RF::World &road)
 {
 
     Factory fact;
@@ -160,4 +165,27 @@ void Interface::createEntities(RF::World &road)
             road.addObject(car);
         }
     }
+}
+
+void Interface::createRacerCars(RF::World &road)
+{
+
+    Factory fact;
+
+    RF::location location1(-0.8, 2);
+    RF::location location2(1.4, 1);
+    RF::location location3(-1.6, 1);
+
+
+    RF::movementVector movement1(0, -0.054);
+    RF::movementVector movement2(0, -0.05);
+    RF::movementVector movement3(0, -0.058);
+
+    std::shared_ptr<RF_GUI::RacerSFML > racer = fact.createRacer(location1, movement1);
+    road.addObject(racer);
+    racer = fact.createRacer(location2, movement2);
+    road.addObject(racer);
+    racer = fact.createRacer(location3, movement3);
+    road.addObject(racer);
+
 }

@@ -28,6 +28,8 @@ void RF_GUI::FuelcarSFML::draw()
 
     sprite.setPosition(static_cast<float >(getLocation().first), static_cast<float >(getLocation().second));
 
+    sprite.setRotation(this->rotation);
+
     auto transform = Transformation::getInstance();
 
     (*transform)(sprite);

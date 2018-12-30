@@ -5,7 +5,7 @@
 #include "roadfighter/include/Entity.h"
 
 
-RF::Entity::Entity(): crashed(false)
+RF::Entity::Entity(): crashed(false), rotation(0), specialActionDuration(0)
 {
     RF::location loc(0, 0);
     entityLocation = loc;
@@ -17,17 +17,13 @@ RF::Entity::Entity(): crashed(false)
     movement = stationary;
 };
 
-RF::Entity::Entity(location & entityLocation, size & entitySize) : entityLocation(entityLocation), entitySize(entitySize), crashed(false)
-{
-    movementVector stationary(0, 0);
-    movement = stationary;
-}
-
 RF::Entity::Entity(RF::location &entityLocation, RF::size &entitySize, RF::movementVector &movement) :
 entityLocation(entityLocation),
 entitySize(entitySize),
 movement(movement),
-crashed(false)
+crashed(false),
+rotation(0),
+specialActionDuration(0)
 {
 }
 
@@ -65,10 +61,14 @@ bool RF::Entity::hasCrashed() const
 
 void RF::Entity::accelerate(RF::movementVector &acceleration)
 {
-    movement.first += acceleration.first;
+    if(specialActionDuration == 0) {
 
-    if(movement.second > -0.18) {
-        movement.second += acceleration.second;
+        movement.first += acceleration.first;
+
+        if (movement.second > -0.06) {
+            movement.second += acceleration.second;
+        }
+
     }
 }
 
@@ -78,7 +78,7 @@ void RF::Entity::attackAction(std::shared_ptr<Entity > world)
 
 void RF::Entity::checkIfInWorld()
 {
-    if(this->getLocation().first > 4 || this->getLocation().first < -4 || this->getLocation().second > 3 || this->getLocation().second < -6){
+    if(this->getLocation().second > 6){
         this->crashed = true;
     }
 }
@@ -86,7 +86,7 @@ void RF::Entity::checkIfInWorld()
 void RF::Entity::checkIfOnRoad()
 {
 
-    if(entityLocation.first < -(RF::endOfRoad) || entityLocation.first > (RF::endOfRoad)){
+    if(entityLocation.first < -(RF::endOfRoad) || entityLocation.first > (RF::endOfRoad-0.4)){
         crashed = true;
     }
 }
@@ -112,18 +112,10 @@ void RF::Entity::checkIfCollided(const std::shared_ptr<RF::Entity> &other)
     }
 }
 
-void RF::Entity::checkOnCollision()
-{
-}
 
 void RF::Entity::update()
 {
-    if(movement.second > 0) {
-        movement.second = 0;
-    }
     entityLocation += movement;
-
-    movement.first = 0;
 
 }
 

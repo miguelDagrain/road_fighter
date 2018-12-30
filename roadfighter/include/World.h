@@ -41,8 +41,6 @@ namespace RF {
 
         void checkIfCollided(const std::shared_ptr<Entity > &other) final;
 
-        void checkOnCollision() final;
-
         void correctPosition(PlaneLocation correctionVector) final;
 
         //deze member zet enkel de movement voor de player

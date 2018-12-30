@@ -18,9 +18,15 @@ namespace RF {
 
         Player(location &entityLocation, size &entitySize, movementVector &movement);
 
-        void correctPosition(PlaneLocation correctionVector) override;
+        void update() final;
+
+        void correctPosition(PlaneLocation correctionVector) final;
+
+        void checkIfCollided(const std::shared_ptr<Entity > &other) final;
 
         void attackAction(std::shared_ptr<Entity > world) final;
+
+
     };
 
 }

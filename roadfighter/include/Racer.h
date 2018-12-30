@@ -14,9 +14,13 @@ namespace RF {
 
         ~Racer() override;
 
-        Racer(location &entityLocation, size &entitySize);
-
         Racer(location &entityLocation, size &entitySize, movementVector &movement);
+
+        void update() final;
+
+        void checkIfCollided(const std::shared_ptr<RF::Entity> &other) final;
+
+        void checkIfInWorld() final;
     };
 
 }

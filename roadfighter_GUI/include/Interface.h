@@ -25,7 +25,9 @@
 
         void handleKeyboardInput(RF::World &road);
 
-        void createEntities(RF::World &road);
+        void createFPCars(RF::World &road);
+
+        void createRacerCars(RF::World &road);
     };
 
 

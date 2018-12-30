@@ -20,8 +20,6 @@ namespace RF {
 
         Entity();
 
-        Entity(location& entityLocation, size& entitySize);
-
         Entity(location& entityLocation, size& entitySize, movementVector& movement);
 
         virtual ~Entity();
@@ -50,8 +48,6 @@ namespace RF {
 
         virtual void checkIfCollided(const std::shared_ptr<Entity > &other);
 
-        virtual void checkOnCollision();
-
         virtual void update();
 
         //functie om de wereld rond het centrum te houden, de 'wereld' beweegt dus in de richting van de correctionVector.
@@ -62,11 +58,16 @@ namespace RF {
     protected:
 
         location entityLocation;
+        //hoek over dewelke de entiteit gedraaid moet worden (per draw)
+        int rotation;
+
         size entitySize;
 
         movementVector movement;
 
         bool crashed;
+
+        int specialActionDuration;
     };
 
 

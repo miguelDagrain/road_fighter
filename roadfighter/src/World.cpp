@@ -82,13 +82,6 @@ void RF::World::checkIfCollided(const std::shared_ptr<RF::Entity> &other)
     }
 }
 
-void RF::World::checkOnCollision()
-{
-    for(auto &object:livingObjects){
-        checkIfCollided(object);
-    }
-}
-
 void RF::World::correctPosition(RF::PlaneLocation correctionVector)
 {
     for(auto &object:livingObjects)
@@ -110,12 +103,16 @@ void RF::World::accelerate(RF::movementVector &acceleration)
 void RF::World::draw() {
     for(auto &object: livingObjects){
         if(std::dynamic_pointer_cast<RF::Road>(object)){
+
             object->draw();
+
         }
     }
     for(auto &object: livingObjects){
         if(!std::dynamic_pointer_cast<RF::Road>(object)) {
-            object->draw();
+            if(object->getLocation().second > -4 && object->getLocation().second < 3) {
+                object->draw();
+            }
         }
     }
 }
