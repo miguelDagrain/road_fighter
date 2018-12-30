@@ -18,18 +18,20 @@ std::shared_ptr<RF_GUI::BulletSFML> Factory::createBullet(RF::location &entityLo
     return std::make_shared<RF_GUI::BulletSFML >(entityLocation, standard, movement);
 }
 
-std::shared_ptr<RF_GUI::FuelcarSFML > Factory::createFuelcar(RF::location &entityLocation, RF::movementVector &movement)
+std::shared_ptr<RF_GUI::FuelcarSFML > Factory::createFuelcar(RF::location &entityLocation)
 {
     RF::size standard(0.4, 0.4);
+    RF::movementVector speed(0, -0.10);
 
-    return std::make_shared<RF_GUI::FuelcarSFML >(entityLocation, standard, movement);
+    return std::make_shared<RF_GUI::FuelcarSFML >(entityLocation, standard, speed);
 }
 
-std::shared_ptr<RF_GUI::PassingcarSFML > Factory::createPassingcar(RF::location &entityLocation, RF::movementVector &movement)
+std::shared_ptr<RF_GUI::PassingcarSFML > Factory::createPassingcar(RF::location &entityLocation)
 {
     RF::size standard(0.4, 0.4);
+    RF::movementVector speed(0, -0.10);
 
-    return std::make_shared<RF_GUI::PassingcarSFML >(entityLocation, standard, movement);
+    return std::make_shared<RF_GUI::PassingcarSFML >(entityLocation, standard, speed);
 }
 
 std::shared_ptr<RF_GUI::PlayerSFML > Factory::createPlayer(RF::location &entityLocation, RF::movementVector &movement)

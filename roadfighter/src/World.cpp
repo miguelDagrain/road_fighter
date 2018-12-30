@@ -24,8 +24,6 @@ void RF::World::update()
 {
     std::shared_ptr<Player > player = nullptr;
 
-    std::vector<std::vector<std::shared_ptr<Entity > >::iterator > dyingObjects;
-
     //we updaten het object
     for(auto &object: livingObjects){
         object->update();
@@ -42,7 +40,7 @@ void RF::World::update()
     }
 
     //verwijder onnodige objecten
-    for(auto objectptr = livingObjects.begin(); objectptr != livingObjects.end(); objectptr++)
+    for(auto objectptr = livingObjects.begin(); objectptr != livingObjects.end(); ++objectptr)
     {
         //we controleren of het object is gecrasht
         (*objectptr)->checkIfInWorld();
@@ -59,13 +57,11 @@ void RF::World::update()
                 observer->notifyEndWorld((*objectptr)->getLocation());
             }
 
-            dyingObjects.emplace_back(objectptr);
+            livingObjects.erase(objectptr);
+
+            --objectptr;
         }
 
-    }
-
-    for(auto &object:dyingObjects){
-        livingObjects.erase(object);
     }
 
 }

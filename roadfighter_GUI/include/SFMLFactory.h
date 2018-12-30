@@ -33,9 +33,9 @@ public:
 
     std::shared_ptr<RF_GUI::BulletSFML > createBullet(RF::location &entityLocation, RF::movementVector &movement);
 
-    std::shared_ptr<RF_GUI::FuelcarSFML > createFuelcar(RF::location &entityLocation, RF::movementVector &movement);
+    std::shared_ptr<RF_GUI::FuelcarSFML > createFuelcar(RF::location &entityLocation);
 
-    std::shared_ptr<RF_GUI::PassingcarSFML > createPassingcar(RF::location &entityLocation, RF::movementVector &movement);
+    std::shared_ptr<RF_GUI::PassingcarSFML > createPassingcar(RF::location &entityLocation);
 
     std::shared_ptr<RF_GUI::PlayerSFML > createPlayer(RF::location &entityLocation, RF::movementVector &movement);
 

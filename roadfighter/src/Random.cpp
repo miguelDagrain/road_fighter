@@ -12,17 +12,46 @@ std::shared_ptr<RF::Random > &RF::Random::getInstance()
 {
     if(instance == nullptr){
 
-        instance = std::shared_ptr<RF::Random >(this);
+        auto random = new Random();
+
+        instance = std::shared_ptr<RF::Random >(random);
     }
 
     return instance;
 }
 
-long RF::Random::getIntNumber() {
-
-    std::random_device randomizer;
-    std::default_random_engine engine(randomizer()); //otherwise default random engine genereert dezelfde output
-    std::uniform_int_distribution<int > distribution(std::numeric_limits<int>::min(), std::numeric_limits<int>::max());
+int RF::Random::getIntCar()
+{
+    std::uniform_int_distribution<int > distribution(0, 8);
 
     return distribution(engine);
 }
+
+
+int RF::Random::getRandomInt() {
+    std::uniform_int_distribution<int > distribution(0, 5);
+
+    return distribution(engine);
+};
+
+
+double RF::Random::getDoubleOnRoad()
+{
+    //de -0.4 is om geen auto over de witte lijn te creeren
+    std::uniform_real_distribution<double > distribution(-RF::endOfRoad, RF::endOfRoad-0.4);
+
+    return distribution(engine);
+}
+
+double RF::Random::getDoubleOnNextPiece()
+{
+    std::uniform_real_distribution<double > distribution(-6, -3.4);
+
+    return distribution(engine);
+}
+
+RF::Random::Random()
+{
+    engine = std::default_random_engine(randomizer());
+}
+

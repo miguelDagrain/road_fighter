@@ -67,7 +67,7 @@ void RF::Entity::accelerate(RF::movementVector &acceleration)
 {
     movement.first += acceleration.first;
 
-    if(movement.second > -0.08) {
+    if(movement.second > -0.18) {
         movement.second += acceleration.second;
     }
 }
@@ -78,7 +78,7 @@ void RF::Entity::attackAction(std::shared_ptr<Entity > world)
 
 void RF::Entity::checkIfInWorld()
 {
-    if(this->getLocation().first > 4 || this->getLocation().first < -4 || this->getLocation().second > 3 || this->getLocation().second < -3){
+    if(this->getLocation().first > 4 || this->getLocation().first < -4 || this->getLocation().second > 3 || this->getLocation().second < -6){
         this->crashed = true;
     }
 }

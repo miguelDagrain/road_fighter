@@ -6,18 +6,31 @@
 #include <memory>
 #include <random>
 
+#include "roadfighter/include/World.h"
+
 namespace RF {
 
     class Random {
     public:
 
-        std::shared_ptr<Random > &getInstance();
+        static std::shared_ptr<Random > &getInstance();
 
-        long getIntNumber();
+        int getIntCar();
+
+        int getRandomInt();
+
+        double getDoubleOnRoad();
+
+        double getDoubleOnNextPiece();
 
     private:
 
+        Random();
+
         static std::shared_ptr<Random > instance;
+
+        std::random_device randomizer;
+        std::default_random_engine engine;
 
     };
 

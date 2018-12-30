@@ -31,10 +31,6 @@ double get_line_end_of_road(std::string inputFile){
     return endLine;
 }
 
-namespace Interface {
-    bool lastMovement = false;
-}
-
 RF::World Interface::setupWorld(std::string &inputFile)
 {
     RF::World road;
@@ -71,15 +67,20 @@ void Interface::updateWorld(RF::World &road, std::string &inputFile)
 
     Factory fact;
 
-    road.update();
 
     RF::location loc(0, 0);
     if(road.getObserver()->checkEndWorld() != loc){
 
+        Interface::createEntities(road);
+
+
         std::shared_ptr<RF_GUI::RoadSFML> backgroundAbove = fact.createRoad(inputFile, road.getObserver()->checkEndWorld());
         road.addObject(backgroundAbove);
+
         road.getObserver()->resetEndWorld();
     }
+
+    road.update();
 
 }
 
@@ -107,25 +108,56 @@ void Interface::handleKeyboardInput(RF::World &road) {
 
     RF::movementVector acceleration{0, 0};
 
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) && lastMovement)
-    {
-        Interface::lastMovement = false;
+
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
         acceleration.first -= 0.01;
-    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) && lastMovement)
-    {
-        Interface::lastMovement = false;
+    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
         acceleration.first += 0.01;
-    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
-    {
-        lastMovement = true;
-        acceleration.second -= 0.003;
-    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-    {
-        lastMovement = true;
-        acceleration.second += 0.003;
-    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
-    {
+    }
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)){
+        acceleration.second -= 0.002;
+    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
+        acceleration.second += 0.002;
+    }
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
     }
 
     road.accelerate(acceleration);
+}
+
+
+void Interface::createEntities(RF::World &road)
+{
+
+    Factory fact;
+    auto random = RF::Random::getInstance();
+
+    for(int iter = 0; iter < 6; ++iter) {
+
+        std::shared_ptr<RF::Entity > car = nullptr;
+
+        int chance = random->getRandomInt();
+
+        //neem een willekeurige waarde die de chance moet voldoen om een entity te maken (anders wordt het te vol)
+        if(chance == 4){
+
+            RF::location startpoint(random->getDoubleOnRoad(), random->getDoubleOnNextPiece());
+
+            //als we een entity maken, moeten we nog bepalen welke auto wordt gepasseerd
+            int kindOfCar = random->getIntCar();
+
+            if(kindOfCar < 8){
+                car = fact.createPassingcar(startpoint);
+            }else{
+                car = fact.createFuelcar(startpoint);
+            }
+        }
+
+        if(car) {
+            road.addObject(car);
+        }
+    }
 }

@@ -5,18 +5,17 @@
 
 #include <SFML/Graphics.hpp>
 
-
 #include "roadfighter/include/World.h"
 #include "roadfighter/include/Bullet.h"
 #include "roadfighter/include/SemiObserverWorld.h"
-#include "SFMLFactory.h"
+#include "roadfighter/include/Random.h"
 
+#include "roadfighter_GUI/include/SFMLFactory.h"
 #include "roadfighter_GUI/include/Transformation.h"
 #include "roadfighter_GUI/include/RoadSFML.h"
 
 
     namespace Interface {
-        extern bool lastMovement;
 
         RF::World setupWorld(std::string &inputFile);
 
@@ -25,6 +24,8 @@
         void handleEvents();
 
         void handleKeyboardInput(RF::World &road);
+
+        void createEntities(RF::World &road);
     };
 
 
