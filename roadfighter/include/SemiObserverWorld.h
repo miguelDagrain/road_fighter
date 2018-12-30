@@ -19,7 +19,16 @@ namespace RF {
         void resetEndWorld();
 
         const RF::location checkEndWorld();
+
+        void notifyExistPlayer();
+
+        void resetExistPlayer();
+
+        bool checkExistPlayer();
+
     private:
+
+        bool existPlayer;
 
         RF::location endWorld;
     };

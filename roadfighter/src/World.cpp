@@ -39,22 +39,28 @@ void RF::World::update()
         this->correctPosition(player->getMovement());
     }
 
-    //verwijder onnodige objecten
-    for(auto objectptr = livingObjects.begin(); objectptr != livingObjects.end(); ++objectptr)
-    {
+    //controleer of objecten crashen
+    for(auto objectptr = livingObjects.begin(); objectptr != livingObjects.end(); ++objectptr) {
         //we controleren of het object is gecrasht
         (*objectptr)->checkIfInWorld();
         (*objectptr)->checkIfOnRoad();
 
-        for(auto &otherObject: livingObjects){
-            if((!std::dynamic_pointer_cast<RF::Road >(otherObject)) && (otherObject) != (*objectptr)) {
+        for (auto &otherObject: livingObjects) {
+            if ((!std::dynamic_pointer_cast<RF::Road>(otherObject)) && (otherObject) != (*objectptr)) {
                 (*objectptr)->checkIfCollided(otherObject);
             }
         }
+    }
 
+    //verwijder onnodige objecten niet meteen omdat we collision tussen verschillende objecten bij beide objecten moeten merken
+    for(auto objectptr = livingObjects.begin(); objectptr != livingObjects.end(); ++objectptr) {
         if((*objectptr)->hasCrashed()){
             if(std::dynamic_pointer_cast<RF::Road>(*objectptr)){
                 observer->notifyEndWorld((*objectptr)->getLocation());
+            }
+
+            if(std::dynamic_pointer_cast<RF::Player>(*objectptr)){
+                observer->notifyExistPlayer();
             }
 
             livingObjects.erase(objectptr);

@@ -17,6 +17,8 @@
 
     namespace Interface {
 
+        extern int coolDown;
+
         RF::World setupWorld(std::string &inputFile);
 
         void updateWorld(RF::World &road,std::string &inputFile);

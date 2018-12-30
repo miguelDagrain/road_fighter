@@ -1,7 +1,7 @@
 
-#include <roadfighter/include/Entity.h>
-
 #include "roadfighter/include/World.h"
+#include "roadfighter/include/Bullet.h"
+
 #include "roadfighter/include/Entity.h"
 
 
@@ -105,6 +105,7 @@ void RF::Entity::checkIfCollided(const std::shared_ptr<RF::Entity> &other)
                 //tot slot controleren we of we ons niet boven de andere entiteit begeven, zoniet dan heb je collision
                 if((this->getLocation().second+this->getSize().second) >= other->getLocation().second){
                     crashed = true;
+
                 }
             }
 

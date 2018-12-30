@@ -26,9 +26,7 @@ void RF::Bullet::checkIfCollided(const std::shared_ptr<RF::Entity> &other) {
                 //tot slot controleren we of we ons niet boven de andere entiteit begeven, zoniet dan heb je collision
                 if((this->getLocation().second+this->getSize().second) >= other->getLocation().second){
                     //we kunnen natuurlijk niet crashen tegen de speler
-                    if (std::dynamic_pointer_cast<RF::Player >(other)){
-
-                    }else{
+                    if (!(std::dynamic_pointer_cast<RF::Player >(other))){
                         crashed = true;
                     }
 

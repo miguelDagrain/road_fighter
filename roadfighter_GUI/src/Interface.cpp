@@ -33,6 +33,10 @@ double get_line_end_of_road(std::string inputFile){
     return endLine;
 }
 
+namespace Interface {
+    int coolDown = 0;
+}
+
 RF::World Interface::setupWorld(std::string &inputFile)
 {
     RF::World road;
@@ -87,6 +91,15 @@ void Interface::updateWorld(RF::World &road, std::string &inputFile)
 
     road.update();
 
+    if(road.getObserver()->checkExistPlayer()){
+        RF::location locPlayer(0, 2);
+        RF::movementVector movement(0, 0);
+
+        std::shared_ptr<RF_GUI::PlayerSFML > playerSFML = fact.createPlayer(locPlayer, movement);
+        road.addObject(playerSFML);
+
+        road.getObserver()->resetExistPlayer();
+    }
 }
 
 void Interface::handleEvents()
@@ -129,8 +142,13 @@ void Interface::handleKeyboardInput(RF::World &road) {
 
     road.accelerate(acceleration);
 
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && !coolDown){
         road.attackAction(road);
+        coolDown = 100;
+    }else {
+        if(coolDown > 0) {
+            --coolDown;
+        }
     }
 }
 
