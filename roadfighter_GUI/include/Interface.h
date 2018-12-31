@@ -7,7 +7,7 @@
 
 #include "roadfighter/include/World.h"
 #include "roadfighter/include/Bullet.h"
-#include "roadfighter/include/SemiObserverWorld.h"
+#include "roadfighter/include/ObserverWorld.h"
 #include "roadfighter/include/Random.h"
 
 #include "roadfighter_GUI/include/SFMLFactory.h"

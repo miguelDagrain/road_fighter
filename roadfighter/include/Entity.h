@@ -7,7 +7,10 @@
 #include "roadfighter/include/PlaneLocation.h"
 #include "roadfighter/include/RoadfighterError.h"
 
+
 namespace RF {
+
+    class ObserverWorld;
 
     using location = PlaneLocation;
     using size = PlaneLocation;
@@ -68,6 +71,8 @@ namespace RF {
         bool crashed;
 
         int specialActionDuration;
+
+        std::shared_ptr<RF::ObserverWorld > observer;
     };
 
 

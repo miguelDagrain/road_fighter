@@ -4,6 +4,8 @@
 #define ROAD_FIGHTER_PASSINGCAR_H
 
 #include "roadfighter/include/Entity.h"
+#include "roadfighter/include/ObserverWorld.h"
+
 
 namespace RF {
 
@@ -15,6 +17,8 @@ namespace RF {
         ~Passingcar() override;
 
         Passingcar(location &entityLocation, size &entitySize, movementVector &movement);
+
+        void checkIfCollided(const std::shared_ptr<RF::Entity> &other) override;
     };
 
 }

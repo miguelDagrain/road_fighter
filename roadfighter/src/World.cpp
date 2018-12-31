@@ -134,12 +134,12 @@ void RF::World::draw() {
 }
 
 
-void RF::World::setObserver(std::shared_ptr<RF::SemiObserverWorld> &&observerPtr)
+void RF::World::setObserver(std::shared_ptr<RF::ObserverWorld> &&observerPtr)
 {
     observer = observerPtr;
 }
 
-const std::shared_ptr<RF::SemiObserverWorld> RF::World::getObserver()
+const std::shared_ptr<RF::ObserverWorld> RF::World::getObserver()
 {
     return observer;
 }

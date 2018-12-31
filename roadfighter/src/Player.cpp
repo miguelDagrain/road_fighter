@@ -1,6 +1,7 @@
 
-#include <roadfighter/include/Player.h>
 
+#include "roadfighter/include/Bullet.h"
+#include "roadfighter/include/Road.h"
 #include "roadfighter/include/Racer.h"
 #include "roadfighter/include/Passingcar.h"
 #include "roadfighter/include/Fuelcar.h"
@@ -13,11 +14,21 @@ RF::Player::~Player() = default;
 RF::Player::Player(RF::location &entityLocation, RF::size &entitySize, RF::movementVector &movement) :
 Entity(entityLocation, entitySize, movement)
 {
-
+    specialActionDuration = 100;
 }
 
+bool RF::Player::hasCrashed() const
+{
+    if(crashed){
+        observer->notifyCrashed();
+    }
 
-void RF::Player::update() {
+    return crashed;
+}
+
+void RF::Player::update()
+{
+    observer->notifyTimePassed();
 
     entityLocation += movement;
 
@@ -47,18 +58,20 @@ void RF::Player::correctPosition(RF::PlaneLocation correctionVector)
 
 void RF::Player::checkIfCollided(const std::shared_ptr<RF::Entity> &other)
 {
-    if(specialActionDuration == 0){
-        //eerst controleren we of we ons niet rechts van de andere entiteit begeven, zoniet ga verder...
-        if(this->getLocation().first <= (other->getLocation().first+other->getSize().first))
+
+
+    if(specialActionDuration == 0 && !(std::dynamic_pointer_cast<RF::Bullet >(other) || std::dynamic_pointer_cast<RF::Road >(other))){
+        //eerst controleren we of we ons niet onder de andere entiteit begeven, zoniet ga verder...
+        if((this->getLocation().second <= (other->getLocation().second+other->getSize().second)))
         {
-            //dan controleren we of we ons niet links van de andere entiteit begeven, zoniet ga verder...
-            if((this->getLocation().first+this->getSize().first) >= other->getLocation().first)
+            //dan controleren we of we ons niet boven de andere entiteit begeven, zoniet ga verder...
+            if((this->getLocation().second+this->getSize().second) >= other->getLocation().second)
             {
-                //vervolgens controleren we of we ons niet onder de andere entiteit begeven, zoniet ga verder...
-                if((this->getLocation().second <= (other->getLocation().second+other->getSize().second)))
+                //vervolgens controleren we of we ons niet rechts van de andere entiteit begeven, zoniet ga verder...
+                if(this->getLocation().first <= (other->getLocation().first+other->getSize().first))
                 {
-                    //tot slot controleren we of we ons niet boven de andere entiteit begeven, zoniet dan heb je collision
-                    if((this->getLocation().second+this->getSize().second) >= other->getLocation().second){
+                    //tot slot controleren we of we ons niet links van de andere entiteit begeven, zoniet dan heb je collision
+                    if((this->getLocation().first+this->getSize().first) >= other->getLocation().first){
 
                         //we controleren welk soort wagen we tegen aangebotst zijn
                         if(std::dynamic_pointer_cast<RF::Passingcar>(other)){
@@ -85,6 +98,7 @@ void RF::Player::checkIfCollided(const std::shared_ptr<RF::Entity> &other)
             }
         }
     }
+
 }
 
 

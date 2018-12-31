@@ -41,7 +41,7 @@ RF::World Interface::setupWorld(std::string &inputFile)
 {
     RF::World road;
 
-    std::shared_ptr<RF::SemiObserverWorld > observer = std::make_shared<RF::SemiObserverWorld>();
+    std::shared_ptr<RF::ObserverWorld > observer = std::make_shared<RF::ObserverWorld>();
     road.setObserver(std::move(observer));
 
     double line = get_line_end_of_road(inputFile);
@@ -53,8 +53,8 @@ RF::World Interface::setupWorld(std::string &inputFile)
     std::shared_ptr<RF_GUI::RoadSFML> background = fact.createRoad(inputFile, 1);
     road.addObject(background);
 
-    std::shared_ptr<RF_GUI::RoadSFML> backgroundMiddle = fact.createRoad(inputFile, 2);
-    road.addObject(backgroundMiddle);
+    background = fact.createRoad(inputFile, 2);
+    road.addObject(background);
 
 
     createRacerCars(road);

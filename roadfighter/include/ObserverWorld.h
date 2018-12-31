@@ -7,12 +7,12 @@
 
 namespace RF {
 
-    class SemiObserverWorld {
+    class ObserverWorld {
 
     public:
-        SemiObserverWorld();
+        ObserverWorld();
 
-        ~SemiObserverWorld();
+        ~ObserverWorld();
 
         void notifyEndWorld(const RF::location &loc);
 
@@ -26,11 +26,24 @@ namespace RF {
 
         bool checkExistPlayer();
 
+        void notifyTimePassed();
+
+        void notifyShotEntity();
+
+        void notifyCrashed();
+
+        void notifyFinished();
+
+        long checkScore();
+
     private:
 
         bool existPlayer;
 
         RF::location endWorld;
+
+        long timeScore;
+        long score;
     };
 
 }

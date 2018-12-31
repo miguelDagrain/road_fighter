@@ -6,16 +6,12 @@
 #include <algorithm>
 #include <vector>
 
+#include "roadfighter/include/ObserverWorld.h"
 #include "roadfighter/include/Entity.h"
-//#include "roadfighter/include/Bullet.h"
-//#include "roadfighter/include/Fuelcar.h"
-//#include "roadfighter/include/Passingcar.h"
 #include "roadfighter/include/Player.h"
-//#include "roadfighter/include/Racer.h"
 #include "roadfighter/include/Road.h"
 #include "roadfighter/include/RoadfighterError.h"
 
-#include "roadfighter/include/SemiObserverWorld.h"
 
 
 namespace RF {
@@ -50,9 +46,9 @@ namespace RF {
 
         void draw() final;
 
-        void setObserver(std::shared_ptr<RF::SemiObserverWorld > &&observerPtr);
+        void setObserver(std::shared_ptr<RF::ObserverWorld > &&observerPtr);
 
-        const std::shared_ptr<RF::SemiObserverWorld > getObserver();
+        const std::shared_ptr<RF::ObserverWorld > getObserver();
 
     private:
         //deze member heeft geen zin voor de composite class
@@ -71,8 +67,6 @@ namespace RF {
         const movementVector  &getMovement() const final;
 
         std::vector<std::shared_ptr<Entity > > livingObjects;
-
-        std::shared_ptr<RF::SemiObserverWorld > observer;
     };
 
 }

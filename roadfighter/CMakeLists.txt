@@ -9,10 +9,11 @@ add_library(FILES_GAME_LOGIC STATIC
         src/Player.cpp
         src/Racer.cpp
         src/Road.cpp
+        src/Finish.cpp
         src/World.cpp
         src/RoadfighterError.cpp
         src/Random.cpp
-        src/SemiObserverWorld.cpp)
+        src/ObserverWorld.cpp)
 
 set(HEADER_FILES_GAME_LOGIC
         include/PlaneLocation.h
@@ -23,10 +24,11 @@ set(HEADER_FILES_GAME_LOGIC
         include/Player.h
         include/Racer.h
         include/Road.h
+        include/Finish.h
         include/World.h
         include/RoadfighterError.h
         include/Random.h
-        include/SemiObserverWorld.h
+        include/ObserverWorld.h
         PARENT_SCOPE)
 
 

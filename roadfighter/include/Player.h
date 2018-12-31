@@ -18,6 +18,8 @@ namespace RF {
 
         Player(location &entityLocation, size &entitySize, movementVector &movement);
 
+        bool hasCrashed() const final;
+
         void update() final;
 
         void correctPosition(PlaneLocation correctionVector) final;

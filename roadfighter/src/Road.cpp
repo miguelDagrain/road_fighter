@@ -14,7 +14,7 @@ Entity(entityLocation, entitySize, movement)
 
 void RF::Road::checkIfInWorld()
 {
-    if(this->getLocation().first > 4 || this->getLocation().first < -4 || this->getLocation().second > 3 || this->getLocation().second < -9){
+    if(this->getLocation().second > 3 || this->getLocation().second < -6){
         crashed = true;
     }
 }

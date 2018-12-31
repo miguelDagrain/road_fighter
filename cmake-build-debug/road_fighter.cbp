@@ -146,10 +146,11 @@
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/Player.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/Racer.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/Road.h"/>
+					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/Finish.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/World.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/RoadfighterError.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/Random.h"/>
-					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/SemiObserverWorld.h"/>
+					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/ObserverWorld.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/Transformation.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/BulletSFML.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/FuelcarSFML.h"/>
@@ -157,6 +158,7 @@
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/PlayerSFML.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/RacerSFML.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/RoadSFML.h"/>
+					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/FinishSFML.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/SFMLFactory.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/Interface.h"/>
 					<Add directory="/usr/local/include"/>
@@ -191,10 +193,11 @@
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/Player.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/Racer.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/Road.h"/>
+					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/Finish.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/World.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/RoadfighterError.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/Random.h"/>
-					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/SemiObserverWorld.h"/>
+					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/ObserverWorld.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/Transformation.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/BulletSFML.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/FuelcarSFML.h"/>
@@ -202,6 +205,7 @@
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/PlayerSFML.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/RacerSFML.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/RoadSFML.h"/>
+					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/FinishSFML.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/SFMLFactory.h"/>
 					<Add directory="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/app/include/Interface.h"/>
 					<Add directory="/usr/local/include"/>
@@ -231,7 +235,13 @@
 		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/src/Entity.cpp">
 			<Option target="FILES_GAME_LOGIC"/>
 		</Unit>
+		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/src/Finish.cpp">
+			<Option target="FILES_GAME_LOGIC"/>
+		</Unit>
 		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/src/Fuelcar.cpp">
+			<Option target="FILES_GAME_LOGIC"/>
+		</Unit>
+		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/src/ObserverWorld.cpp">
 			<Option target="FILES_GAME_LOGIC"/>
 		</Unit>
 		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/src/Passingcar.cpp">
@@ -255,13 +265,13 @@
 		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/src/RoadfighterError.cpp">
 			<Option target="FILES_GAME_LOGIC"/>
 		</Unit>
-		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/src/SemiObserverWorld.cpp">
-			<Option target="FILES_GAME_LOGIC"/>
-		</Unit>
 		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter/src/World.cpp">
 			<Option target="FILES_GAME_LOGIC"/>
 		</Unit>
 		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter_GUI/src/BulletSFML.cpp">
+			<Option target="FILES_GAME_GUI"/>
+		</Unit>
+		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter_GUI/src/FinishSFML.cpp">
 			<Option target="FILES_GAME_GUI"/>
 		</Unit>
 		<Unit filename="/home/miguel/Documents/cursussen-BA2/gevorderd_programmeren/road_fighter/roadfighter_GUI/src/FuelcarSFML.cpp">
