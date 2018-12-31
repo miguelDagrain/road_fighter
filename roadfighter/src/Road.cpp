@@ -14,7 +14,8 @@ Entity(entityLocation, entitySize, movement)
 
 void RF::Road::checkIfInWorld()
 {
-    if(this->getLocation().second > 3 || this->getLocation().second < -6){
+    //-9 omdat we een vloeiend overgang willen creeren en dus een extra stuk weg moeten kunnen generen in de wereld
+    if(this->getLocation().second > 3 || this->getLocation().second < -9){
         crashed = true;
     }
 }

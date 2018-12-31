@@ -20,6 +20,7 @@
 #include "roadfighter_GUI/include/PlayerSFML.h"
 #include "roadfighter_GUI/include/RacerSFML.h"
 #include "roadfighter_GUI/include/RoadSFML.h"
+#include "FinishSFML.h"
 
 
 class Factory {
@@ -44,6 +45,8 @@ public:
     std::shared_ptr<RF_GUI::RoadSFML > createRoad(std::string &inputFile, int pos);
 
     std::shared_ptr<RF_GUI::RoadSFML > createRoad(std::string &inputFile, const RF::location &loc);
+
+    std::shared_ptr<RF_GUI::FinishSFML > createFinish(std::string &inputFile, const RF::location &loc);
 };
 
 #endif //ROAD_FIGHTER_ENTITYFACTORY_H

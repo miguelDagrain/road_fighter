@@ -36,11 +36,15 @@ namespace RF {
 
         long checkScore();
 
+        bool checkFinished();
+
     private:
 
         bool existPlayer;
 
         RF::location endWorld;
+
+        bool finished;
 
         long timeScore;
         long score;

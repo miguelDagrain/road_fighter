@@ -3,6 +3,9 @@
 #ifndef ROAD_FIGHTER_INTERFACE_H
 #define ROAD_FIGHTER_INTERFACE_H
 
+#include <fstream>
+#include <chrono>
+#include <thread>
 #include <SFML/Graphics.hpp>
 
 #include "roadfighter/include/World.h"
@@ -15,13 +18,20 @@
 #include "roadfighter_GUI/include/RoadSFML.h"
 
 
-    namespace Interface {
+    class Interface {
+    public:
 
-        extern int coolDown;
+        explicit Interface(int roadLength);
 
-        RF::World setupWorld(std::string &inputFile);
+        ~Interface();
 
-        void updateWorld(RF::World &road,std::string &inputFile);
+        void runGame(std::string &&inputfileRoad, std::string &&inputFileFinish);
+
+    private:
+
+        RF::World setupWorld(std::string &inputFileRoad);
+
+        bool updateWorld(RF::World &road,std::string &inputFileRoad, std::string &inputFileFinish);
 
         void handleEvents();
 
@@ -30,6 +40,11 @@
         void createFPCars(RF::World &road);
 
         void createRacerCars(RF::World &road);
+
+
+        int coolDown;
+
+        int length;
     };
 
 

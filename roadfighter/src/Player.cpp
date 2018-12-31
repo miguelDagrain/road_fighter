@@ -5,6 +5,7 @@
 #include "roadfighter/include/Racer.h"
 #include "roadfighter/include/Passingcar.h"
 #include "roadfighter/include/Fuelcar.h"
+#include "roadfighter/include/Finish.h"
 #include "roadfighter/include/Player.h"
 
 RF::Player::Player() = default;
@@ -60,7 +61,7 @@ void RF::Player::checkIfCollided(const std::shared_ptr<RF::Entity> &other)
 {
 
 
-    if(specialActionDuration == 0 && !(std::dynamic_pointer_cast<RF::Bullet >(other) || std::dynamic_pointer_cast<RF::Road >(other))){
+    if(specialActionDuration == 0 && !(std::dynamic_pointer_cast<RF::Bullet >(other))){
         //eerst controleren we of we ons niet onder de andere entiteit begeven, zoniet ga verder...
         if((this->getLocation().second <= (other->getLocation().second+other->getSize().second)))
         {
@@ -89,6 +90,8 @@ void RF::Player::checkIfCollided(const std::shared_ptr<RF::Entity> &other)
 
                         } else if(std::dynamic_pointer_cast<RF::Racer>(other)){
                             specialActionDuration = 50;
+                        } else if(std::dynamic_pointer_cast<RF::Finish>(other)){
+                            observer->notifyFinished();
                         }
 
                     }

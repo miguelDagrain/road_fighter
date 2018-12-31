@@ -67,7 +67,8 @@ std::shared_ptr<RF_GUI::RoadSFML > Factory::createRoad(std::string &inputFile, i
     return std::make_shared<RF_GUI::RoadSFML >(standardLocation, standardSize, standardMovement, inputFile);
 }
 
-std::shared_ptr<RF_GUI::RoadSFML> Factory::createRoad(std::string &inputFile, const RF::location &loc) {
+std::shared_ptr<RF_GUI::RoadSFML> Factory::createRoad(std::string &inputFile, const RF::location &loc)
+{
 
     RF::location newLoc(loc.first, loc.second - 12);
     RF::size standardSize(8, 6);
@@ -75,4 +76,13 @@ std::shared_ptr<RF_GUI::RoadSFML> Factory::createRoad(std::string &inputFile, co
 
     return std::make_shared<RF_GUI::RoadSFML >(newLoc, standardSize, standardMovement, inputFile);
 
+}
+
+std::shared_ptr<RF_GUI::FinishSFML> Factory::createFinish(std::string &inputFile, const RF::location &loc)
+{
+    RF::location newLoc(loc.first, loc.second - 12);
+    RF::size standardSize(8, 6);
+    RF::movementVector standardMovement(0, 0);
+
+    return std::make_shared<RF_GUI::FinishSFML >(newLoc, standardSize, standardMovement, inputFile);
 }

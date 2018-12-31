@@ -3,7 +3,7 @@
 
 #include "roadfighter/include/ObserverWorld.h"
 
-RF::ObserverWorld::ObserverWorld(): existPlayer(false), score(0), timeScore(10000)
+RF::ObserverWorld::ObserverWorld(): existPlayer(false), score(0), timeScore(10000), finished(false)
 {
     RF::location loc(0, 0);
     endWorld = loc;
@@ -52,9 +52,14 @@ void RF::ObserverWorld::notifyCrashed() {
 }
 
 void RF::ObserverWorld::notifyFinished() {
+    finished = true;
     score += timeScore;
 }
 
 long RF::ObserverWorld::checkScore() {
     return 0;
+}
+
+bool RF::ObserverWorld::checkFinished() {
+    return finished;
 }

@@ -11,6 +11,11 @@ RF::World::~World() = default;
 
 void RF::World::addObject(std::shared_ptr<RF::Entity> newbornObject)
 {
+    if(observer) {
+        std::shared_ptr<RF::ObserverWorld> copy(observer);
+        newbornObject->setObserver(std::move(copy));
+    }
+
     livingObjects.emplace_back(newbornObject);
 }
 
@@ -40,14 +45,14 @@ void RF::World::update()
     }
 
     //controleer of objecten crashen
-    for(auto objectptr = livingObjects.begin(); objectptr != livingObjects.end(); ++objectptr) {
+    for (auto &livingObject : livingObjects) {
         //we controleren of het object is gecrasht
-        (*objectptr)->checkIfInWorld();
-        (*objectptr)->checkIfOnRoad();
+        livingObject->checkIfInWorld();
+        livingObject->checkIfOnRoad();
 
         for (auto &otherObject: livingObjects) {
-            if ((!std::dynamic_pointer_cast<RF::Road>(otherObject)) && (otherObject) != (*objectptr)) {
-                (*objectptr)->checkIfCollided(otherObject);
+            if (otherObject != livingObject) {
+                livingObject->checkIfCollided(otherObject);
             }
         }
     }
@@ -137,12 +142,12 @@ void RF::World::draw() {
 void RF::World::setObserver(std::shared_ptr<RF::ObserverWorld> &&observerPtr)
 {
     observer = observerPtr;
+    for(auto &object:livingObjects){
+        std::shared_ptr<RF::ObserverWorld > copy(observer);
+        object->setObserver(std::move(copy));
+    }
 }
 
-const std::shared_ptr<RF::ObserverWorld> RF::World::getObserver()
-{
-    return observer;
-}
 
 void RF::World::checkIfInWorld() {
     throw RoadfighterError("The world can't be outside the world.");

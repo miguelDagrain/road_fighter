@@ -46,9 +46,7 @@ namespace RF {
 
         void draw() final;
 
-        void setObserver(std::shared_ptr<RF::ObserverWorld > &&observerPtr);
-
-        const std::shared_ptr<RF::ObserverWorld > getObserver();
+        void setObserver(std::shared_ptr<RF::ObserverWorld > &&observerPtr) override;
 
     private:
         //deze member heeft geen zin voor de composite class

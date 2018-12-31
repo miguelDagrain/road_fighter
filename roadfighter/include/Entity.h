@@ -31,6 +31,9 @@ namespace RF {
 
         virtual void removeObject(std::shared_ptr<Entity > deadObject);
 
+        virtual void setObserver(std::shared_ptr<RF::ObserverWorld > &&observerPtr);
+
+        virtual const std::shared_ptr<RF::ObserverWorld > getObserver() const;
 
         virtual const location &getLocation() const;
 

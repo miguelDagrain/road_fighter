@@ -39,6 +39,16 @@ void RF::Entity::removeObject(std::shared_ptr<RF::Entity> deadObject)
     throw RoadfighterError("You can't remove an object from this kind of Entity.");
 }
 
+void RF::Entity::setObserver(std::shared_ptr<RF::ObserverWorld> &&observerPtr)
+{
+    observer = observerPtr;
+}
+
+const std::shared_ptr<RF::ObserverWorld> RF::Entity::getObserver() const
+{
+    return observer;
+}
+
 const RF::location &RF::Entity::getLocation() const
 {
     return entityLocation;
@@ -93,22 +103,22 @@ void RF::Entity::checkIfOnRoad()
 
 void RF::Entity::checkIfCollided(const std::shared_ptr<RF::Entity> &other)
 {
-    //eerst controleren we of we ons niet onder de andere entiteit begeven, zoniet ga verder...
-    if((this->getLocation().second <= (other->getLocation().second+other->getSize().second)))
-    {
-        //dan controleren we of we ons niet boven de andere entiteit begeven, zoniet ga verder...
-        if((this->getLocation().second+this->getSize().second) >= other->getLocation().second)
-        {
-            //vervolgens controleren we of we ons niet rechts van de andere entiteit begeven, zoniet ga verder...
-            if(this->getLocation().first <= (other->getLocation().first+other->getSize().first))
-            {
-                //tot slot controleren we of we ons niet links van de andere entiteit begeven, zoniet dan heb je collision
-                if((this->getLocation().first+this->getSize().first) >= other->getLocation().first){
-                    crashed = true;
+    if(!std::dynamic_pointer_cast<RF::Road>(other)) {
 
+        //eerst controleren we of we ons niet onder de andere entiteit begeven, zoniet ga verder...
+        if ((this->getLocation().second <= (other->getLocation().second + other->getSize().second))) {
+            //dan controleren we of we ons niet boven de andere entiteit begeven, zoniet ga verder...
+            if ((this->getLocation().second + this->getSize().second) >= other->getLocation().second) {
+                //vervolgens controleren we of we ons niet rechts van de andere entiteit begeven, zoniet ga verder...
+                if (this->getLocation().first <= (other->getLocation().first + other->getSize().first)) {
+                    //tot slot controleren we of we ons niet links van de andere entiteit begeven, zoniet dan heb je collision
+                    if ((this->getLocation().first + this->getSize().first) >= other->getLocation().first) {
+                        crashed = true;
+
+                    }
                 }
-            }
 
+            }
         }
     }
 }
