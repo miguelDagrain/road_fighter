@@ -40,7 +40,7 @@ bool RF::ObserverWorld::checkExistPlayer() {
 }
 
 void RF::ObserverWorld::notifyTimePassed() {
-    timeScore = long(timeScore*0.99);
+    timeScore = long(timeScore*0.9999);
 }
 
 void RF::ObserverWorld::notifyShotEntity() {
@@ -57,7 +57,7 @@ void RF::ObserverWorld::notifyFinished() {
 }
 
 long RF::ObserverWorld::checkScore() {
-    return 0;
+    return score;
 }
 
 bool RF::ObserverWorld::checkFinished() {

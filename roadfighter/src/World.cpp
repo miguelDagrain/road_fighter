@@ -111,14 +111,14 @@ void RF::World::accelerate(RF::movementVector &acceleration)
     }
 }
 
-void RF::World::attackAction(RF::Entity &world)
+std::shared_ptr<RF::Entity> RF::World::attackAction(RF::Entity &world)
 {
     for(auto &object:livingObjects){
         if(std::dynamic_pointer_cast<Player >(object)){
-            object->attackAction(world);
-            break;
+            return object->attackAction(world);
         }
     }
+    return nullptr;
 }
 
 void RF::World::draw() {

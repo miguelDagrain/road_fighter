@@ -1,9 +1,9 @@
 
 #include <iostream>
 
-#include "include/SFMLFactory.h"
+#include "Factory.h"
 #include "roadfighter_GUI/include/PlayerSFML.h"
-#include "roadfighter_GUI/include/Interface.h"
+#include "Interface.h"
 
 
 
@@ -13,7 +13,7 @@
 
 int main(int argc, char* argv[]) {
 
-    Interface runner(10);
+    Interface runner(100);
 
     runner.runGame(argv[1], argv[2]);
 

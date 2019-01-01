@@ -13,7 +13,7 @@
 #include "roadfighter/include/ObserverWorld.h"
 #include "roadfighter/include/Random.h"
 
-#include "roadfighter_GUI/include/SFMLFactory.h"
+#include "Factory.h"
 #include "roadfighter_GUI/include/Transformation.h"
 #include "roadfighter_GUI/include/RoadSFML.h"
 
@@ -33,7 +33,7 @@
 
         bool updateWorld(RF::World &road,std::string &inputFileRoad, std::string &inputFileFinish);
 
-        void handleEvents();
+        void handleEvents(sf::View &gameView, sf::View &scoreView);
 
         void handleKeyboardInput(RF::World &road);
 

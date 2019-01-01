@@ -8,7 +8,7 @@ FIND_PACKAGE(SFML 2 COMPONENTS system window graphics)
 
 
 #Maak executable aan
-add_executable(game main.cpp)
+add_executable(game main.cpp Interface.h Interface.cpp Factory.h Factory.cpp)
 
 target_include_directories(game PUBLIC ${HEADER_FILES_GAME_LOGIC} ${HEADER_FILES_GAME_GUI} ${SFML_INCLUDE_DIR})
 

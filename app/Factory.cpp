@@ -1,7 +1,7 @@
 
-#include <include/SFMLFactory.h>
+#include <app/Factory.h>
 
-#include "roadfighter_GUI/include/SFMLFactory.h"
+#include "Factory.h"
 
 template<typename Tresult>
 std::shared_ptr<Tresult> Factory::createEntity()
@@ -11,11 +11,13 @@ std::shared_ptr<Tresult> Factory::createEntity()
     return std::make_shared<Tresult >(*newPtr);
 }
 
-std::shared_ptr<RF_GUI::BulletSFML> Factory::createBullet(RF::location &entityLocation, RF::movementVector &movement)
+std::shared_ptr<RF_GUI::BulletSFML> Factory::createBullet(std::shared_ptr<RF::Entity > base)
 {
-    RF::size standard(0.3, 0.3);
+    RF::location standardLoc(base->getLocation());
+    RF::size standardSize(base->getSize());
+    RF::movementVector standardMovement(base->getMovement());
 
-    return std::make_shared<RF_GUI::BulletSFML >(entityLocation, standard, movement);
+    return std::make_shared<RF_GUI::BulletSFML >(standardLoc, standardSize, standardMovement);
 }
 
 std::shared_ptr<RF_GUI::FuelcarSFML > Factory::createFuelcar(RF::location &entityLocation)

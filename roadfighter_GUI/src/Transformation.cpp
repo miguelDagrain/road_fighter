@@ -8,7 +8,7 @@ namespace RF_GUI{
 }
 
 
-RF_GUI::Transformation::Transformation(): window(std::make_shared<sf::RenderWindow>(sf::VideoMode(800, 600), "roadfighter"))
+RF_GUI::Transformation::Transformation(): window(std::make_shared<sf::RenderWindow>(sf::VideoMode(1000, 600), "roadfighter"))
 {
 }
 

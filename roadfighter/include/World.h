@@ -42,7 +42,7 @@ namespace RF {
         //deze member zet enkel de movement voor de player
         void accelerate(movementVector &acceleration) final;
 
-        void attackAction(RF::Entity &world) final;
+        std::shared_ptr<RF::Entity > attackAction(RF::Entity &world) final;
 
         void draw() final;
 

@@ -20,7 +20,7 @@
 #include "roadfighter_GUI/include/PlayerSFML.h"
 #include "roadfighter_GUI/include/RacerSFML.h"
 #include "roadfighter_GUI/include/RoadSFML.h"
-#include "FinishSFML.h"
+#include "include/FinishSFML.h"
 
 
 class Factory {
@@ -32,7 +32,7 @@ public:
     template <typename Tresult>
     std::shared_ptr<Tresult > createEntity();
 
-    std::shared_ptr<RF_GUI::BulletSFML > createBullet(RF::location &entityLocation, RF::movementVector &movement);
+    std::shared_ptr<RF_GUI::BulletSFML > createBullet(std::shared_ptr<RF::Entity > base);
 
     std::shared_ptr<RF_GUI::FuelcarSFML > createFuelcar(RF::location &entityLocation);
 

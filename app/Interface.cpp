@@ -1,17 +1,12 @@
 
 
-#include <include/Interface.h>
+#include <app/Interface.h>
 
-#include "roadfighter_GUI/include/Interface.h"
+#include "Interface.h"
 
-double get_line_end_of_road(std::string inputFile){
-    sf::Texture backgroundTexture;
+long get_number_from_string(const std::string &inputFile){
+    long number = 0;
 
-    backgroundTexture.loadFromFile(inputFile);
-
-    int number = 0;
-
-    int iter = 10;
     for(auto x:inputFile){
 
         if(x < 58 && x > 47){
@@ -20,12 +15,22 @@ double get_line_end_of_road(std::string inputFile){
 
             number += x;
 
-            number *= iter;
+            number *= 10;
         }
 
     }
 
     number /= 10;
+
+    return number;
+}
+
+double get_line_end_of_road(const std::string &inputFile){
+    sf::Texture backgroundTexture;
+
+    backgroundTexture.loadFromFile(inputFile);
+
+    long number = get_number_from_string(inputFile);
 
     double endLine = (static_cast<double>(number)/backgroundTexture.getSize().x)*4;
 
@@ -113,7 +118,7 @@ bool Interface::updateWorld(RF::World &road, std::string &inputFileRoad, std::st
 
 }
 
-void Interface::handleEvents()
+void Interface::handleEvents(sf::View &gameView, sf::View &scoreView)
 {
     auto transformationObject = RF_GUI::Transformation::getInstance();
 
@@ -124,7 +129,8 @@ void Interface::handleEvents()
             case sf::Event::Closed :
                 transformationObject->getWindow()->close();
                 break;
-
+            case sf::Event::Resized:
+                gameView.reset(sf::FloatRect(0.f, 0.f, event.size.width, event.size.height));
             default:
                 break;
         }
@@ -154,7 +160,10 @@ void Interface::handleKeyboardInput(RF::World &road) {
     road.accelerate(acceleration);
 
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && !coolDown){
-        road.attackAction(road);
+        Factory fact;
+
+        std::shared_ptr<RF::Entity > bulletBase = road.attackAction(road);
+        road.addObject(fact.createBullet(bulletBase));
         coolDown = 100;
     }else {
         if(coolDown > 0) {
@@ -223,16 +232,27 @@ void Interface::createRacerCars(RF::World &road)
 void Interface::runGame(std::string &&inputfileRoad, std::string &&inputFileFinish)
 {
 
+    //we laden een font in om de score te schrijven
+    sf::Font font;
+    font.loadFromFile("slkscr.ttf");
+
     RF::World road = this->setupWorld(inputfileRoad);
 
     auto transformationObject = RF_GUI::Transformation::getInstance();
 
-    sf::View view(sf::FloatRect(0.f, 0.f, 800.f, 600.f));
+    sf::View gameView(sf::FloatRect(0.f, 0.f, transformationObject->getWindow()->getSize().x,
+            transformationObject->getWindow()->getSize().y));
+
+    sf::View viewScore(sf::FloatRect(0.f, 0.f, 100.f, 600.f));
+
+    gameView.setViewport(sf::FloatRect(0.f, 0.f, 0.8f, 1.f));
+
+    viewScore.setViewport(sf::FloatRect(0.8f, 0.f, 0.2f, 1.f));
 
     bool finished = false;
 
     while(transformationObject->getWindow()->isOpen() && !finished){
-        this->handleEvents();
+        this->handleEvents(gameView, viewScore);
 
         std::this_thread::sleep_for(std::chrono::microseconds(300));
 
@@ -240,20 +260,29 @@ void Interface::runGame(std::string &&inputfileRoad, std::string &&inputFileFini
 
         transformationObject->getWindow()->clear();
 
+        transformationObject->getWindow()->setView(gameView);
+
         road.draw();
 
-        transformationObject->getWindow()->setView(view);
+
+        transformationObject->getWindow()->setView(viewScore);
+
+        long currentScore = road.getObserver()->checkScore();
+
+        sf::Text score;
+        score.setFont(font);
+        score.setString(std::to_string(currentScore));
+        score.setCharacterSize(30);
+        score.setFillColor(sf::Color::White);
+        score.setStyle(sf::Text::Bold);
+        score.setPosition(10, (40));
+
+
+        transformationObject->getWindow()->draw(score);
 
         transformationObject->getWindow()->display();
-
-
     }
 
-    std::this_thread::sleep_for(std::chrono::seconds(1));
-
-
-    sf::Font font;
-    font.loadFromFile("slkscr.ttf");
     sf::Text text;
     text.setFont(font);
     text.setString("Finished");
@@ -264,25 +293,59 @@ void Interface::runGame(std::string &&inputfileRoad, std::string &&inputFileFini
 
     std::ifstream highScores("All_time_high_scores.txt");
 
+    long gottenScore = road.getObserver()->checkScore();
+
+    std::vector<std::string > vecScores;
+    std::string scoreStr;
+    std::string replaced;
+    while (getline(highScores, scoreStr)){
+        long score = get_number_from_string(scoreStr);
+
+        if(replaced.empty()) {
+            if (score > gottenScore) {
+                vecScores.emplace_back(scoreStr);
+            } else {
+                vecScores.emplace_back(std::to_string(gottenScore));
+                replaced = scoreStr;
+
+            }
+        } else {
+            vecScores.emplace_back(replaced);
+            replaced = scoreStr;
+        }
+    }
+
+    highScores.close();
+    std::ofstream newHighScores("All_time_high_scores.txt", std::ios::trunc);
+
     std::vector<sf::Text > scores;
-    std::string scoreText;
     int iter = 1;
-    while (getline(highScores, scoreText)){
+    for(auto &scoreText:vecScores){
+        newHighScores << scoreText;
+        newHighScores.write("\n", 1);
+
+
         sf::Text score;
-        text.setFont(font);
-        text.setString(scoreText);
-        text.setCharacterSize(30);
-        text.setFillColor(sf::Color::White);
-        text.setStyle(sf::Text::Bold);
-        text.setPosition(200, (20*iter));
+        score.setFont(font);
+        score.setString(scoreText);
+        score.setCharacterSize(30);
+        score.setFillColor(sf::Color::White);
+        score.setStyle(sf::Text::Bold);
+        score.setPosition(200, (40*iter));
 
         scores.emplace_back(score);
 
         ++iter;
     };
 
+    highScores.close();
+
+    std::this_thread::sleep_for(std::chrono::seconds(1));
+
     while(transformationObject->getWindow()->isOpen()){
-        this->handleEvents();
+        this->handleEvents(gameView, viewScore);
+
+        transformationObject->getWindow()->setView(gameView);
 
         transformationObject->getWindow()->clear(sf::Color::Black);
 

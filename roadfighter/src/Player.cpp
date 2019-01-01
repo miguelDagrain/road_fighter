@@ -1,5 +1,4 @@
 
-
 #include "roadfighter/include/Bullet.h"
 #include "roadfighter/include/Road.h"
 #include "roadfighter/include/Racer.h"
@@ -104,4 +103,13 @@ void RF::Player::checkIfCollided(const std::shared_ptr<RF::Entity> &other)
 
 }
 
+
+std::shared_ptr<RF::Entity > RF::Player::attackAction(RF::Entity &world)
+{
+    RF::location standardLoc(this->getLocation());
+    RF::size standardBullet(0.3, 0.3);
+    RF::movementVector standardMovement(this->getMovement()*1.5);
+
+    return std::make_shared<RF::Bullet >(standardLoc, standardBullet, standardMovement);
+}
 

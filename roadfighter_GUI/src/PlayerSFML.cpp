@@ -1,5 +1,5 @@
 
-#include "roadfighter_GUI/include/SFMLFactory.h"
+#include "app/Factory.h"
 
 #include "roadfighter_GUI/include/PlayerSFML.h"
 
@@ -35,13 +35,4 @@ void RF_GUI::PlayerSFML::draw()
     auto transform = Transformation::getInstance();
 
     (*transform)(sprite);
-}
-
-
-void RF_GUI::PlayerSFML::attackAction(RF::Entity &world)
-{
-    Factory factory;
-    RF::location tempLoc = this->getLocation();
-    RF::movementVector tempMove =  (this->getMovement()*1.5);
-    world.addObject(factory.createBullet(tempLoc, tempMove));
 }

@@ -82,8 +82,9 @@ void RF::Entity::accelerate(RF::movementVector &acceleration)
     }
 }
 
-void RF::Entity::attackAction(Entity &world)
+std::shared_ptr<RF::Entity > RF::Entity::attackAction(Entity &world)
 {
+    return nullptr;
 }
 
 void RF::Entity::checkIfInWorld()

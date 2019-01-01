@@ -20,8 +20,6 @@ namespace RF_GUI {
         ~PlayerSFML() override;
 
         void draw() final;
-
-        void attackAction(RF::Entity &world) final;
     };
 
 }
