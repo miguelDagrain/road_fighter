@@ -1,17 +1,32 @@
 
 #include "app/Factory.h"
-
 #include "roadfighter_GUI/include/PlayerSFML.h"
 
+/**
+ * @brief basis constructor voor een PlayerSFML.
+ */
 RF_GUI::PlayerSFML::PlayerSFML() = default;
 
+/**
+ * @brief constructor voor PlayerSFML met locatie, grootte en beweging.
+ *
+ * @param entityLocation locatie van PlayerSFML.
+ * @param entitySize grootte van PlayerSFML.
+ * @param movement beweging van PlayerSFML.
+ */
 RF_GUI::PlayerSFML::PlayerSFML(RF::location &entityLocation, RF::size &entitySize, RF::movementVector &movement):
         RF::Player(entityLocation, entitySize, movement)
 {
 }
 
+/**
+ * @brief destructor van PlayerSFML.
+ */
 RF_GUI::PlayerSFML::~PlayerSFML() = default;
 
+/**
+ * @brief functie die een PlayerSFML tekent.
+ */
 void RF_GUI::PlayerSFML::draw()
 {
     sf::Sprite sprite;

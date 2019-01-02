@@ -4,10 +4,16 @@
 
 #include "Interface.h"
 
-long get_number_from_string(const std::string &inputFile){
+/**
+ * @brief kleine hulpfunctie om getal uit een string te halen
+ *
+ * @param numberStr getal in string geschreven.
+ * @return de waarde van het getal.
+ */
+long get_number_from_string(const std::string &numberStr){
     long number = 0;
 
-    for(auto x:inputFile){
+    for(auto x:numberStr){
 
         if(x < 58 && x > 47){
 
@@ -25,6 +31,12 @@ long get_number_from_string(const std::string &inputFile){
     return number;
 }
 
+/**
+ * @brief kleine hulpfunctie die aan de hand van de naam van een bestand de locatie van het einde van de weg leest.
+ *
+ * @param inputFile het bestand dat wordt ingelezen.
+ * @return double die aangeeft waar de lijn loopt.
+ */
 double get_line_end_of_road(const std::string &inputFile){
     sf::Texture backgroundTexture;
 
@@ -38,13 +50,26 @@ double get_line_end_of_road(const std::string &inputFile){
     return endLine;
 }
 
+/**
+ * @brief constructor voor een Interface met lengte van de weg (aantal stukken weg).
+ *
+ * @param roadLength int die het aantal stukken weg weergeeft.
+ */
 Interface::Interface(int roadLength): coolDown(0), length(roadLength)
 {
 }
 
+/**
+ * @brief destructor van de Interface klasse.
+ */
 Interface::~Interface() = default;
 
-
+/**
+ * @brief functie die een wereld opzet om te kunnen rijden.
+ *
+ * @param inputFileRoad bestand waar we de wegstukken vinden.
+ * @return de wereld die is gemaakt.
+ */
 RF::World Interface::setupWorld(std::string &inputFileRoad)
 {
     RF::World road;
@@ -78,6 +103,14 @@ RF::World Interface::setupWorld(std::string &inputFileRoad)
     return road;
 }
 
+/**
+ * @brief functie die de wereld update.
+ *
+ * @param road referentie naar de wereld die moet geupdate worden.
+ * @param inputFileRoad bestand waar we de texture voor een wegstuk vinden.
+ * @param inputFileFinish bestand waar we de texture voor het finishline wegstuk vinden.
+ * @return boolean die aangeeft of de finish is bereikt of niet.
+ */
 bool Interface::updateWorld(RF::World &road, std::string &inputFileRoad, std::string &inputFileFinish)
 {
     Interface::handleKeyboardInput(road);
@@ -118,7 +151,12 @@ bool Interface::updateWorld(RF::World &road, std::string &inputFileRoad, std::st
 
 }
 
-void Interface::handleEvents(sf::View &gameView, sf::View &scoreView)
+/**
+ * @brief functie die events behandeld, bij scaling ook de views update.
+ *
+ * @param gameView de view op de window.
+ */
+void Interface::handleEvents(sf::View &gameView)
 {
     auto transformationObject = RF_GUI::Transformation::getInstance();
 
@@ -138,6 +176,11 @@ void Interface::handleEvents(sf::View &gameView, sf::View &scoreView)
 
 }
 
+/**
+ * @brief functie die keyboard input behandeld voor een wereld
+ *
+ * @param road wereld waarvoor de input wordt behandeld.
+ */
 void Interface::handleKeyboardInput(RF::World &road) {
     auto transformationObject = RF_GUI::Transformation::getInstance();
 
@@ -162,7 +205,7 @@ void Interface::handleKeyboardInput(RF::World &road) {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && !coolDown){
         Factory fact;
 
-        std::shared_ptr<RF::Entity > bulletBase = road.attackAction(road);
+        std::shared_ptr<RF::Entity > bulletBase = road.attackAction();
         road.addObject(fact.createBullet(bulletBase));
         coolDown = 100;
     }else {
@@ -172,7 +215,11 @@ void Interface::handleKeyboardInput(RF::World &road) {
     }
 }
 
-
+/**
+ * @brief functie die fuelcars of passingcars genereert in de wereld (er bestaat een verhouding tussen beide).
+ *
+ * @param road de wereld waarin de entiteiten worden gegenereerd.
+ */
 void Interface::createFPCars(RF::World &road)
 {
 
@@ -206,6 +253,11 @@ void Interface::createFPCars(RF::World &road)
     }
 }
 
+/**
+ * @brief functie die racers genereert in een wereld.
+ *
+ * @param road de wereld waarin de racers worden gegenereerd.
+ */
 void Interface::createRacerCars(RF::World &road)
 {
 
@@ -229,6 +281,12 @@ void Interface::createRacerCars(RF::World &road)
 
 }
 
+/**
+ * @brief functie die een het spel in werking stelt.
+ *
+ * @param inputfileRoad bestand waar we de texture voor het wegstuk vinden.
+ * @param inputFileFinish bestand waar we de texture voor het wegstuk met de finishline vinden.
+ */
 void Interface::runGame(std::string &&inputfileRoad, std::string &&inputFileFinish)
 {
 
@@ -252,7 +310,7 @@ void Interface::runGame(std::string &&inputfileRoad, std::string &&inputFileFini
     bool finished = false;
 
     while(transformationObject->getWindow()->isOpen() && !finished){
-        this->handleEvents(gameView, viewScore);
+        this->handleEvents(gameView);
 
         std::this_thread::sleep_for(std::chrono::microseconds(300));
 
@@ -343,7 +401,7 @@ void Interface::runGame(std::string &&inputfileRoad, std::string &&inputFileFini
     std::this_thread::sleep_for(std::chrono::seconds(1));
 
     while(transformationObject->getWindow()->isOpen()){
-        this->handleEvents(gameView, viewScore);
+        this->handleEvents(gameView);
 
         transformationObject->getWindow()->setView(gameView);
 

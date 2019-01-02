@@ -33,7 +33,7 @@
 
         bool updateWorld(RF::World &road,std::string &inputFileRoad, std::string &inputFileFinish);
 
-        void handleEvents(sf::View &gameView, sf::View &scoreView);
+        void handleEvents(sf::View &gameView);
 
         void handleKeyboardInput(RF::World &road);
 

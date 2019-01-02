@@ -7,16 +7,34 @@
 #include "roadfighter/include/Finish.h"
 #include "roadfighter/include/Player.h"
 
+/**
+ * @brief basis constructor van een Player.
+ */
 RF::Player::Player() = default;
 
+/**
+ * @brief destructor van een Player
+ */
 RF::Player::~Player() = default;
 
+/**
+ * @brief constructor van een Player met locatie, grootte en beweging.
+ *
+ * @param entityLocation locatie van de Player.
+ * @param entitySize grootte van de Player.
+ * @param movement beweging van de Player.
+ */
 RF::Player::Player(RF::location &entityLocation, RF::size &entitySize, RF::movementVector &movement) :
 Entity(entityLocation, entitySize, movement)
 {
     specialActionDuration = 100;
 }
 
+/**
+ * @brief functie die weergeeft of de speler is gecrasht.
+ *
+ * @return of de Player al dan niet is gecrasht.
+ */
 bool RF::Player::hasCrashed() const
 {
     if(crashed){
@@ -26,6 +44,9 @@ bool RF::Player::hasCrashed() const
     return crashed;
 }
 
+/**
+ * @brief functie die de Player update.
+ */
 void RF::Player::update()
 {
     observer->notifyTimePassed();
@@ -47,6 +68,11 @@ void RF::Player::update()
 
 }
 
+/**
+ * @brief functie die de locatie van de Player corrigeert (voor representatie).
+ *
+ * @param correctionVector de vector waarmee we de positie corrigeren
+ */
 void RF::Player::correctPosition(RF::PlaneLocation correctionVector)
 {
     entityLocation.second -= correctionVector.second;
@@ -56,6 +82,11 @@ void RF::Player::correctPosition(RF::PlaneLocation correctionVector)
     }
 }
 
+/**
+ * @brief functie die controleert of de Player collision heeft met een andere entiteit.
+ *
+ * @param other de andere entiteit.
+ */
 void RF::Player::checkIfCollided(const std::shared_ptr<RF::Entity> &other)
 {
 
@@ -103,8 +134,12 @@ void RF::Player::checkIfCollided(const std::shared_ptr<RF::Entity> &other)
 
 }
 
-
-std::shared_ptr<RF::Entity > RF::Player::attackAction(RF::Entity &world)
+/**
+ * @brief functie die een de aanval van de Player voorstelt.
+ *
+ * @return shared ptr naar de entiteit die aanval voorstelt.
+ */
+std::shared_ptr<RF::Entity > RF::Player::attackAction()
 {
     RF::location standardLoc(this->getLocation());
     RF::size standardBullet(0.3, 0.3);

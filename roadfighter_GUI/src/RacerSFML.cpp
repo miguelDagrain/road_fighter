@@ -1,15 +1,30 @@
-
 #include "roadfighter_GUI/include/RacerSFML.h"
 
+/**
+ * @brief basis constructor voor een RacerSFML.
+ */
 RF_GUI::RacerSFML::RacerSFML() = default;
 
+/**
+ * @brief constructor voor RacerSFML met locatie, grootte en beweging.
+ *
+ * @param entityLocation locatie van RacerSFML.
+ * @param entitySize grootte van RacerSFML.
+ * @param movement beweging van RacerSFML.
+ */
 RF_GUI::RacerSFML::RacerSFML(RF::location &entityLocation, RF::size &entitySize, RF::movementVector &movement) :
 RF::Racer(entityLocation, entitySize, movement)
 {
 }
 
+/**
+ * @brief destructor van RacerSFML.
+ */
 RF_GUI::RacerSFML::~RacerSFML() = default;
 
+/**
+ * @brief functie die een RacerSFML tekent.
+ */
 void RF_GUI::RacerSFML::draw() {
     sf::Sprite sprite;
     sf::Texture texture;

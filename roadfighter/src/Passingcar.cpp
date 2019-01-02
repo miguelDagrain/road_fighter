@@ -3,17 +3,33 @@
 #include "roadfighter/include/Road.h"
 #include "roadfighter/include/Passingcar.h"
 
+/**
+ * @brief basis constructor voor een Passingcar.
+ */
 RF::Passingcar::Passingcar() = default;
 
+/**
+ * @brief destructor voor een Passingcar.
+ */
 RF::Passingcar::~Passingcar() = default;
 
-
+/**
+ * @brief constructor voor een Passingcar met locatie, grootte en beweging.
+ *
+ * @param entityLocation locatie van de Passingcar.
+ * @param entitySize grootte van de Passingcar.
+ * @param movement beweging van de Passingcar.
+ */
 RF::Passingcar::Passingcar(RF::location &entityLocation, RF::size &entitySize, RF::movementVector &movement) :
 Entity(entityLocation, entitySize, movement)
 {
-
 }
 
+/**
+ * @brief functie die controleert of deze Passingcar collision heeft met een andere entiteit.
+ *
+ * @param other entiteit waarmee collision mee wordt gecontroleerd.
+ */
 void RF::Passingcar::checkIfCollided(const std::shared_ptr<RF::Entity> &other)
 {
     if(!std::dynamic_pointer_cast<RF::Road>(other)) {

@@ -1,18 +1,30 @@
-
-#include <include/BulletSFML.h>
-
 #include "roadfighter_GUI/include/BulletSFML.h"
 
-
+/**
+ * @brief basis constructor voor een BulletSFML.
+ */
 RF_GUI::BulletSFML::BulletSFML() = default;
 
+/**
+ * @brief constructor voor BulletSFML met locatie, grootte en beweging.
+ *
+ * @param entityLocation locatie van BulletSFML.
+ * @param entitySize grootte van BulletSFML.
+ * @param movement beweging van BulletSFML.
+ */
 RF_GUI::BulletSFML::BulletSFML(RF::location &entityLocation, RF::size &entitySize, RF::movementVector &movement):
         Bullet(entityLocation, entitySize, movement)
 {
 }
 
+/**
+ * @brief destructor van BulletSFML.
+ */
 RF_GUI::BulletSFML::~BulletSFML() = default;
 
+/**
+ * @brief functie die een BulletSFML tekent.
+ */
 void RF_GUI::BulletSFML::draw()
 {
     sf::Sprite sprite;

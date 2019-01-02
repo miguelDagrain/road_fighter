@@ -3,16 +3,32 @@
 #include "roadfighter/include/Road.h"
 #include "roadfighter/include/Bullet.h"
 
-
+/**
+ * @brief basis constructor voor een bullet.
+ */
 RF::Bullet::Bullet() = default;
 
+/**
+ * @brief basis destructor voor een bullet
+ */
 RF::Bullet::~Bullet() = default;
 
-
-RF::Bullet::Bullet(RF::location &entityLocation, RF::size &entitySize, RF::movementVector &movement) : Entity(entityLocation, entitySize, movement) {
-
+/**
+ * @brief constructor van bullet met locatie, grootte en beweging
+ *
+ * @param entityLocation locatie van het object
+ * @param entitySize grootte van het object
+ * @param movement beweging van het object
+ */
+RF::Bullet::Bullet(RF::location &entityLocation, RF::size &entitySize, RF::movementVector &movement) : Entity(entityLocation, entitySize, movement)
+{
 }
 
+/**
+ * @brief functie die controlleert of er collision is tussen deze kogel en een ander object.
+ *
+ * @param other het andere object waarvan we controleren of er collision is.
+ */
 void RF::Bullet::checkIfCollided(const std::shared_ptr<RF::Entity> &other) {
 
     if(!std::dynamic_pointer_cast<RF::Road>(other)){

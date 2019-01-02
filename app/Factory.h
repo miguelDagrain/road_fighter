@@ -25,12 +25,9 @@
 
 class Factory {
 public:
-    Factory() = default;
+    Factory();
 
-    virtual ~Factory() = default;
-
-    template <typename Tresult>
-    std::shared_ptr<Tresult > createEntity();
+    ~Factory();
 
     std::shared_ptr<RF_GUI::BulletSFML > createBullet(std::shared_ptr<RF::Entity > base);
 

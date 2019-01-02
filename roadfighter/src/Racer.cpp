@@ -1,20 +1,33 @@
 
-#include <roadfighter/include/Racer.h>
-#include <roadfighter/include/Bullet.h>
-
+#include "roadfighter/include/Bullet.h"
 #include "roadfighter/include/Racer.h"
 
+/**
+ * @brief basis constructor van een Racer.
+ */
 RF::Racer::Racer() = default;
 
+/**
+ * @brief destructor van een Racer.
+ */
 RF::Racer::~Racer() = default;
 
+/**
+ * @brief constructor van een Racer met locatie, grootte en beweging
+ *
+ * @param entityLocation locatie van de Racer.
+ * @param entitySize grootte van de Racer.
+ * @param movement beweging van de Racer.
+ */
 RF::Racer::Racer(RF::location &entityLocation, RF::size &entitySize, RF::movementVector &movement) :
 Entity(entityLocation, entitySize, movement)
 {
     specialActionDuration = 400;
 }
 
-
+/**
+ * @brief functie die een update doet van de Racer.
+ */
 void RF::Racer::update() {
 
     if(specialActionDuration == 0) {
@@ -30,6 +43,11 @@ void RF::Racer::update() {
 
 }
 
+/**
+ * @brief functie die controleert of de Racer collision heeft met een andere entiteit.
+ *
+ * @param other de andere entiteit waarmee collision wordt gecontroleerd.
+ */
 void RF::Racer::checkIfCollided(const std::shared_ptr<RF::Entity> &other)
 {
     if(std::dynamic_pointer_cast<RF::Bullet >(other)) {
@@ -54,8 +72,9 @@ void RF::Racer::checkIfCollided(const std::shared_ptr<RF::Entity> &other)
     }
 }
 
-
+/**
+ * @brief Controleer of de racers nog in het spel zitten (ze kunnen niet verwijdert worden).
+ */
 void RF::Racer::checkIfInWorld()
 {
-    //racers blijven in het spel
 }

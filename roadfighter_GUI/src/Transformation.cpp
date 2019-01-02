@@ -1,18 +1,22 @@
 
-#include <include/Transformation.h>
-
 #include "roadfighter_GUI/include/Transformation.h"
 
 namespace RF_GUI{
     std::shared_ptr<RF_GUI::Transformation > Transformation::instance = nullptr;
 }
 
-
+/**
+ * @brief basis constructor van Transformation.
+ */
 RF_GUI::Transformation::Transformation(): window(std::make_shared<sf::RenderWindow>(sf::VideoMode(1000, 600), "roadfighter"))
 {
 }
 
-
+/**
+ * @brief () operator om een sprite te kunnen tekenen.
+ *
+ * @param entity de entiteit van om te tekenen.
+ */
 void RF_GUI::Transformation::operator()(sf::Sprite entity) {
     //de 9 is om de weg op tijd te kunnen tekenen
     if(entity.getPosition().x > 4 || entity.getPosition().x < -4 || entity.getPosition().y > 3 || entity.getPosition().y < -9){
@@ -39,6 +43,11 @@ void RF_GUI::Transformation::operator()(sf::Sprite entity) {
     window->draw(entity);
 }
 
+/**
+ * @brief functie die een instantie van de Transformation klasse teruggeeft.
+ *
+ * @return shared ptr naar de instantie van de Transformation klasse.
+ */
 std::shared_ptr<RF_GUI::Transformation> &RF_GUI::Transformation::getInstance() {
 
     if(instance == nullptr) {
