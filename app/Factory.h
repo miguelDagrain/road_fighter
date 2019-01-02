@@ -20,7 +20,7 @@
 #include "roadfighter_GUI/include/PlayerSFML.h"
 #include "roadfighter_GUI/include/RacerSFML.h"
 #include "roadfighter_GUI/include/RoadSFML.h"
-#include "include/FinishSFML.h"
+#include "roadfighter_GUI/include/FinishSFML.h"
 
 
 class Factory {

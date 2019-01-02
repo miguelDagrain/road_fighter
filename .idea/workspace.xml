@@ -13,38 +13,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a6eb8fa-9912-480e-9da5-cd36d440e19d" name="Default" comment="finished">
+    <list default="true" id="0a6eb8fa-9912-480e-9da5-cd36d440e19d" name="Default" comment="documentatie">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Factory.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/Factory.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Factory.h" beforeDir="false" afterPath="$PROJECT_DIR$/app/Factory.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Interface.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/Interface.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Interface.h" beforeDir="false" afterPath="$PROJECT_DIR$/app/Interface.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter/include/Entity.h" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/include/Entity.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter/include/PlaneLocation.h" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/include/PlaneLocation.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter/include/Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/include/Player.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter/include/World.h" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/include/World.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter/src/Bullet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/src/Bullet.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter/src/Entity.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/src/Entity.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter/src/Finish.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/src/Finish.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter/src/Fuelcar.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/src/Fuelcar.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter/src/ObserverWorld.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/src/ObserverWorld.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter/src/Passingcar.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/src/Passingcar.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter/src/PlaneLocation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/src/PlaneLocation.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter/src/Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/src/Player.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter/src/Racer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/src/Racer.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter/src/Random.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/src/Random.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter/src/Road.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/src/Road.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter/src/RoadfighterError.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/src/RoadfighterError.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter/src/World.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter/src/World.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter_GUI/src/BulletSFML.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter_GUI/src/BulletSFML.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter_GUI/src/FinishSFML.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter_GUI/src/FinishSFML.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter_GUI/src/FuelcarSFML.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter_GUI/src/FuelcarSFML.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter_GUI/src/PassingcarSFML.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter_GUI/src/PassingcarSFML.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter_GUI/src/PlayerSFML.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter_GUI/src/PlayerSFML.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter_GUI/src/RacerSFML.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter_GUI/src/RacerSFML.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter_GUI/src/RoadSFML.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter_GUI/src/RoadSFML.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roadfighter_GUI/src/Transformation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/roadfighter_GUI/src/Transformation.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -61,38 +32,7 @@
     <favorites_list name="road_fighter" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Interface.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="878">
-              <caret line="312" column="35" selection-start-line="312" selection-start-column="35" selection-end-line="312" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Factory.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Factory.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
-              <folding>
-                <element signature="e#76#93#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -160,8 +100,8 @@
         <option value="$PROJECT_DIR$/roadfighter_GUI/src/Transformation.cpp" />
         <option value="$PROJECT_DIR$/app/Interface.h" />
         <option value="$PROJECT_DIR$/app/Interface.cpp" />
-        <option value="$PROJECT_DIR$/app/Factory.h" />
         <option value="$PROJECT_DIR$/app/Factory.cpp" />
+        <option value="$PROJECT_DIR$/app/Factory.h" />
       </list>
     </option>
   </component>
@@ -193,7 +133,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -201,54 +140,11 @@
               <item name="road_fighter" type="b2602c69:ProjectViewProjectNode" />
               <item name="road_fighter" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="road_fighter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="road_fighter" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="road_fighter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="road_fighter" type="462c0819:PsiDirectoryNode" />
-              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="road_fighter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="road_fighter" type="462c0819:PsiDirectoryNode" />
-              <item name="roadfighter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="road_fighter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="road_fighter" type="462c0819:PsiDirectoryNode" />
-              <item name="roadfighter" type="462c0819:PsiDirectoryNode" />
-              <item name="include" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="road_fighter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="road_fighter" type="462c0819:PsiDirectoryNode" />
-              <item name="roadfighter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="road_fighter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="road_fighter" type="462c0819:PsiDirectoryNode" />
-              <item name="roadfighter_GUI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="road_fighter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="road_fighter" type="462c0819:PsiDirectoryNode" />
-              <item name="roadfighter_GUI" type="462c0819:PsiDirectoryNode" />
-              <item name="include" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="road_fighter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="road_fighter" type="462c0819:PsiDirectoryNode" />
-              <item name="roadfighter_GUI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -366,7 +262,9 @@
       <workItem from="1546246730547" duration="17068000" />
       <workItem from="1546336807315" duration="6003000" />
       <workItem from="1546358704926" duration="12295000" />
-      <workItem from="1546427024235" duration="19399000" />
+      <workItem from="1546427024235" duration="20785000" />
+      <workItem from="1546451542986" duration="1406000" />
+      <workItem from="1546455305601" duration="944000" />
     </task>
     <task id="LOCAL-00001" summary="basic structure continuation">
       <created>1544631418348</created>
@@ -515,17 +413,23 @@
       <option name="project" value="LOCAL" />
       <updated>1546371905630</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="documentatie">
+      <created>1546450109851</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1546450109851</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="344785000" />
+    <option name="totallyTimeSpent" value="348521000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1920" height="1050" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4935065" visible="true" weight="0.29295623" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4935065" visible="true" weight="0.29935965" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5064935" side_tool="true" weight="0.12966916" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -596,15 +500,10 @@
     <MESSAGE value="finishLine" />
     <MESSAGE value="finish" />
     <MESSAGE value="finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished" />
+    <MESSAGE value="documentatie" />
+    <option name="LAST_COMMIT_MESSAGE" value="documentatie" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sprites/grassBackground_156.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter_GUI/include/FuelcarSFML.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/roadfighter_GUI/include/RoadSFML.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -869,13 +768,6 @@
     <entry file="file://$PROJECT_DIR$/roadfighter_GUI/include/BulletSFML.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/roadfighter_GUI/src/FinishSFML.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/roadfighter_GUI/src/FuelcarSFML.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="86">
@@ -938,29 +830,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Interface.cpp">
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Factory.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="878">
-          <caret line="312" column="35" selection-start-line="312" selection-start-column="35" selection-end-line="312" selection-end-column="35" />
+        <state relative-caret-position="192">
+          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roadfighter_GUI/src/FinishSFML.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Factory.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+        <state relative-caret-position="196">
+          <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
           <folding>
             <element signature="e#76#93#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Factory.cpp">
+    <entry file="file://$PROJECT_DIR$/app/Interface.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        <state relative-caret-position="4334">
+          <caret line="312" column="35" selection-start-line="312" selection-start-column="35" selection-end-line="312" selection-end-column="35" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
