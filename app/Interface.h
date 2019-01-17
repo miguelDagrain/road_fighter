@@ -18,34 +18,34 @@
 #include "roadfighter_GUI/include/RoadSFML.h"
 
 
-    class Interface {
-    public:
+class Interface {
+public:
 
-        explicit Interface(int roadLength);
+    explicit Interface(int roadLength);
 
-        ~Interface();
+    ~Interface();
 
-        void runGame(std::string &&inputfileRoad, std::string &&inputFileFinish);
+    void runGame(std::string &&inputfileRoad, std::string &&inputFileFinish);
 
-    private:
+private:
 
-        RF::World setupWorld(std::string &inputFileRoad);
+    RF::World setupWorld(std::string &inputFileRoad);
 
-        bool updateWorld(RF::World &road,std::string &inputFileRoad, std::string &inputFileFinish);
+    bool updateWorld(RF::World &road,std::string &inputFileRoad, std::string &inputFileFinish);
 
-        void handleEvents(sf::View &gameView);
+    void handleEvents(sf::View &gameView);
 
-        void handleKeyboardInput(RF::World &road);
+    void handleKeyboardInput(RF::World &road);
 
-        void createFPCars(RF::World &road);
+    void createFPCars(RF::World &road);
 
-        void createRacerCars(RF::World &road);
+    void createRacerCars(RF::World &road);
 
 
-        int coolDown;
+    int coolDown;
 
-        int length;
-    };
+    int length;
+};
 
 
 

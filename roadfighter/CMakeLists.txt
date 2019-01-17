@@ -1,6 +1,6 @@
 
 
-add_library(FILES_GAME_LOGIC STATIC
+set(SOURCE_FILES_GAME_LOGIC
         src/PlaneLocation.cpp
         src/Bullet.cpp
         src/Entity.cpp
@@ -32,6 +32,7 @@ set(HEADER_FILES_GAME_LOGIC
         PARENT_SCOPE)
 
 
+add_library(FILES_GAME_LOGIC STATIC ${SOURCE_FILES_GAME_LOGIC})
 target_include_directories(FILES_GAME_LOGIC PUBLIC ${HEADER_FILES_GAME_LOGIC})
 
 #

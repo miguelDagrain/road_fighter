@@ -2,6 +2,8 @@
 
 namespace RF {
     std::shared_ptr<RF::Random > RF::Random::instance = nullptr;
+    //volgens code inspection field instance is never used maar safe delete gaat niet want
+    //hij wordt wel degelijk in de getInstance() functie gebruikt
 }
 
 /**

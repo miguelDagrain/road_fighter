@@ -19,7 +19,7 @@ namespace RF {
 
         PlaneLocation &operator-=(const PlaneLocation& rhs);
 
-        PlaneLocation operator*(const double rhs) const;
+        PlaneLocation operator*(double rhs) const;
     };
 
 }

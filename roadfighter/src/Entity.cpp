@@ -47,6 +47,8 @@ RF::Entity::~Entity() = default;
  * @param newbornObject het object dat wordt toegevoegd.
  */
 void RF::Entity::addObject(std::shared_ptr<RF::Entity> newbornObject)
+//Ik weet dat er hier een clang tidy warning is maar om me aan de composition design pattern te houden kan ik hier
+//geen const reference gebruiken.
 {
     throw RoadfighterError("You can't add an object to this kind of Entity.");
 }
@@ -165,8 +167,7 @@ void RF::Entity::checkIfInWorld()
  */
 void RF::Entity::checkIfOnRoad()
 {
-
-    if(entityLocation.first < -(RF::endOfRoad) || entityLocation.first > (RF::endOfRoad-0.4)){
+    if(entityLocation.first > (RF::endOfRoad-0.4) || entityLocation.first < -(RF::endOfRoad)){
         crashed = true;
     }
 }

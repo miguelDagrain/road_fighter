@@ -3,6 +3,8 @@
 
 namespace RF_GUI{
     std::shared_ptr<RF_GUI::Transformation > Transformation::instance = nullptr;
+    //volgens code inspection field instance is never used maar safe delete gaat niet want
+    //hij wordt wel degelijk in de getInstance() functie gebruikt
 }
 
 /**
